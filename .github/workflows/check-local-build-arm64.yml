@@ -1,0 +1,21 @@
+name: check-local-build-arm64
+on:
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install swebench
+        run: pip install swebench==4.1.0
+      - name: Run with local builds (no registry namespace)
+        run: |
+          python -m swebench.harness.run_evaluation \
+            -p predictions.jsonl \
+            -i pallets__flask-5063 psf__requests-1963 \
+            -id arm64_local_build_test \
+            -n none \
+            --max_workers 1 || true
