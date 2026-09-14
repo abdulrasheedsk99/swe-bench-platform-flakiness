@@ -1,0 +1,18 @@
+name: check-manifest
+on:
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - name: Raw docker pull attempt
+        run: |
+          echo "--- docker pull, letting Docker report the real reason ---"
+          docker pull swebench/sweb.eval.x86_64.pallets_1776_flask-5063:latest || true
+          echo ""
+          echo "--- docker manifest inspect (shows what platforms actually exist) ---"
+          docker manifest inspect swebench/sweb.eval.x86_64.pallets_1776_flask-5063:latest || true
+          echo ""
+          echo "--- host architecture for reference ---"
+          uname -m
+          docker version --format '{{.Server.Arch}}'
