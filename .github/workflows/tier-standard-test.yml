@@ -1,0 +1,52 @@
+name: tier-standard-test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet /opt/ghc "$AGENT_TOOLSDIRECTORY" /usr/local/lib/android || true
+          df -h
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install swebench
+        run: pip install swebench==4.1.0
+
+      - name: Run grading harness on one instance
+        run: |
+          python -m swebench.harness.run_evaluation \
+            -p predictions.jsonl \
+            -i pallets__flask-5063 \
+            -id standard_tier_test \
+            --max_workers 1
+
+      - name: Compare against local ground truth
+        run: |
+          python3 -c "
+          import json
+          report = json.load(open('gemma4-32k-mini-swe-agent.standard_tier_test.json'))
+          ground_truth = json.load(open('ground_truth_local.json'))
+          iid = 'pallets__flask-5063'
+          tier_verdict = 'RESOLVED' if iid in report['resolved_ids'] else 'UNRESOLVED'
+          expected = ground_truth[iid]
+          print(f'Instance: {iid}')
+          print(f'Local ground truth: {expected}')
+          print(f'Standard-tier verdict: {tier_verdict}')
+          print(f'MATCH: {tier_verdict == expected}')
+          "
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: standard-tier-report
+          path: gemma4-32k-mini-swe-agent.standard_tier_test.json
