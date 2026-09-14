@@ -1,0 +1,15 @@
+name: check-dockerd
+on:
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-slim
+    steps:
+      - name: Look for dockerd and try starting it
+        run: |
+          which dockerd || echo "NO_DOCKERD_BINARY"
+          sudo dockerd --version 2>&1 || echo "DOCKERD_VERSION_FAILED"
+          sudo dockerd > /tmp/dockerd.log 2>&1 &
+          sleep 3
+          docker version || echo "STILL_NO_DAEMON_AFTER_MANUAL_START"
+          cat /tmp/dockerd.log 2>/dev/null | tail -20
