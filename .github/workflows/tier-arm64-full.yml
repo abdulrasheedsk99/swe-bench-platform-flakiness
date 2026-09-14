@@ -7,6 +7,10 @@ on:
         description: 'Repetition label (e.g. rep1, rep2, rep3)'
         required: true
         default: 'rep1'
+      max_workers:
+        description: 'Parallel workers for the harness'
+        required: true
+        default: '1'
 
 jobs:
   grade:
@@ -29,14 +33,16 @@ jobs:
       - name: Run grading harness on all 18 instances
         env:
           REP_ID: ${{ inputs.rep_id }}
+          MAX_WORKERS: ${{ inputs.max_workers }}
         run: |
           python -m swebench.harness.run_evaluation \
             -p predictions.jsonl \
             -id "arm64_full_${REP_ID}" \
-            --max_workers 2
+            --max_workers "$MAX_WORKERS"
           df -h
 
       - name: Compare against local ground truth
+        if: always()
         env:
           REP_ID: ${{ inputs.rep_id }}
         run: |
@@ -45,22 +51,29 @@ jobs:
           rep = os.environ['REP_ID']
           report = json.load(open(f'gemma4-32k-mini-swe-agent.arm64_full_{rep}.json'))
           ground_truth = json.load(open('ground_truth_local.json'))
-          resolved = set(report['resolved_ids'])
-          mismatches = []
+          completed = set(report.get('completed_ids', []))
+          resolved = set(report.get('resolved_ids', []))
+          matches, mismatches, did_not_complete = [], [], []
           for iid, expected in ground_truth.items():
+              if iid not in completed:
+                  did_not_complete.append(iid)
+                  continue
               tier_verdict = 'RESOLVED' if iid in resolved else 'UNRESOLVED'
-              if tier_verdict != expected:
-                  mismatches.append((iid, expected, tier_verdict))
+              (matches if tier_verdict == expected else mismatches).append((iid, expected, tier_verdict))
           print(f'Total instances: {len(ground_truth)}')
-          print(f'Matches: {len(ground_truth) - len(mismatches)}')
+          print(f'Completed: {len(completed)}')
+          print(f'Matches: {len(matches)}')
           print(f'Mismatches: {len(mismatches)}')
+          print(f'Did not complete: {len(did_not_complete)}')
           for iid, expected, actual in mismatches:
               print(f'  MISMATCH: {iid} -- local={expected}, tier={actual}')
+          for iid in did_not_complete:
+              print(f'  DID NOT COMPLETE: {iid}')
           "
 
       - name: Upload report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: arm64-full-report-${{ inputs.rep_id }}
+          name: arm64-full-report-${{ inputs.rep_id }}-w${{ inputs.max_workers }}
           path: gemma4-32k-mini-swe-agent.arm64_full_*.json
