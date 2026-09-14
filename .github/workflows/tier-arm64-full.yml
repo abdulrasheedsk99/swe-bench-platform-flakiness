@@ -1,0 +1,66 @@
+name: tier-arm64-full
+
+on:
+  workflow_dispatch:
+    inputs:
+      rep_id:
+        description: 'Repetition label (e.g. rep1, rep2, rep3)'
+        required: true
+        default: 'rep1'
+
+jobs:
+  grade:
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet /opt/ghc "$AGENT_TOOLSDIRECTORY" /usr/local/lib/android || true
+          df -h
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install swebench
+        run: pip install swebench==4.1.0
+
+      - name: Run grading harness on all 18 instances
+        env:
+          REP_ID: ${{ inputs.rep_id }}
+        run: |
+          python -m swebench.harness.run_evaluation \
+            -p predictions.jsonl \
+            -id "arm64_full_${REP_ID}" \
+            --max_workers 2
+          df -h
+
+      - name: Compare against local ground truth
+        env:
+          REP_ID: ${{ inputs.rep_id }}
+        run: |
+          python3 -c "
+          import json, os
+          rep = os.environ['REP_ID']
+          report = json.load(open(f'gemma4-32k-mini-swe-agent.arm64_full_{rep}.json'))
+          ground_truth = json.load(open('ground_truth_local.json'))
+          resolved = set(report['resolved_ids'])
+          mismatches = []
+          for iid, expected in ground_truth.items():
+              tier_verdict = 'RESOLVED' if iid in resolved else 'UNRESOLVED'
+              if tier_verdict != expected:
+                  mismatches.append((iid, expected, tier_verdict))
+          print(f'Total instances: {len(ground_truth)}')
+          print(f'Matches: {len(ground_truth) - len(mismatches)}')
+          print(f'Mismatches: {len(mismatches)}')
+          for iid, expected, actual in mismatches:
+              print(f'  MISMATCH: {iid} -- local={expected}, tier={actual}')
+          "
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: arm64-full-report-${{ inputs.rep_id }}
+          path: gemma4-32k-mini-swe-agent.arm64_full_*.json
