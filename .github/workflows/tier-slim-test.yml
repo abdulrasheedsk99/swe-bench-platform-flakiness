@@ -1,0 +1,65 @@
+name: tier-slim-test
+
+on:
+  workflow_dispatch:
+    inputs:
+      instance_id:
+        description: 'SWE-bench instance ID to grade'
+        required: true
+        default: 'pallets__flask-5063'
+
+jobs:
+  grade:
+    runs-on: ubuntu-slim
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check Docker availability
+        run: |
+          echo "--- docker version ---"
+          docker version || echo "DOCKER_VERSION_FAILED"
+          echo "--- docker info ---"
+          docker info || echo "DOCKER_INFO_FAILED"
+          echo "--- can we run a container at all? ---"
+          docker run --rm hello-world || echo "DOCKER_RUN_FAILED"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install swebench
+        run: pip install swebench==4.1.0
+
+      - name: Run grading harness
+        env:
+          INSTANCE_ID: ${{ inputs.instance_id }}
+        run: |
+          python -m swebench.harness.run_evaluation \
+            -p predictions.jsonl \
+            -i "$INSTANCE_ID" \
+            -id slim_tier_test \
+            --max_workers 1
+
+      - name: Compare against local ground truth
+        env:
+          INSTANCE_ID: ${{ inputs.instance_id }}
+        run: |
+          python3 -c "
+          import json, os
+          iid = os.environ['INSTANCE_ID']
+          report = json.load(open('gemma4-32k-mini-swe-agent.slim_tier_test.json'))
+          ground_truth = json.load(open('ground_truth_local.json'))
+          tier_verdict = 'RESOLVED' if iid in report['resolved_ids'] else 'UNRESOLVED'
+          expected = ground_truth[iid]
+          print(f'Instance: {iid}')
+          print(f'Local ground truth: {expected}')
+          print(f'Slim-tier verdict: {tier_verdict}')
+          print(f'MATCH: {tier_verdict == expected}')
+          "
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: slim-tier-report-${{ inputs.instance_id }}
+          path: gemma4-32k-mini-swe-agent.slim_tier_test.json
