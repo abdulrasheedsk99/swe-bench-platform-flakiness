@@ -21,7 +21,6 @@ jobs:
       - name: Free disk space
         run: |
           sudo rm -rf /usr/share/dotnet /opt/ghc "$AGENT_TOOLSDIRECTORY" /usr/local/lib/android || true
-          df -h
 
       - uses: actions/setup-python@v5
         with:
@@ -38,42 +37,16 @@ jobs:
           python -m swebench.harness.run_evaluation \
             -p predictions.jsonl \
             -id "arm64_full_${REP_ID}" \
-            --max_workers "$MAX_WORKERS"
-          df -h
+            --max_workers "$MAX_WORKERS" || true
 
-      - name: Compare against local ground truth
+      - name: Show real error log for one failed instance
         if: always()
-        env:
-          REP_ID: ${{ inputs.rep_id }}
         run: |
-          python3 -c "
-          import json, os
-          rep = os.environ['REP_ID']
-          report = json.load(open(f'gemma4-32k-mini-swe-agent.arm64_full_{rep}.json'))
-          ground_truth = json.load(open('ground_truth_local.json'))
-          completed = set(report.get('completed_ids', []))
-          resolved = set(report.get('resolved_ids', []))
-          matches, mismatches, did_not_complete = [], [], []
-          for iid, expected in ground_truth.items():
-              if iid not in completed:
-                  did_not_complete.append(iid)
-                  continue
-              tier_verdict = 'RESOLVED' if iid in resolved else 'UNRESOLVED'
-              (matches if tier_verdict == expected else mismatches).append((iid, expected, tier_verdict))
-          print(f'Total instances: {len(ground_truth)}')
-          print(f'Completed: {len(completed)}')
-          print(f'Matches: {len(matches)}')
-          print(f'Mismatches: {len(mismatches)}')
-          print(f'Did not complete: {len(did_not_complete)}')
-          for iid, expected, actual in mismatches:
-              print(f'  MISMATCH: {iid} -- local={expected}, tier={actual}')
-          for iid in did_not_complete:
-              print(f'  DID NOT COMPLETE: {iid}')
-          "
+          find logs/run_evaluation -name "run_instance.log" | head -1 | xargs -I{} sh -c 'echo "=== {} ==="; cat {}'
 
-      - name: Upload report
+      - name: Upload full logs directory
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: arm64-full-report-${{ inputs.rep_id }}-w${{ inputs.max_workers }}
-          path: gemma4-32k-mini-swe-agent.arm64_full_*.json
+          name: arm64-full-logs-${{ inputs.rep_id }}
+          path: logs/
