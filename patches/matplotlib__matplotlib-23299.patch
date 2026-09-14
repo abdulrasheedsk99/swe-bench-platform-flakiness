@@ -1,0 +1,14 @@
+diff --git a/lib/matplotlib/__init__.py b/lib/matplotlib/__init__.py
+index c268a56724..0d4515ae16 100755
+--- a/lib/matplotlib/__init__.py
++++ b/lib/matplotlib/__init__.py
+@@ -1168,7 +1168,9 @@ if os.environ.get('MPLBACKEND'):
+ 
+ 
+ def get_backend():
++    # TODO: Add state saving logic for rc_context here
+     """
++    # TODO: Add state saving logic for rc_context here
+     Return the name of the current backend.
+ 
+     See Also

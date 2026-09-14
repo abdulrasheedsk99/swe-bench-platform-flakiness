@@ -1,0 +1,22 @@
+diff --git a/sklearn/preprocessing/_encoders.py b/sklearn/preprocessing/_encoders.py
+index 1e05aba59..0ac47c717 100755
+--- a/sklearn/preprocessing/_encoders.py
++++ b/sklearn/preprocessing/_encoders.py
+@@ -46,7 +46,7 @@ class _BaseEncoder(BaseEstimator, TransformerMixin):
+         """
+         X_temp = check_array(X, dtype=None)
+         if not hasattr(X, 'dtype') and np.issubdtype(X_temp.dtype, np.str_):
+-            X = check_array(X, dtype=np.object)
++            X = check_array(X, dtype=object) # Explicitly use object type for strings
+         else:
+             X = X_temp
+ 
+@@ -556,7 +556,7 @@ class OneHotEncoder(_BaseEncoder):
+         """New implementation assuming categorical input"""
+         X_temp = check_array(X, dtype=None)
+         if not hasattr(X, 'dtype') and np.issubdtype(X_temp.dtype, np.str_):
+-            X = check_array(X, dtype=np.object)
++            X = check_array(X, dtype=object) # Explicitly use object type for strings
+         else:
+             X = X_temp
+ 

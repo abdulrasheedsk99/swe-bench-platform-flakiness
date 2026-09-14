@@ -1,0 +1,10 @@
+2026-09-13 21:37:33,860 - minisweagent - INFO - Loading dataset princeton-nlp/SWE-Bench_Lite, split test...
+2026-09-13 21:37:34,957 - minisweagent - INFO - Instance filter: 300 -> 2 instances
+2026-09-13 21:37:34,958 - minisweagent - INFO - Running on 2 instances...
+2026-09-13 21:37:34,959 - minisweagent - INFO - Building agent config from specs: ['scripts/swebench.yaml']
+2026-09-13 21:37:36,436 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-5e439ba8 -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-13496:latest sleep 2h
+2026-09-13 21:37:43,605 - minisweagent.environment - INFO - Started container minisweagent-5e439ba8 with ID 6fe7ba55b5367969685d3e573f80c00075737d6b4e72c6ad1df9ef4d8b648502
+2026-09-13 21:40:19,015 - minisweagent - INFO - Saved trajectory to 'trajectories_backfill2/scikit-learn__scikit-learn-13496/scikit-learn__scikit-learn-13496.traj.json'
+2026-09-13 21:40:19,054 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-a1389d73 -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-13497:latest sleep 2h
+2026-09-13 21:40:27,589 - minisweagent.environment - INFO - Started container minisweagent-a1389d73 with ID 8874c37ff92021f37ad5d551309ce1296be17e3d941618a4cff3f01aa9606492
+2026-09-13 21:43:14,352 - minisweagent - INFO - Saved trajectory to 'trajectories_backfill2/scikit-learn__scikit-learn-13497/scikit-learn__scikit-learn-13497.traj.json'

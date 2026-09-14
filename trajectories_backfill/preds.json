@@ -1,0 +1,22 @@
+{
+  "matplotlib__matplotlib-23562": {
+    "model_name_or_path": "ollama_chat/gemma4-32k:latest",
+    "instance_id": "matplotlib__matplotlib-23562",
+    "model_patch": ""
+  },
+  "matplotlib__matplotlib-23563": {
+    "model_name_or_path": "ollama_chat/gemma4-32k:latest",
+    "instance_id": "matplotlib__matplotlib-23563",
+    "model_patch": ""
+  },
+  "scikit-learn__scikit-learn-13142": {
+    "model_name_or_path": "ollama_chat/gemma4-32k:latest",
+    "instance_id": "scikit-learn__scikit-learn-13142",
+    "model_patch": ""
+  },
+  "scikit-learn__scikit-learn-13439": {
+    "model_name_or_path": "ollama_chat/gemma4-32k:latest",
+    "instance_id": "scikit-learn__scikit-learn-13439",
+    "model_patch": "diff --git a/sklearn/pipeline.py b/sklearn/pipeline.py\nindex 7eaf9a46f..f69261c62 100755\n--- a/sklearn/pipeline.py\n+++ b/sklearn/pipeline.py\n@@ -27,6 +27,7 @@ __all__ = ['Pipeline', 'FeatureUnion', 'make_pipeline', 'make_union']\n \n \n class Pipeline(_BaseComposition):\n+__len__ = property(lambda self: len(self.steps))\n     \"\"\"Pipeline of transforms with a final estimator.\n \n     Sequentially apply a list of transforms and a final estimator.\n@@ -929,3 +930,9 @@ def make_union(*transformers, **kwargs):\n         raise TypeError('Unknown keyword arguments: \"{}\"'\n                         .format(list(kwargs.keys())[0]))\n     return FeatureUnion(_name_estimators(transformers), n_jobs=n_jobs)\n+\n+    def __len__(self):\n+        return len(self.steps)\n+\n+    def __len__(self):\n+        return len(self.steps)\n"
+  }
+}

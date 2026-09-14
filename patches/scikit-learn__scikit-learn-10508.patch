@@ -1,0 +1,47 @@
+diff --git a/sklearn/preprocessing/label.py b/sklearn/preprocessing/label.py
+index 61b8d4a21..8334762d2 100755
+--- a/sklearn/preprocessing/label.py
++++ b/sklearn/preprocessing/label.py
+@@ -92,40 +92,8 @@ class LabelEncoder(BaseEstimator, TransformerMixin):
+         -------
+         self : returns an instance of self.
+         """
+-        y = column_or_1d(y, warn=True)
+-        self.classes_ = np.unique(y)
+-        return self
+-
+-    def fit_transform(self, y):
+-        """Fit label encoder and return encoded labels
+-
+-        Parameters
+-        ----------
+-        y : array-like of shape [n_samples]
+-            Target values.
+-
+-        Returns
+-        -------
+-        y : array-like of shape [n_samples]
+-        """
+-        y = column_or_1d(y, warn=True)
+-        self.classes_, y = np.unique(y, return_inverse=True)
+-        return y
+-
+-    def transform(self, y):
+-        """Transform labels to normalized encoding.
+-
+-        Parameters
+-        ----------
+-        y : array-like of shape [n_samples]
+-            Target values.
+-
+-        Returns
+-        -------
+-        y : array-like of shape [n_samples]
+-        """
+-        check_is_fitted(self, 'classes_')
+-        y = column_or_1d(y, warn=True)
++        if y.size == 0:
++            return np.array([], dtype=np.intp)
+ 
+         classes = np.unique(y)
+         if len(np.intersect1d(classes, self.classes_)) < len(classes):

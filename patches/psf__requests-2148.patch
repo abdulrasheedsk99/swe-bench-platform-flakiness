@@ -1,0 +1,17 @@
+diff --git a/requests/models.py b/requests/models.py
+index 0dc5556..80544ed 100755
+--- a/requests/models.py
++++ b/requests/models.py
+@@ -701,7 +701,11 @@ class Response(object):
+                 if self.status_code == 0:
+                     self._content = None
+                 else:
+-                    self._content = bytes().join(self.iter_content(CONTENT_CHUNK_SIZE)) or bytes()
++                    try:
++        self._content = bytes().join(self.iter_content(CONTENT_CHUNK_SIZE)) or bytes()
++    except socket.error as e:
++        raise requests.exceptions.ConnectionError("Socket error during content retrieval: " + str(e)) from e
++        self._content = None
+ 
+             except AttributeError:
+                 self._content = None

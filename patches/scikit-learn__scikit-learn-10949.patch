@@ -1,0 +1,23 @@
+diff --git a/sklearn/utils/validation.py b/sklearn/utils/validation.py
+index fe1f7236e..901819cde 100755
+--- a/sklearn/utils/validation.py
++++ b/sklearn/utils/validation.py
+@@ -351,7 +351,12 @@ def _ensure_no_complex_data(array):
+                          "{}\n".format(array))
+ 
+ 
+-def check_array(array, accept_sparse=False, accept_large_sparse=True,
++def check_array(array, accept_sparse=False, accept_large_sparse=True, warn_on_dtype=False),
++n    if warn_on_dtype and isinstance(array, pd.DataFrame):
++        # Check for object dtype conversion to float64, mimicking sklearn behavior.
++        # This is a heuristic check based on the reported bug scenario.
++        object_cols = array.select_dtypes(include=["object"]).columns
++        if len(object_cols) > 0 and np.issubdtype(array[object_cols].iloc[:, 0].dtype, np.number): # Simplified check for object dtype containing numbers
+                 dtype="numeric", order=None, copy=False, force_all_finite=True,
+                 ensure_2d=True, allow_nd=False, ensure_min_samples=1,
+                 ensure_min_features=1, warn_on_dtype=False, estimator=None):
+@@ -936,3 +941,4 @@ def check_non_negative(X, whom):
+     X = X.data if sp.issparse(X) else X
+     if (X < 0).any():
+         raise ValueError("Negative values in data passed to %s" % whom)
++import pandas as pd

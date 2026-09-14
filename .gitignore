@@ -1,0 +1,12 @@
+logs/
+trajectories/
+trajectories_test/
+trajectories_test2/
+trajectories_test3/
+trajectories_test4/
+trajectories_test5/
+trajectories_test6/
+trajectories_test7/
+trajectories_ctxtest/
+trajectories_v2/
+gemma4-32k-mini-swe-agent.local_grading_test.json

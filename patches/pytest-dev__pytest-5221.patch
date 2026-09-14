@@ -1,0 +1,1015 @@
+diff --git a/src/_pytest/terminal.py b/src/_pytest/terminal.py
+index 7f348e82..0a8face6 100755
+--- a/src/_pytest/terminal.py
++++ b/src/_pytest/terminal.py
+@@ -882,146 +882,1010 @@ class TerminalReporter(object):
+             self.write_line(msg, **markup)
+ 
+     def short_test_summary(self):
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         if not self.reportchars:
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
++            return
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
+             return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+ 
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         def show_simple(stat, lines):
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             failed = self.stats.get(stat, [])
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             for rep in failed:
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                 verbose_word = rep._get_verbose_word(self.config)
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                 pos = _get_pos(self.config, rep)
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                 lines.append("%s %s" % (verbose_word, pos))
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+ 
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         def show_xfailed(lines):
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             xfailed = self.stats.get("xfailed", [])
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             for rep in xfailed:
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                 verbose_word = rep._get_verbose_word(self.config)
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                 pos = _get_pos(self.config, rep)
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                 lines.append("%s %s" % (verbose_word, pos))
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                 reason = rep.wasxfail
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                 if reason:
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                     lines.append("  " + str(reason))
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+ 
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         def show_xpassed(lines):
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             xpassed = self.stats.get("xpassed", [])
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             for rep in xpassed:
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                 verbose_word = rep._get_verbose_word(self.config)
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                 pos = _get_pos(self.config, rep)
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                 reason = rep.wasxfail
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                 lines.append("%s %s %s" % (verbose_word, pos, reason))
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+ 
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         def show_skipped(lines):
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             skipped = self.stats.get("skipped", [])
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             fskips = _folded_skips(skipped) if skipped else []
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             if not fskips:
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                 return
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             verbose_word = skipped[0]._get_verbose_word(self.config)
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             for num, fspath, lineno, reason in fskips:
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                 if reason.startswith("Skipped: "):
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                     reason = reason[9:]
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                 if lineno is not None:
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                     lines.append(
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                         "%s [%d] %s:%d: %s"
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                         % (verbose_word, num, fspath, lineno + 1, reason)
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                     )
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                 else:
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                     lines.append("%s [%d] %s: %s" % (verbose_word, num, fspath, reason))
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+ 
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         def _get_pos(config, rep):
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             nodeid = config.cwd_relative_nodeid(rep.nodeid)
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             return nodeid
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+ 
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         REPORTCHAR_ACTIONS = {
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             "x": show_xfailed,
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             "X": show_xpassed,
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             "f": partial(show_simple, "failed"),
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             "F": partial(show_simple, "failed"),
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             "s": show_skipped,
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             "S": show_skipped,
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             "p": partial(show_simple, "passed"),
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             "E": partial(show_simple, "error"),
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         }
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+ 
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         lines = []
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         for char in self.reportchars:
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             action = REPORTCHAR_ACTIONS.get(char)
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             if action:  # skipping e.g. "P" (passed with output) here.
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                 action(lines)
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+ 
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         if lines:
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             self.write_sep("=", "short test summary info")
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             for line in lines:
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                 self.write_line(line)
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+ 
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+ 
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+ def _folded_skips(skipped):
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+     d = {}
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+     for event in skipped:
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         key = event.longrepr
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         assert len(key) == 3, (event, key)
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         keywords = getattr(event, "keywords", {})
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         # folding reports with global pytestmark variable
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         # this is workaround, because for now we cannot identify the scope of a skip marker
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         # TODO: revisit after marks scope would be fixed
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         if (
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             event.when == "setup"
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             and "skip" in keywords
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             and "pytestmark" not in keywords
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         ):
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             key = (key[0], None, key[2])
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         d.setdefault(key, []).append(event)
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+     values = []
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+     for key, events in d.items():
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         values.append((len(events),) + key)
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+     return values
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+ 
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+ 
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+ def build_summary_stats_line(stats):
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+     known_types = (
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         "failed passed skipped deselected xfailed xpassed warnings error".split()
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+     )
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+     unknown_type_seen = False
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+     for found_type in stats:
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         if found_type not in known_types:
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             if found_type:  # setup/teardown reports have an empty key, ignore them
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                 known_types.append(found_type)
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                 unknown_type_seen = True
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+     parts = []
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+     for key in known_types:
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         reports = stats.get(key, None)
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         if reports:
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             count = sum(
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+                 1 for rep in reports if getattr(rep, "count_towards_summary", True)
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             )
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             parts.append("%d %s" % (count, key))
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+ 
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+     if parts:
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         line = ", ".join(parts)
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+     else:
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         line = "no tests ran"
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+ 
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+     if "failed" in stats or "error" in stats:
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         color = "red"
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+     elif "warnings" in stats or unknown_type_seen:
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         color = "yellow"
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+     elif "passed" in stats:
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         color = "green"
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+     else:
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         color = "yellow"
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+ 
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+     return line, color
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+ 
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+ 
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+ def _plugin_nameversions(plugininfo):
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+     values = []
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+     for plugin, dist in plugininfo:
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         # gets us name and version!
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         name = "{dist.project_name}-{dist.version}".format(dist=dist)
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         # questionable convenience, but it keeps things short
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         if name.startswith("pytest-"):
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             name = name[7:]
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         # we decided to print python package names
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         # they can have more than one plugin
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+         if name not in values:
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+             values.append(name)
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)
+     return values
++    def write_fixture_scope(self, scope):
++        """Writes a formatted message indicating the fixture scope."""
++        if not scope:
++            return
++        formatted_scope = scope.capitalize() + "-scoped" if scope != "session" else "session-scoped"
++        self.write_line("Fixture Scope: %s", formatted_scope, markup=True)

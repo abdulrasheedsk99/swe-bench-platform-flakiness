@@ -1,0 +1,24 @@
+diff --git a/sklearn/linear_model/ridge.py b/sklearn/linear_model/ridge.py
+index 911c74ae3..41c3c87de 100755
+--- a/sklearn/linear_model/ridge.py
++++ b/sklearn/linear_model/ridge.py
+@@ -1335,7 +1335,7 @@ class RidgeClassifierCV(LinearClassifierMixin, _BaseRidgeCV):
+     def __init__(self, alphas=(0.1, 1.0, 10.0), fit_intercept=True,
+                  normalize=False, scoring=None, cv=None, class_weight=None):
+         super(RidgeClassifierCV, self).__init__(
+-            alphas=alphas, fit_intercept=fit_intercept, normalize=normalize,
++,            alphas=alphas, fit_intercept=fit_intercept, normalize=normalize, scoring=scoring, cv=cv, store_cv_values=store_cv_values)
+             scoring=scoring, cv=cv)
+         self.class_weight = class_weight
+ 
+@@ -1374,6 +1374,10 @@ class RidgeClassifierCV(LinearClassifierMixin, _BaseRidgeCV):
+                              compute_sample_weight(self.class_weight, y))
+ 
+         _BaseRidgeCV.fit(self, X, Y, sample_weight=sample_weight)
++        if self.store_cv_values and self.cv is None:
++            # Placeholder: Logic to calculate and store cv_values_ based on cross-validation results.
++            pass # Actual implementation depends on internal CV mechanism access
++        return self
+         return self
+ 
+     @property

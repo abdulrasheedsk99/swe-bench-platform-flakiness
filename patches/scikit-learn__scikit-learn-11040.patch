@@ -1,0 +1,69 @@
+diff --git a/sklearn/neighbors/unsupervised.py b/sklearn/neighbors/unsupervised.py
+old mode 100755
+new mode 100644
+index db19e8df6..5e77fdbf1
+--- a/sklearn/neighbors/unsupervised.py
++++ b/sklearn/neighbors/unsupervised.py
+@@ -10,15 +10,15 @@ class NearestNeighbors(NeighborsBase, KNeighborsMixin,
+                        RadiusNeighborsMixin, UnsupervisedMixin):
+     """Unsupervised learner for implementing neighbor searches.
+ 
+-    Read more in the :ref:`User Guide <unsupervised_neighbors>`.
++    Read more in the :ref:.
+ 
+     Parameters
+     ----------
+     n_neighbors : int, optional (default = 5)
+-        Number of neighbors to use by default for :meth:`kneighbors` queries.
++        Number of neighbors to use by default for :meth: queries.
+ 
+     radius : float, optional (default = 1.0)
+-        Range of parameter space to use by default for :meth:`radius_neighbors`
++        Range of parameter space to use by default for :meth:
+         queries.
+ 
+     algorithm : {'auto', 'ball_tree', 'kd_tree', 'brute'}, optional
+@@ -28,7 +28,7 @@ class NearestNeighbors(NeighborsBase, KNeighborsMixin,
+         - 'kd_tree' will use :class:`KDTree`
+         - 'brute' will use a brute-force search.
+         - 'auto' will attempt to decide the most appropriate algorithm
+-          based on the values passed to :meth:`fit` method.
++          based on the values passed to :meth: method.
+ 
+         Note: fitting on sparse input will override the setting of
+         this parameter, using brute force.
+@@ -76,7 +76,7 @@ class NearestNeighbors(NeighborsBase, KNeighborsMixin,
+ 
+     n_jobs : int, optional (default = 1)
+         The number of parallel jobs to run for neighbors search.
+-        If ``-1``, then the number of jobs is set to the number of CPU cores.
++        If -1, then the number of jobs is set to the number of CPU cores.
+ 
+     Examples
+     --------
+@@ -106,15 +106,22 @@ class NearestNeighbors(NeighborsBase, KNeighborsMixin,
+ 
+     Notes
+     -----
+-    See :ref:`Nearest Neighbors <neighbors>` in the online documentation
+-    for a discussion of the choice of ``algorithm`` and ``leaf_size``.
++    See :ref: in the online documentation
++    for a discussion of the choice of algorithm and leaf_size.
+ 
+     https://en.wikipedia.org/wiki/K-nearest_neighbor_algorithm
+-    """
++"""
+ 
+     def __init__(self, n_neighbors=5, radius=1.0,
+                  algorithm='auto', leaf_size=30, metric='minkowski',
+                  p=2, metric_params=None, n_jobs=1, **kwargs):
++        if isinstance(n_neighbors, float) and n_neighbors != int(n_neighbors):
++            raise ValueError(f"n_neighbors must be an integer, but got {n_neighbors}")
++
++        # Cast to int if it's a whole number represented as a float (e.g., 3.0)
++        if isinstance(n_neighbors, float):
++            n_neighbors = int(n_neighbors)
++
+         super(NearestNeighbors, self).__init__(
+               n_neighbors=n_neighbors,
+               radius=radius,

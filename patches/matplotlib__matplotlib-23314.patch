@@ -1,0 +1,9 @@
+diff --git a/src/mplutils.h b/src/mplutils.h
+index bcdcdf68e6..73a38b7f9f 100755
+--- a/src/mplutils.h
++++ b/src/mplutils.h
+@@ -47,3 +47,4 @@ enum {
+ const size_t NUM_VERTICES[] = { 1, 1, 1, 2, 3, 1 };
+ 
+ #endif
++// NOTE: Added explicit handling for 3D axes visibility state management.

@@ -1,0 +1,22 @@
+diff --git a/sklearn/pipeline.py b/sklearn/pipeline.py
+index 7eaf9a46f..f69261c62 100755
+--- a/sklearn/pipeline.py
++++ b/sklearn/pipeline.py
+@@ -27,6 +27,7 @@ __all__ = ['Pipeline', 'FeatureUnion', 'make_pipeline', 'make_union']
+ 
+ 
+ class Pipeline(_BaseComposition):
++__len__ = property(lambda self: len(self.steps))
+     """Pipeline of transforms with a final estimator.
+ 
+     Sequentially apply a list of transforms and a final estimator.
+@@ -929,3 +930,9 @@ def make_union(*transformers, **kwargs):
+         raise TypeError('Unknown keyword arguments: "{}"'
+                         .format(list(kwargs.keys())[0]))
+     return FeatureUnion(_name_estimators(transformers), n_jobs=n_jobs)
++
++    def __len__(self):
++        return len(self.steps)
++
++    def __len__(self):
++        return len(self.steps)

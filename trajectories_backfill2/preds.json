@@ -1,0 +1,12 @@
+{
+  "scikit-learn__scikit-learn-13496": {
+    "model_name_or_path": "ollama_chat/gemma4-32k:latest",
+    "instance_id": "scikit-learn__scikit-learn-13496",
+    "model_patch": "diff --git a/sklearn/ensemble/iforest.py b/sklearn/ensemble/iforest.py\nindex 8a1bd3625..c6275931c 100755\n--- a/sklearn/ensemble/iforest.py\n+++ b/sklearn/ensemble/iforest.py\n@@ -71,6 +71,10 @@ class IsolationForest(BaseBagging, OutlierMixin):\n         determined as in the original paper.\n \n         .. versionchanged:: 0.20\n+    warm_start : bool, optional (default=False)\n+        When set to ``True``, reuse the solution of the previous call to fit\n+        and add more estimators to the ensemble, otherwise, just fit a whole\n+        new forest. See :term:`the Glossary <warm_start>`.\n            The default value of ``contamination`` will change from 0.1 in 0.20\n            to ``'auto'`` in 0.22.\n \n@@ -173,7 +177,7 @@ class IsolationForest(BaseBagging, OutlierMixin):\n                  n_jobs=None,\n                  behaviour='old',\n                  random_state=None,\n-                 verbose=0):\n+                 , warm_start=False):\n         super().__init__(\n             base_estimator=ExtraTreeRegressor(\n                 max_features=1,\n"
+  },
+  "scikit-learn__scikit-learn-13497": {
+    "model_name_or_path": "ollama_chat/gemma4-32k:latest",
+    "instance_id": "scikit-learn__scikit-learn-13497",
+    "model_patch": ""
+  }
+}

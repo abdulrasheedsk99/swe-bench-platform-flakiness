@@ -1,0 +1,27 @@
+diff --git a/src/pytest.py b/src/pytest.py
+index a6376843..ed257b90 100755
+--- a/src/pytest.py
++++ b/src/pytest.py
+@@ -104,3 +104,22 @@ else:
+     from _pytest.compat import _setup_collect_fakemodule
+ 
+     _setup_collect_fakemodule()
++def unroll_all(iterable):
++    """Asserts that all elements in an iterable satisfy a predicate, providing detailed failure reports."""
++    for i, item in enumerate(iterable):
++        if not item(): # Assuming item() is the predicate call result
++            # In a real scenario, we'd need context on how to get the failing value/predicate.
++            # For demonstration, we raise an AssertionError mimicking detailed failure.
++            raise AssertionError(f"Assertion failed at index {i}. Predicate returned False for element: {item()}")
++    return True
++
++def unroll_any(iterable):
++    """Asserts that at least one element in an iterable satisfies a predicate, providing detailed failure reports."""
++    for i, item in enumerate(iterable):
++        if item(): # Assuming item() is the predicate call result
++            return True
++    raise AssertionError("Assertion failed: No elements satisfied the predicate.")
++
++# Note: These functions assume the iterable yields callable predicates (e.g., lambda x: is_even(x)).
++# Actual integration would require modifying all calling sites in source code to use these wrappers instead of built-in all/any.
++
