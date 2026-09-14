@@ -2,6 +2,11 @@ name: tier-arm64-test
 
 on:
   workflow_dispatch:
+    inputs:
+      instance_id:
+        description: 'SWE-bench instance ID to grade'
+        required: true
+        default: 'pallets__flask-5063'
 
 jobs:
   grade:
@@ -21,21 +26,25 @@ jobs:
       - name: Install swebench
         run: pip install swebench==4.1.0
 
-      - name: Run grading harness on one instance
+      - name: Run grading harness
+        env:
+          INSTANCE_ID: ${{ inputs.instance_id }}
         run: |
           python -m swebench.harness.run_evaluation \
             -p predictions.jsonl \
-            -i pallets__flask-5063 \
+            -i "$INSTANCE_ID" \
             -id arm64_tier_test \
             --max_workers 1
 
       - name: Compare against local ground truth
+        env:
+          INSTANCE_ID: ${{ inputs.instance_id }}
         run: |
           python3 -c "
-          import json
+          import json, os
+          iid = os.environ['INSTANCE_ID']
           report = json.load(open('gemma4-32k-mini-swe-agent.arm64_tier_test.json'))
           ground_truth = json.load(open('ground_truth_local.json'))
-          iid = 'pallets__flask-5063'
           tier_verdict = 'RESOLVED' if iid in report['resolved_ids'] else 'UNRESOLVED'
           expected = ground_truth[iid]
           print(f'Instance: {iid}')
@@ -48,5 +57,5 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: arm64-tier-report
+          name: arm64-tier-report-${{ inputs.instance_id }}
           path: gemma4-32k-mini-swe-agent.arm64_tier_test.json
