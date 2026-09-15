@@ -1,0 +1,19 @@
+name: check-image-identity
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull and inspect the exact image
+        run: |
+          IMAGE="docker.io/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23913:latest"
+          docker pull "$IMAGE"
+          echo "--- Image ID ---"
+          docker inspect --format='{{.Id}}' "$IMAGE"
+          echo "--- Created ---"
+          docker inspect --format='{{.Created}}' "$IMAGE"
+          echo "--- Registry digest ---"
+          docker inspect --format='{{index .RepoDigests 0}}' "$IMAGE"
