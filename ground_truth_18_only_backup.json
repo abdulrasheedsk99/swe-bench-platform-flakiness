@@ -16,11 +16,5 @@
   "scikit-learn__scikit-learn-12471": "UNRESOLVED",
   "matplotlib__matplotlib-23314": "UNRESOLVED",
   "pytest-dev__pytest-11148": "UNRESOLVED",
-  "pytest-dev__pytest-5221": "UNRESOLVED",
-  "scikit-learn__scikit-learn-13584": "RESOLVED",
-  "scikit-learn__scikit-learn-13779": "RESOLVED",
-  "matplotlib__matplotlib-23913": "RESOLVED",
-  "pytest-dev__pytest-5227": "RESOLVED",
-  "pytest-dev__pytest-5413": "RESOLVED",
-  "sympy__sympy-12171": "RESOLVED"
+  "pytest-dev__pytest-5221": "UNRESOLVED"
 }
