@@ -1,0 +1,42 @@
+name: check-cpu-evidence
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: CPU model and core count
+        run: |
+          echo "=== /proc/cpuinfo summary ==="
+          grep "model name\|^processor" /proc/cpuinfo | sort | uniq -c
+
+      - name: CPU steal time (hypervisor contention indicator)
+        run: |
+          echo "=== /proc/stat, two samples 2 seconds apart ==="
+          echo "--- sample 1 ---"
+          cat /proc/stat | head -1
+          sleep 2
+          echo "--- sample 2 (2s later) ---"
+          cat /proc/stat | head -1
+          echo ""
+          echo "(8th field is 'steal' -- jiffies of CPU time stolen by the hypervisor for other tenants)"
+
+      - name: Timing microbenchmark of a comparable CPU-bound loop
+        run: |
+          python3 -c "
+          import time
+          times = []
+          for i in range(10):
+              start = time.perf_counter()
+              # comparable-scale nested loop to matplotlib's bbox-overlap check
+              total = 0
+              for x in range(2000):
+                  for y in range(50):
+                      total += x * y
+              elapsed = time.perf_counter() - start
+              times.append(elapsed)
+              print(f'iteration {i}: {elapsed:.4f}s')
+          print(f'min={min(times):.4f}s max={max(times):.4f}s spread={max(times)-min(times):.4f}s')
+          "
