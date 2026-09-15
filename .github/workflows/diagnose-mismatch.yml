@@ -14,45 +14,20 @@ jobs:
       - name: Install swebench
         run: pip install swebench==4.1.0
 
-      - name: Print FAIL_TO_PASS tests for context
+      - name: Run the same fixed patch 15 times, print each verdict directly
         run: |
-          python3 -c "
-          from datasets import load_dataset
-          ds = load_dataset('SWE-bench/SWE-bench_Lite', split='test')
-          row = [r for r in ds if r['instance_id'] == 'matplotlib__matplotlib-23913'][0]
-          print('FAIL_TO_PASS:', row['FAIL_TO_PASS'])
-          print('PASS_TO_PASS (first 5):', row['PASS_TO_PASS'][:5])
-          "
-
-      - name: Run the same fixed patch 5 times
-        run: |
-          for i in 1 2 3 4 5; do
-            echo "=== REP $i ==="
+          for i in $(seq 1 15); do
+            echo "=== STANDARD REP $i ==="
             python3 -m swebench.harness.run_evaluation \
               -p predictions.jsonl \
               -i matplotlib__matplotlib-23913 \
-              -id mismatch_diag_$i \
+              -id std_mismatch_$i \
               --max_workers 1 || true
           done
 
-      - name: Summarize all 5 verdicts
-        if: always()
-        run: |
-          for i in 1 2 3 4 5; do
-            python3 -c "
-            import json
-            try:
-                r = json.load(open('gold-reference.mismatch_diag_$i.json'))
-                v = 'RESOLVED' if 'matplotlib__matplotlib-23913' in r.get('resolved_ids', []) else 'UNRESOLVED'
-            except FileNotFoundError:
-                v = 'REPORT_MISSING'
-            print(f'Rep $i: {v}')
-            "
-          done
-
-      - name: Upload full logs
+      - name: Upload full logs for every rep
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: mismatch-diagnosis-logs
-          path: logs/
+          name: mismatch-diagnosis-full-logs
+          path: logs/run_evaluation/std_mismatch_*
