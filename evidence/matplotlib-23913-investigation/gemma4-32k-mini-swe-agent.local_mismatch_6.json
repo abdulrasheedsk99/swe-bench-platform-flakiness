@@ -1,0 +1,46 @@
+{
+    "total_instances": 1,
+    "submitted_instances": 24,
+    "completed_instances": 1,
+    "resolved_instances": 1,
+    "unresolved_instances": 0,
+    "empty_patch_instances": 0,
+    "error_instances": 0,
+    "completed_ids": [
+        "matplotlib__matplotlib-23913"
+    ],
+    "incomplete_ids": [],
+    "empty_patch_ids": [],
+    "submitted_ids": [
+        "matplotlib__matplotlib-23299",
+        "matplotlib__matplotlib-23314",
+        "matplotlib__matplotlib-23913",
+        "pallets__flask-4992",
+        "pallets__flask-5063",
+        "psf__requests-1963",
+        "psf__requests-2148",
+        "pytest-dev__pytest-11148",
+        "pytest-dev__pytest-5103",
+        "pytest-dev__pytest-5221",
+        "pytest-dev__pytest-5227",
+        "pytest-dev__pytest-5413",
+        "scikit-learn__scikit-learn-10297",
+        "scikit-learn__scikit-learn-10508",
+        "scikit-learn__scikit-learn-10949",
+        "scikit-learn__scikit-learn-11040",
+        "scikit-learn__scikit-learn-12471",
+        "scikit-learn__scikit-learn-13439",
+        "scikit-learn__scikit-learn-13496",
+        "scikit-learn__scikit-learn-13584",
+        "scikit-learn__scikit-learn-13779",
+        "sympy__sympy-11400",
+        "sympy__sympy-11897",
+        "sympy__sympy-12171"
+    ],
+    "resolved_ids": [
+        "matplotlib__matplotlib-23913"
+    ],
+    "unresolved_ids": [],
+    "error_ids": [],
+    "schema_version": 2
+}
