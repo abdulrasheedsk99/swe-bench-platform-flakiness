@@ -1,0 +1,46 @@
+2026-11-23 13:42:25,487 - minisweagent - INFO - Loading dataset princeton-nlp/SWE-Bench_Lite, split test...
+2026-11-23 13:42:26,437 - minisweagent - INFO - Instance filter: 300 -> 14 instances
+2026-11-23 13:42:26,438 - minisweagent - INFO - Running on 14 instances...
+2026-11-23 13:42:26,438 - minisweagent - INFO - Building agent config from specs: ['scripts/swebench-gemini.yaml']
+2026-11-23 13:42:27,552 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-37899696 -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.astropy_1776_astropy-6938:latest sleep 2h
+2026-11-23 13:42:27,878 - minisweagent.environment - INFO - Started container minisweagent-37899696 with ID 661c65ab0ea967f5de42603771327fef2bd716dc65775eba8f94a880360a0303
+2026-11-23 13:42:51,287 - minisweagent - INFO - Saved trajectory to 'trajectories_api/gemini/astropy__astropy-6938/astropy__astropy-6938.traj.json'
+2026-11-23 13:42:51,298 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-b799a23d -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.django_1776_django-11620:latest sleep 2h
+2026-11-23 13:42:51,445 - minisweagent.environment - INFO - Started container minisweagent-b799a23d with ID 835bb3da416273988a776875cedaac76bfb01a732c179be3bfb75ad4410d5e1f
+2026-11-23 13:45:12,693 - minisweagent - INFO - Saved trajectory to 'trajectories_api/gemini/django__django-11620/django__django-11620.traj.json'
+2026-11-23 13:45:12,700 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-c5361a5c -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.django_1776_django-11742:latest sleep 2h
+2026-11-23 13:45:12,839 - minisweagent.environment - INFO - Started container minisweagent-c5361a5c with ID 7de978baa044fc1c354ca76d16d5cef45c61f21e9699c7435901e65b9f99e840
+2026-11-23 13:53:36,834 - minisweagent - INFO - Saved trajectory to 'trajectories_api/gemini/django__django-11742/django__django-11742.traj.json'
+2026-11-23 13:53:36,844 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-ddec8558 -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-25079:latest sleep 2h
+2026-11-23 13:53:37,003 - minisweagent.environment - INFO - Started container minisweagent-ddec8558 with ID 0aa549fb226fdd1916e1ec7caa8b8d294c5495b795030e712be2f58cbfdab442
+2026-11-23 13:59:49,072 - minisweagent - INFO - Saved trajectory to 'trajectories_api/gemini/matplotlib__matplotlib-25079/matplotlib__matplotlib-25079.traj.json'
+2026-11-23 13:59:49,083 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-384cb8b6 -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.mwaskom_1776_seaborn-2848:latest sleep 2h
+2026-11-23 13:59:49,230 - minisweagent.environment - INFO - Started container minisweagent-384cb8b6 with ID a31264b25c2e8d0b6b9905a3bbf30ba98417ca796de3e86bbbdf182766d9eaa8
+2026-11-23 14:02:54,086 - minisweagent - INFO - Saved trajectory to 'trajectories_api/gemini/mwaskom__seaborn-2848/mwaskom__seaborn-2848.traj.json'
+2026-11-23 14:02:54,094 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-b5578a3a -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.pydata_1776_xarray-4248:latest sleep 2h
+2026-11-23 14:02:54,252 - minisweagent.environment - INFO - Started container minisweagent-b5578a3a with ID ba932b3f49dd54ecf85ff987dfece55ee319cb5dea473abd6946fe8acc8672fd
+2026-11-23 14:05:46,013 - minisweagent - INFO - Saved trajectory to 'trajectories_api/gemini/pydata__xarray-4248/pydata__xarray-4248.traj.json'
+2026-11-23 14:05:46,020 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-ebf8f1ac -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-7114:latest sleep 2h
+2026-11-23 14:05:46,171 - minisweagent.environment - INFO - Started container minisweagent-ebf8f1ac with ID 6d8de8348582f2fbb691d1bdc77388121e2814f426fe517d4ffe571c5933a710
+2026-11-23 14:12:07,693 - minisweagent - INFO - Saved trajectory to 'trajectories_api/gemini/pylint-dev__pylint-7114/pylint-dev__pylint-7114.traj.json'
+2026-11-23 14:12:07,704 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-18f0ddec -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-7373:latest sleep 2h
+2026-11-23 14:12:07,866 - minisweagent.environment - INFO - Started container minisweagent-18f0ddec with ID b73c290436d3c779ae00552aa480e56228f2c4baad5cbfad831eff4b5a5a86e2
+2026-11-23 14:13:00,215 - minisweagent - INFO - Saved trajectory to 'trajectories_api/gemini/pytest-dev__pytest-7373/pytest-dev__pytest-7373.traj.json'
+2026-11-23 14:13:00,224 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-9b7572bd -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-7490:latest sleep 2h
+2026-11-23 14:13:00,384 - minisweagent.environment - INFO - Started container minisweagent-9b7572bd with ID 937d88611b0576b8e8de854041ca7b36a06666512972d1bd713753c7e14307d2
+2026-11-23 14:19:22,399 - minisweagent - INFO - Saved trajectory to 'trajectories_api/gemini/pytest-dev__pytest-7490/pytest-dev__pytest-7490.traj.json'
+2026-11-23 14:19:22,413 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-9530f9e2 -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-14087:latest sleep 2h
+2026-11-23 14:19:22,604 - minisweagent.environment - INFO - Started container minisweagent-9530f9e2 with ID eae4ee45e23d556ab57fd3b203d9d13cfe6ea35340db6047ab6f2a7702b16f04
+2026-11-23 14:25:33,250 - minisweagent - INFO - Saved trajectory to 'trajectories_api/gemini/scikit-learn__scikit-learn-14087/scikit-learn__scikit-learn-14087.traj.json'
+2026-11-23 14:25:33,262 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-5c22497f -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-14092:latest sleep 2h
+2026-11-23 14:25:33,413 - minisweagent.environment - INFO - Started container minisweagent-5c22497f with ID 71ae77a1833f41ab60f5a18cffacedefe210c8fa016acf48363fd21e3497018d
+2026-11-23 14:27:40,514 - minisweagent - INFO - Saved trajectory to 'trajectories_api/gemini/scikit-learn__scikit-learn-14092/scikit-learn__scikit-learn-14092.traj.json'
+2026-11-23 14:27:40,523 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-69cb0c23 -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8282:latest sleep 2h
+2026-11-23 14:27:40,678 - minisweagent.environment - INFO - Started container minisweagent-69cb0c23 with ID d78fc1373c65ca3d0e0e8b5679b01be8f9ed43114f7444313040d65713aa47f3
+2026-11-23 14:42:30,540 - minisweagent - INFO - Saved trajectory to 'trajectories_api/gemini/sphinx-doc__sphinx-8282/sphinx-doc__sphinx-8282.traj.json'
+2026-11-23 14:42:30,554 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-3bd7b540 -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.sympy_1776_sympy-13773:latest sleep 2h
+2026-11-23 14:42:30,754 - minisweagent.environment - INFO - Started container minisweagent-3bd7b540 with ID 437a0405d6510227d13cda21d2d113cce02be10ace8506b2a169a1953fcb2894
+2026-11-23 14:43:35,180 - minisweagent - INFO - Saved trajectory to 'trajectories_api/gemini/sympy__sympy-13773/sympy__sympy-13773.traj.json'
+2026-11-23 14:43:35,193 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-7859c728 -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.sympy_1776_sympy-14024:latest sleep 2h
+2026-11-23 14:43:35,355 - minisweagent.environment - INFO - Started container minisweagent-7859c728 with ID e12a74ab324324865d590acfb0a9dcc47ccc7d1c3d6674dd709ee0668bd21e84
+2026-11-23 14:46:52,578 - minisweagent - INFO - Saved trajectory to 'trajectories_api/gemini/sympy__sympy-14024/sympy__sympy-14024.traj.json'

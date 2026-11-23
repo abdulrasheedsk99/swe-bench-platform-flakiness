@@ -1,0 +1,15 @@
+provider,instance_id,exit_status,patch_chars,applies,note
+gemini,django__django-11620,Submitted,4249,yes,
+gemini,django__django-11742,LimitsExceeded,0,no,empty patch
+gemini,sphinx-doc__sphinx-8282,Submitted,1599,yes,
+gemini,astropy__astropy-6938,Submitted,517,yes,
+gemini,pydata__xarray-4248,Submitted,1813,yes,
+gemini,pylint-dev__pylint-7114,LimitsExceeded,0,no,empty patch
+gemini,mwaskom__seaborn-2848,Submitted,3902,yes,
+gemini,sympy__sympy-13773,Submitted,903,yes,
+gemini,sympy__sympy-14024,Submitted,647,yes,
+gemini,scikit-learn__scikit-learn-14087,LimitsExceeded,0,no,empty patch
+gemini,scikit-learn__scikit-learn-14092,Submitted,794,yes,
+gemini,pytest-dev__pytest-7373,Submitted,1428,yes,
+gemini,pytest-dev__pytest-7490,Submitted,639,yes,
+gemini,matplotlib__matplotlib-25079,LimitsExceeded,0,no,empty patch
