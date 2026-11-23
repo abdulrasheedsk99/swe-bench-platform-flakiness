@@ -1,0 +1,56 @@
+trajectory: astropy__astropy-6938.traj.json
+  exit_status: Submitted | messages: 62 | calls with usage: 29
+  prompt_tokens: 209499 | completion_tokens: 4216
+trajectory: django__django-11620.traj.json
+  exit_status: Submitted | messages: 66 | calls with usage: 28
+  prompt_tokens: 218933 | completion_tokens: 3635
+trajectory: django__django-11742.traj.json
+  exit_status: Submitted | messages: 52 | calls with usage: 22
+  prompt_tokens: 209295 | completion_tokens: 3581
+trajectory: matplotlib__matplotlib-25079.traj.json
+  exit_status: Submitted | messages: 64 | calls with usage: 27
+  prompt_tokens: 359351 | completion_tokens: 5072
+trajectory: mwaskom__seaborn-2848.traj.json
+  exit_status: Submitted | messages: 60 | calls with usage: 29
+  prompt_tokens: 357818 | completion_tokens: 4261
+trajectory: pydata__xarray-4248.traj.json
+  exit_status: Submitted | messages: 65 | calls with usage: 28
+  prompt_tokens: 342734 | completion_tokens: 4526
+trajectory: pylint-dev__pylint-7114.traj.json
+  exit_status: Submitted | messages: 153 | calls with usage: 73
+  prompt_tokens: 1571512 | completion_tokens: 15020
+trajectory: pytest-dev__pytest-7373.traj.json
+  exit_status: Submitted | messages: 23 | calls with usage: 10
+  prompt_tokens: 38396 | completion_tokens: 1396
+trajectory: pytest-dev__pytest-7490.traj.json
+  exit_status: Submitted | messages: 67 | calls with usage: 30
+  prompt_tokens: 446570 | completion_tokens: 5343
+trajectory: scikit-learn__scikit-learn-14087.traj.json
+  exit_status: Submitted | messages: 51 | calls with usage: 22
+  prompt_tokens: 225815 | completion_tokens: 5481
+trajectory: scikit-learn__scikit-learn-14092.traj.json
+  exit_status: Submitted | messages: 65 | calls with usage: 29
+  prompt_tokens: 437637 | completion_tokens: 3957
+trajectory: sphinx-doc__sphinx-8282.traj.json
+  exit_status: Submitted | messages: 28 | calls with usage: 11
+  prompt_tokens: 68636 | completion_tokens: 2310
+trajectory: sympy__sympy-13773.traj.json
+  exit_status: Submitted | messages: 93 | calls with usage: 43
+  prompt_tokens: 574271 | completion_tokens: 7030
+trajectory: sympy__sympy-14024.traj.json
+  exit_status: Submitted | messages: 252 | calls with usage: 125
+  prompt_tokens: 4480053 | completion_tokens: 27194
+patch length for astropy__astropy-6938 : 569
+patch length for django__django-11620 : 2109
+patch length for django__django-11742 : 2440
+patch length for matplotlib__matplotlib-25079 : 1089
+patch length for mwaskom__seaborn-2848 : 801
+patch length for pydata__xarray-4248 : 5431
+patch length for pylint-dev__pylint-7114 : 772
+patch length for pytest-dev__pytest-7373 : 1534
+patch length for pytest-dev__pytest-7490 : 847
+patch length for scikit-learn__scikit-learn-14087 : 1506
+patch length for scikit-learn__scikit-learn-14092 : 1537
+patch length for sphinx-doc__sphinx-8282 : 2015
+patch length for sympy__sympy-13773 : 2136
+patch length for sympy__sympy-14024 : 805

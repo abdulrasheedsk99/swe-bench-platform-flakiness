@@ -1,0 +1,70 @@
+trajectory: astropy__astropy-6938.traj.json
+  exit_status: Submitted | messages: 16 | calls with usage: 7
+  prompt_tokens: 28378 | completion_tokens: 1647
+  est. cost at list price: $0.0037
+trajectory: django__django-11620.traj.json
+  exit_status: Submitted | messages: 18 | calls with usage: 8
+  prompt_tokens: 56632 | completion_tokens: 3597
+  est. cost at list price: $0.0075
+trajectory: django__django-11742.traj.json
+  exit_status: Submitted | messages: 16 | calls with usage: 7
+  prompt_tokens: 42952 | completion_tokens: 4610
+  est. cost at list price: $0.0066
+trajectory: matplotlib__matplotlib-25079.traj.json
+  exit_status: Submitted | messages: 17 | calls with usage: 7
+  prompt_tokens: 56208 | completion_tokens: 3787
+  est. cost at list price: $0.0075
+trajectory: mwaskom__seaborn-2848.traj.json
+  exit_status: Submitted | messages: 28 | calls with usage: 12
+  prompt_tokens: 124874 | completion_tokens: 5335
+  est. cost at list price: $0.0152
+trajectory: pydata__xarray-4248.traj.json
+  exit_status: Submitted | messages: 16 | calls with usage: 7
+  prompt_tokens: 49415 | completion_tokens: 3189
+  est. cost at list price: $0.0065
+trajectory: pylint-dev__pylint-7114.traj.json
+  exit_status: Submitted | messages: 57 | calls with usage: 27
+  prompt_tokens: 423083 | completion_tokens: 17126
+  est. cost at list price: $0.0509
+trajectory: pytest-dev__pytest-7373.traj.json
+  exit_status: Submitted | messages: 12 | calls with usage: 4
+  prompt_tokens: 19487 | completion_tokens: 1506
+  est. cost at list price: $0.0027
+trajectory: pytest-dev__pytest-7490.traj.json
+  exit_status: Submitted | messages: 16 | calls with usage: 7
+  prompt_tokens: 90133 | completion_tokens: 3415
+  est. cost at list price: $0.0107
+trajectory: scikit-learn__scikit-learn-14087.traj.json
+  exit_status: Submitted | messages: 21 | calls with usage: 9
+  prompt_tokens: 65723 | completion_tokens: 3359
+  est. cost at list price: $0.0083
+trajectory: scikit-learn__scikit-learn-14092.traj.json
+  exit_status: Submitted | messages: 14 | calls with usage: 6
+  prompt_tokens: 33841 | completion_tokens: 2248
+  est. cost at list price: $0.0045
+trajectory: sphinx-doc__sphinx-8282.traj.json
+  exit_status: Submitted | messages: 17 | calls with usage: 7
+  prompt_tokens: 50347 | completion_tokens: 2726
+  est. cost at list price: $0.0064
+trajectory: sympy__sympy-13773.traj.json
+  exit_status: Submitted | messages: 19 | calls with usage: 8
+  prompt_tokens: 47009 | completion_tokens: 2553
+  est. cost at list price: $0.0060
+trajectory: sympy__sympy-14024.traj.json
+  exit_status: Submitted | messages: 28 | calls with usage: 13
+  prompt_tokens: 145253 | completion_tokens: 7671
+  est. cost at list price: $0.0184
+patch length for astropy__astropy-6938 : 731
+patch length for django__django-11620 : 799
+patch length for django__django-11742 : 1701
+patch length for matplotlib__matplotlib-25079 : 842
+patch length for mwaskom__seaborn-2848 : 628
+patch length for pydata__xarray-4248 : 1528
+patch length for pylint-dev__pylint-7114 : 1712
+patch length for pytest-dev__pytest-7373 : 1699
+patch length for pytest-dev__pytest-7490 : 801
+patch length for scikit-learn__scikit-learn-14087 : 1504
+patch length for scikit-learn__scikit-learn-14092 : 1479
+patch length for sphinx-doc__sphinx-8282 : 1627
+patch length for sympy__sympy-13773 : 916
+patch length for sympy__sympy-14024 : 788
