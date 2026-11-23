@@ -1,0 +1,4 @@
+uname -m: aarch64
+Python 3.11.18
+docker server: linux/arm64 28.0.4
+/dev/root       145G   39G  106G  27% /

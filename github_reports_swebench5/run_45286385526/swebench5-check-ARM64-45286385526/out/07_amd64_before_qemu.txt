@@ -1,0 +1,9 @@
+Unable to find image 'alpine:latest' locally
+latest: Pulling from library/alpine
+881fc932939e: Pulling fs layer
+881fc932939e: Verifying Checksum
+881fc932939e: Download complete
+881fc932939e: Pull complete
+Digest: sha256:f59abe656b692d901e184be3445e084786602108599d2a51d229c0f5a48c71bf
+Status: Downloaded newer image for alpine:latest
+exec /bin/uname: exec format error

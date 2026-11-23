@@ -1,0 +1,83 @@
+name: tier-standard-v5
+
+# Replays every frozen batch on the GitHub Standard runner with swebench 5.0.2 and compares
+# the verdicts with the local ground truth that was produced with swebench 4.1.0.
+on:
+  workflow_dispatch:
+    inputs:
+      rep_id:
+        description: 'Repetition label'
+        required: true
+        default: 'rep1'
+
+jobs:
+  grade:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { name: clean23,       pred: predictions_clean23.jsonl,       gt: ground_truth_clean23.json }
+          - { name: gold_ext,      pred: predictions_gold_ext.jsonl,      gt: ground_truth_gold_ext.json }
+          - { name: gold_ext2,     pred: predictions_gold_ext2.jsonl,     gt: ground_truth_gold_ext2.json }
+          - { name: api_deepseek,  pred: predictions_api_deepseek.jsonl,  gt: ground_truth_api_deepseek.json }
+          - { name: api_openai,    pred: predictions_api_openai.jsonl,    gt: ground_truth_api_openai.json }
+          - { name: api_gemini,    pred: predictions_api_gemini.jsonl,    gt: ground_truth_api_gemini.json }
+          - { name: api_anthropic, pred: predictions_api_anthropic.jsonl, gt: ground_truth_api_anthropic.json }
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - name: Free disk space (remove unused preinstalled toolchains)
+        run: |
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/lib/android /opt/hostedtoolcache/CodeQL
+          df -h /
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install swebench 5.0.2
+        run: |
+          pip install swebench==5.0.2
+          pip show swebench | head -2
+
+      - name: Grade with swebench 5.0.2
+        env:
+          REP_ID: ${{ inputs.rep_id }}
+        run: |
+          mkdir -p out
+          swebench eval SWE-bench/SWE-bench_Lite \
+            -p "${{ matrix.pred }}" \
+            --run-id "v5_${{ matrix.name }}_${REP_ID}" \
+            -j 2 --report-dir out
+
+      - name: Compare against the 4.1.0 local ground truth
+        env:
+          REP_ID: ${{ inputs.rep_id }}
+        run: |
+          python3 - <<'PY' | tee out/compare.txt
+          import glob, json, os
+          rep = os.environ["REP_ID"]
+          name = "${{ matrix.name }}"
+          files = glob.glob(f"out/*.v5_{name}_{rep}.json")
+          report = json.load(open(files[0]))
+          gt = json.load(open("${{ matrix.gt }}"))
+          resolved = set(report["resolved_ids"])
+          errors = set(report.get("error_ids", []))
+          bad = []
+          for iid, expected in gt.items():
+              actual = "RESOLVED" if iid in resolved else "UNRESOLVED"
+              if actual != expected:
+                  bad.append((iid, expected, actual, iid in errors))
+          print(f"RESULT batch={name} swebench=5.0.2 total={len(gt)} matches={len(gt)-len(bad)} mismatches={len(bad)} harness_errors={len(errors)}")
+          for iid, expected, actual, is_err in bad:
+              print(f"  MISMATCH: {iid} -- ground_truth(4.1.0)={expected}, 5.0.2={actual}, harness_error={is_err}")
+          PY
+          cat out/compare.txt >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v5-${{ matrix.name }}-${{ inputs.rep_id }}-${{ github.run_id }}
+          path: |
+            out/
+            logs/

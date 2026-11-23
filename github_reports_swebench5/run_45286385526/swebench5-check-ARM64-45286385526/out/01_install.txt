@@ -1,0 +1,3 @@
+Name: swebench
+Version: 5.0.2
+Summary: The official SWE-bench package - a benchmark for evaluating LMs on software engineering
