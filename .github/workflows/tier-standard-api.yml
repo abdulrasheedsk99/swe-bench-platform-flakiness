@@ -1,0 +1,84 @@
+name: tier-standard-api
+
+on:
+  workflow_dispatch:
+    inputs:
+      rep_id:
+        description: 'Repetition label'
+        required: true
+        default: 'rep1'
+      providers:
+        description: 'Space-separated providers to grade'
+        required: true
+        default: 'deepseek openai anthropic'
+
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - name: Free disk space (remove unused preinstalled toolchains)
+        run: |
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/lib/android /opt/hostedtoolcache/CodeQL
+          df -h /
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install swebench
+        run: pip install swebench==4.1.0
+
+      - name: Grade each provider's frozen patches
+        env:
+          REP_ID: ${{ inputs.rep_id }}
+          PROVIDERS: ${{ inputs.providers }}
+        run: |
+          for prov in $PROVIDERS; do
+            f="predictions_api_${prov}.jsonl"
+            [ -s "$f" ] || { echo "missing $f"; exit 1; }
+            echo "=== grading $prov"
+            python -m swebench.harness.run_evaluation \
+              -p "$f" \
+              -id "api_${prov}_${REP_ID}" \
+              --max_workers 2
+          done
+
+      - name: Compare against local ground truth
+        env:
+          REP_ID: ${{ inputs.rep_id }}
+          PROVIDERS: ${{ inputs.providers }}
+        run: |
+          python3 - <<'PY'
+          import glob, json, os
+          rep = os.environ["REP_ID"]
+          total = mismatches = 0
+          for prov in os.environ["PROVIDERS"].split():
+              gt = json.load(open("ground_truth_api_%s.json" % prov))
+              files = glob.glob("*.api_%s_%s.json" % (prov, rep))
+              if not files:
+                  print("[%s] NO REPORT FOUND" % prov)
+                  total += len(gt)
+                  mismatches += len(gt)
+                  continue
+              resolved = set(json.load(open(files[0])).get("resolved_ids", []))
+              bad = []
+              for iid, expected in gt.items():
+                  actual = "RESOLVED" if iid in resolved else "UNRESOLVED"
+                  if actual != expected:
+                      bad.append((iid, expected, actual))
+              print("[%s] Total instances: %d | Matches: %d | Mismatches: %d" % (prov, len(gt), len(gt) - len(bad), len(bad)))
+              for iid, expected, actual in bad:
+                  print("  MISMATCH: %s -- local=%s, tier=%s" % (iid, expected, actual))
+              total += len(gt)
+              mismatches += len(bad)
+          print("ALL PROVIDERS: Total %d | Mismatches %d" % (total, mismatches))
+          PY
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-report-${{ inputs.rep_id }}-${{ github.run_id }}
+          path: |
+            *.api_*_${{ inputs.rep_id }}.json
+            !*_local_*.json

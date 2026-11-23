@@ -180,5 +180,6 @@ model:
   model_name: "openai/gpt-6-luna"
   model_kwargs:
     drop_params: true
-    temperature: 0.2
-    max_tokens: 16384
+    max_completion_tokens: 16384
+    extra_body:
+      reasoning_effort: "none"

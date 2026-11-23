@@ -1,0 +1,16 @@
+{
+  "astropy__astropy-6938": "RESOLVED",
+  "django__django-11620": "RESOLVED",
+  "django__django-11742": "RESOLVED",
+  "matplotlib__matplotlib-25079": "UNRESOLVED",
+  "mwaskom__seaborn-2848": "RESOLVED",
+  "pydata__xarray-4248": "UNRESOLVED",
+  "pylint-dev__pylint-7114": "RESOLVED",
+  "pytest-dev__pytest-7373": "RESOLVED",
+  "pytest-dev__pytest-7490": "RESOLVED",
+  "scikit-learn__scikit-learn-14087": "RESOLVED",
+  "scikit-learn__scikit-learn-14092": "RESOLVED",
+  "sphinx-doc__sphinx-8282": "UNRESOLVED",
+  "sympy__sympy-13773": "UNRESOLVED",
+  "sympy__sympy-14024": "UNRESOLVED"
+}
