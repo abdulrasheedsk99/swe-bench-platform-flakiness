@@ -1,0 +1,1 @@
+RESULT batch=clean23 swebench=5.0.2 total=23 matches=23 mismatches=0 harness_errors=0

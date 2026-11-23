@@ -1,0 +1,1 @@
+RESULT batch=api_gemini swebench=5.0.2 total=10 matches=10 mismatches=0 harness_errors=0
