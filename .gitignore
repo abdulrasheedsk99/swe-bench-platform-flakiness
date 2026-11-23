@@ -11,3 +11,7 @@ trajectories_ctxtest/
 trajectories_v2/
 gemma4-32k-mini-swe-agent.local_grading_test.json
 .venv-swebench/
+
+# Terminal logs and scratch dev runs (not evidence; the report JSONs are)
+*.log
+trajectories_12b_*/

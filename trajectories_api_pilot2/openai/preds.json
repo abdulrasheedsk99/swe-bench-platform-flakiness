@@ -1,0 +1,7 @@
+{
+  "django__django-11742": {
+    "model_name_or_path": "openai/gpt-6-luna",
+    "instance_id": "django__django-11742",
+    "model_patch": "diff --git a/django/db/models/fields/__init__.py b/django/db/models/fields/__init__.py\nindex 9ce46e3f73..00f0d80635 100755\n--- a/django/db/models/fields/__init__.py\n+++ b/django/db/models/fields/__init__.py\n@@ -955,8 +955,30 @@ class CharField(Field):\n         return [\n             *super().check(**kwargs),\n             *self._check_max_length_attribute(**kwargs),\n+            *self._check_choices_max_length(),\n         ]\n \n+    def _check_choices_max_length(self):\n+        if (not self.choices or not isinstance(self.max_length, int) or\n+                isinstance(self.max_length, bool) or self.max_length <= 0):\n+            return []\n+        try:\n+            longest_choice = max(\n+                (len(str(value)) for value, _ in self.flatchoices), default=0,\n+            )\n+        except (TypeError, ValueError):\n+            # Invalid choices are reported by _check_choices().\n+            return []\n+        if longest_choice > self.max_length:\n+            return [\n+                checks.Error(\n+                    \"'max_length' is too small to fit the longest value in 'choices' (%d characters).\" % longest_choice,\n+                    obj=self,\n+                    id='fields.E009',\n+                )\n+            ]\n+        return []\n+\n     def _check_max_length_attribute(self, **kwargs):\n         if self.max_length is None:\n             return [\n"
+  }
+}
