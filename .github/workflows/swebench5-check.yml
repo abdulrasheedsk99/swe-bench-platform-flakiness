@@ -1,0 +1,152 @@
+name: swebench5-check
+
+# Diagnostic only: what does swebench 5.0.2 do on the x86_64 and ARM64 hosted runners?
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [ubuntu-latest, ubuntu-24.04-arm]
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Environment
+        run: |
+          mkdir -p out
+          {
+            echo "uname -m: $(uname -m)"
+            python --version
+            docker version --format 'docker server: {{.Server.Os}}/{{.Server.Arch}} {{.Server.Version}}'
+            df -h / | tail -1
+          } | tee out/00_environment.txt
+
+      - name: Install swebench 5.0.2
+        run: |
+          pip install swebench==5.0.2
+          pip show swebench | head -3 | tee out/01_install.txt
+
+      - name: Source audit (can the architecture be set?)
+        continue-on-error: true
+        env:
+          COLUMNS: '200'
+          NO_COLOR: '1'
+        run: |
+          python - <<'PY' 2>&1 | tee out/02_source_audit.txt
+          import inspect, pathlib, re, subprocess
+          import swebench
+          from swebench.image_builder.image_spec import ImageSpec, make_image_spec
+          root = pathlib.Path(swebench.__file__).parent
+          print("make_image_spec signature:", inspect.signature(make_image_spec))
+          print("ImageSpec fields:", list(ImageSpec.__dataclass_fields__))
+          skip = ("log_parsers", "inference", "collect", "modal_eval")
+          print("--- lines mentioning arch / arm64 / aarch64 / machine() (excluding parsers, inference, collect, modal)")
+          for f in sorted(root.rglob("*.py")):
+              if any(s in str(f) for s in skip):
+                  continue
+              for i, line in enumerate(f.read_text(errors="ignore").splitlines(), 1):
+                  if re.search(r"\barch\b|arm64|aarch64|machine\(\)", line):
+                      print(f"{f.relative_to(root)}:{i}: {line.strip()}")
+          for cmd in (["swebench", "eval", "--help"], ["swebench", "images", "--help"]):
+              out = subprocess.run(cmd, capture_output=True, text=True).stdout
+              hits = [l.strip() for l in out.splitlines() if re.search(r"arch|platform", l, re.I)]
+              print("---", " ".join(cmd), "-> help lines mentioning arch/platform:", hits or "none")
+          PY
+
+      - name: Dataset contract (do the datasets carry what 5.x needs?)
+        continue-on-error: true
+        run: |
+          python - <<'PY' 2>&1 | tee out/03_dataset_contract.txt
+          from datasets import load_dataset
+          need = {"image", "eval_script", "log_parser", "eval_type"}
+          for name in ("SWE-bench/SWE-bench_Lite", "SWE-bench/SWE-bench_Verified"):
+              ds = load_dataset(name, split="test")
+              cols = set(ds.column_names)
+              print(name, "rows:", len(ds))
+              print("  columns:", ds.column_names)
+              print("  missing required columns:", sorted(need - cols) or "none")
+              if "image" in cols:
+                  print("  first image field:", ds[0]["instance_id"], ds[0]["image"])
+          PY
+
+      - name: Registry manifests as seen from this runner
+        continue-on-error: true
+        run: |
+          python - <<'PY' 2>&1 | tee out/04_registry.txt
+          import json, subprocess
+          from datasets import load_dataset
+          imgs = ["swebench/sweb.eval.x86_64.astropy_1776_astropy-12907:latest"]
+          ds = load_dataset("SWE-bench/SWE-bench_Verified", split="test")
+          if "image" in ds.column_names:
+              imgs.append(ds[0]["image"])
+          for img in dict.fromkeys(imgs):
+              r = subprocess.run(["docker", "manifest", "inspect", img], capture_output=True, text=True)
+              print("===", img, "exit", r.returncode)
+              if r.returncode == 0:
+                  m = json.loads(r.stdout)
+                  plats = [f"{x['platform']['os']}/{x['platform']['architecture']}" for x in m.get("manifests", [])]
+                  print("platforms:", plats or m)
+              else:
+                  print(r.stderr.strip()[:500])
+          PY
+
+      - name: Gold evaluation, Lite instance (swebench 5.0.2)
+        continue-on-error: true
+        run: |
+          timeout 1500 swebench eval SWE-bench/SWE-bench_Lite --gold -i astropy__astropy-12907 \
+            --run-id "v5_lite_${{ runner.arch }}" -j 1 --report-dir out/reports 2>&1 | tee out/05_gold_lite.txt
+
+      - name: Gold evaluation, first Verified instance (swebench 5.0.2)
+        continue-on-error: true
+        run: |
+          iid=$(python -c "from datasets import load_dataset; print(load_dataset('SWE-bench/SWE-bench_Verified', split='test')[0]['instance_id'])")
+          echo "instance: $iid" | tee out/06_gold_verified.txt
+          timeout 1500 swebench eval verified --gold -i "$iid" \
+            --run-id "v5_verified_${{ runner.arch }}" -j 1 --report-dir out/reports 2>&1 | tee -a out/06_gold_verified.txt
+
+      - name: amd64 emulation probe, before QEMU (ARM64 only)
+        if: runner.arch == 'ARM64'
+        continue-on-error: true
+        run: docker run --rm --platform linux/amd64 alpine uname -m 2>&1 | tee out/07_amd64_before_qemu.txt
+
+      - name: Enable QEMU (ARM64 only)
+        if: runner.arch == 'ARM64'
+        continue-on-error: true
+        uses: docker/setup-qemu-action@v3
+        with:
+          platforms: amd64
+
+      - name: amd64 emulation probe, after QEMU (ARM64 only)
+        if: runner.arch == 'ARM64'
+        continue-on-error: true
+        run: docker run --rm --platform linux/amd64 alpine uname -m 2>&1 | tee out/08_amd64_after_qemu.txt
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## swebench 5.0.2 check on ${{ runner.arch }}"
+            for f in out/*.txt; do
+              echo "### $f"
+              echo '```'
+              head -c 5000 "$f"
+              echo
+              echo '```'
+            done
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: swebench5-check-${{ runner.arch }}-${{ github.run_id }}
+          path: |
+            out/
+            logs/
