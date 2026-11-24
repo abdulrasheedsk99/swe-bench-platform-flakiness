@@ -64,3 +64,42 @@ Final tier set for quantitative comparison: local (M4 Pro) and GitHub
 standard (ubuntu-latest) only, both showing 3/3 reps with zero
 discrepancies across all 18 instances. ubuntu-slim and ARM64 stand as two
 independent, precisely-diagnosed structural exclusion findings.
+
+## matplotlib__matplotlib-23913 flips on GitHub Standard (September 2026)
+
+The gold patch for this instance graded RESOLVED in every local pass (3 initial
+passes and 15 later repetitions) but not on the GitHub Standard runner: a first
+batch of 5 repetitions returned 5 of 5 RESOLVED, and a second batch of 15
+repetitions about 15 minutes later returned 15 of 15 UNRESOLVED.
+
+Evidence chain:
+1. The two FAIL_TO_PASS tests, `test_legend_draggable[True]` and
+   `test_legend_draggable[False]`, passed in every attempt in both blocks. The flip
+   comes from an unrelated PASS_TO_PASS test, `test_warn_big_data_best_loc`.
+2. Source: `legend.py`, function `_find_best_position`, times its own placement
+   search with `time.perf_counter()` and emits a `UserWarning` only if the search
+   takes longer than a hardcoded one second. The test plots 1,000 lines to push the
+   search past that mark and asserts the warning. Whether it passes depends on how
+   fast the machine runs the search, not on the patch.
+3. Confounds checked: the runner OS image was identical across both batches
+   (`ubuntu-24.04`, build `20260907.300.1`), and the evaluation image's build date
+   (August 15) predates both windows.
+4. CPU steal time was 0 and a ten-iteration microbenchmark had a spread of
+   0.0001 s on a fresh runner. This is one short sample on an ephemeral runner and
+   does not rule out contention.
+
+Interpretation: the local tier runs the harness under Docker's x86_64 emulation,
+whose overhead is consistent with pushing the search past one second every time
+(the local tier's stability is then not superior stability). Native GitHub
+execution sits near the threshold. The elapsed time of the search was not measured
+on either tier, and the GitHub-side mechanism (one borderline machine profile
+versus different hardware in the two windows) is undetermined; telling them apart
+would need trials interleaved across time windows.
+
+Files: `evidence/matplotlib-23913-investigation/` (the 15 local repetition
+reports) and the workflows `diagnose-mismatch.yml`, `check-cpu-evidence.yml` and
+`check-image-identity.yml`.
+
+Treatment in the paper: the instance is excluded from the clean 101-instance set
+and counted separately (upper limit 5.3% on the disagreement rate when it is
+included).
