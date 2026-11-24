@@ -1,0 +1,76 @@
+check	Set up job	﻿2026-09-14T03:19:02.5838665Z Current runner version: '2.337.0'
+check	Set up job	2026-09-14T03:19:02.5874978Z ##[group]Runner Image Provisioner
+check	Set up job	2026-09-14T03:19:02.5876312Z Hosted Compute Agent
+check	Set up job	2026-09-14T03:19:02.5876976Z Version: 20260828.587
+check	Set up job	2026-09-14T03:19:02.5877766Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+check	Set up job	2026-09-14T03:19:02.5878578Z Build Date: 2026-08-28T16:44:25Z
+check	Set up job	2026-09-14T03:19:02.5879291Z Worker ID: {4b6a1cd1-c90b-4341-a77d-9a0e03287ed9}
+check	Set up job	2026-09-14T03:19:02.5880127Z Azure Region: eastus2
+check	Set up job	2026-09-14T03:19:02.5880772Z ##[endgroup]
+check	Set up job	2026-09-14T03:19:02.5883467Z ##[group]Operating System
+check	Set up job	2026-09-14T03:19:02.5884254Z Ubuntu
+check	Set up job	2026-09-14T03:19:02.5884782Z 24.04.5
+check	Set up job	2026-09-14T03:19:02.5885403Z LTS
+check	Set up job	2026-09-14T03:19:02.5885921Z ##[endgroup]
+check	Set up job	2026-09-14T03:19:02.5886579Z ##[group]Runner Image
+check	Set up job	2026-09-14T03:19:02.5887265Z Image: ubuntu-24.04-arm
+check	Set up job	2026-09-14T03:19:02.5887876Z Version: 20260907.118.1
+check	Set up job	2026-09-14T03:19:02.5889084Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24-arm64/20260907.118/images/ubuntu/Ubuntu2404-Arm64-Readme.md
+check	Set up job	2026-09-14T03:19:02.5890997Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24-arm64%2F20260907.118
+check	Set up job	2026-09-14T03:19:02.5892334Z ##[endgroup]
+check	Set up job	2026-09-14T03:19:02.5893735Z ##[group]GITHUB_TOKEN Permissions
+check	Set up job	2026-09-14T03:19:02.5897588Z Contents: read
+check	Set up job	2026-09-14T03:19:02.5898258Z Metadata: read
+check	Set up job	2026-09-14T03:19:02.5899056Z Packages: read
+check	Set up job	2026-09-14T03:19:02.5899617Z ##[endgroup]
+check	Set up job	2026-09-14T03:19:02.5903883Z Secret source: Actions
+check	Set up job	2026-09-14T03:19:02.5905094Z Cache mode: write
+check	Set up job	2026-09-14T03:19:02.5906674Z Prepare workflow directory
+check	Set up job	2026-09-14T03:19:02.6329191Z Prepare all required actions
+check	Set up job	2026-09-14T03:19:02.6449784Z Complete job name: check
+check	Raw docker pull attempt	﻿2026-09-14T03:19:02.7300743Z ##[group]Run echo "--- docker pull, letting Docker report the real reason ---"
+check	Raw docker pull attempt	2026-09-14T03:19:02.7302405Z ^[[36;1mecho "--- docker pull, letting Docker report the real reason ---"^[[0m
+check	Raw docker pull attempt	2026-09-14T03:19:02.7303777Z ^[[36;1mdocker pull swebench/sweb.eval.x86_64.pallets_1776_flask-5063:latest || true^[[0m
+check	Raw docker pull attempt	2026-09-14T03:19:02.7305030Z ^[[36;1mecho ""^[[0m
+check	Raw docker pull attempt	2026-09-14T03:19:02.7305900Z ^[[36;1mecho "--- docker manifest inspect (shows what platforms actually exist) ---"^[[0m
+check	Raw docker pull attempt	2026-09-14T03:19:02.7307269Z ^[[36;1mdocker manifest inspect swebench/sweb.eval.x86_64.pallets_1776_flask-5063:latest || true^[[0m
+check	Raw docker pull attempt	2026-09-14T03:19:02.7308280Z ^[[36;1mecho ""^[[0m
+check	Raw docker pull attempt	2026-09-14T03:19:02.7308998Z ^[[36;1mecho "--- host architecture for reference ---"^[[0m
+check	Raw docker pull attempt	2026-09-14T03:19:02.7309841Z ^[[36;1muname -m^[[0m
+check	Raw docker pull attempt	2026-09-14T03:19:02.7310494Z ^[[36;1mdocker version --format '{{.Server.Arch}}'^[[0m
+check	Raw docker pull attempt	2026-09-14T03:19:02.7854004Z shell: /usr/bin/bash -e {0}
+check	Raw docker pull attempt	2026-09-14T03:19:02.7855831Z ##[endgroup]
+check	Raw docker pull attempt	2026-09-14T03:19:02.8104170Z --- docker pull, letting Docker report the real reason ---
+check	Raw docker pull attempt	2026-09-14T03:19:03.1920617Z latest: Pulling from swebench/sweb.eval.x86_64.pallets_1776_flask-5063
+check	Raw docker pull attempt	2026-09-14T03:19:03.1927937Z no matching manifest for linux/arm64/v8 in the manifest list entries
+check	Raw docker pull attempt	2026-09-14T03:19:03.1935291Z 
+check	Raw docker pull attempt	2026-09-14T03:19:03.1936101Z --- docker manifest inspect (shows what platforms actually exist) ---
+check	Raw docker pull attempt	2026-09-14T03:19:03.9799839Z {
+check	Raw docker pull attempt	2026-09-14T03:19:03.9800556Z    "schemaVersion": 2,
+check	Raw docker pull attempt	2026-09-14T03:19:03.9801234Z    "mediaType": "application/vnd.oci.image.index.v1+json",
+check	Raw docker pull attempt	2026-09-14T03:19:03.9801746Z    "manifests": [
+check	Raw docker pull attempt	2026-09-14T03:19:03.9802502Z       {
+check	Raw docker pull attempt	2026-09-14T03:19:03.9802986Z          "mediaType": "application/vnd.oci.image.manifest.v1+json",
+check	Raw docker pull attempt	2026-09-14T03:19:03.9803553Z          "size": 2198,
+check	Raw docker pull attempt	2026-09-14T03:19:03.9804248Z          "digest": "sha256:e661f7a19d411a7b0c26e493fafbe145e3726672faec51ce7accfa269e99a164",
+check	Raw docker pull attempt	2026-09-14T03:19:03.9804838Z          "platform": {
+check	Raw docker pull attempt	2026-09-14T03:19:03.9805272Z             "architecture": "amd64",
+check	Raw docker pull attempt	2026-09-14T03:19:03.9805839Z             "os": "linux"
+check	Raw docker pull attempt	2026-09-14T03:19:03.9806344Z          }
+check	Raw docker pull attempt	2026-09-14T03:19:03.9806744Z       },
+check	Raw docker pull attempt	2026-09-14T03:19:03.9807158Z       {
+check	Raw docker pull attempt	2026-09-14T03:19:03.9807687Z          "mediaType": "application/vnd.oci.image.manifest.v1+json",
+check	Raw docker pull attempt	2026-09-14T03:19:03.9808186Z          "size": 564,
+check	Raw docker pull attempt	2026-09-14T03:19:03.9809371Z          "digest": "sha256:76a31efd3df70a316afb1b2d61ca70f80abaabdd12579008b2f65b49d0f78413",
+check	Raw docker pull attempt	2026-09-14T03:19:03.9810025Z          "platform": {
+check	Raw docker pull attempt	2026-09-14T03:19:03.9810405Z             "architecture": "unknown",
+check	Raw docker pull attempt	2026-09-14T03:19:03.9810799Z             "os": "unknown"
+check	Raw docker pull attempt	2026-09-14T03:19:03.9811229Z          }
+check	Raw docker pull attempt	2026-09-14T03:19:03.9811607Z       }
+check	Raw docker pull attempt	2026-09-14T03:19:03.9812283Z    ]
+check	Raw docker pull attempt	2026-09-14T03:19:03.9812656Z }
+check	Raw docker pull attempt	2026-09-14T03:19:03.9814120Z 
+check	Raw docker pull attempt	2026-09-14T03:19:03.9814439Z --- host architecture for reference ---
+check	Raw docker pull attempt	2026-09-14T03:19:03.9825251Z aarch64
+check	Raw docker pull attempt	2026-09-14T03:19:03.9974563Z arm64
+check	Complete job	﻿2026-09-14T03:19:04.0157880Z Cleaning up orphan processes

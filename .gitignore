@@ -14,6 +14,7 @@ gemma4-32k-mini-swe-agent.local_grading_test.json
 
 # Terminal logs and scratch dev runs (not evidence; the report JSONs are)
 *.log
+!evidence/github-archive/**/run.log
 trajectories_12b_*/
 
 # Local scratch and tooling output (not evidence)

@@ -1,0 +1,49 @@
+check	Set up job	﻿2026-09-14T02:30:25.1082138Z Current runner version: '2.337.0'
+check	Set up job	2026-09-14T02:30:25.1121838Z ##[group]Runner Image Provisioner
+check	Set up job	2026-09-14T02:30:25.1122786Z Hosted Compute Agent
+check	Set up job	2026-09-14T02:30:25.1123372Z Version: 20260707.563
+check	Set up job	2026-09-14T02:30:25.1124054Z Commit: 02667638d2b423fbc733a8e32a88b44996a3ba6e
+check	Set up job	2026-09-14T02:30:25.1125183Z Build Date: 2026-07-07T19:33:50Z
+check	Set up job	2026-09-14T02:30:25.1125905Z Worker ID: {6848de84-37bf-44bd-9f65-1563fff38ef0}
+check	Set up job	2026-09-14T02:30:25.1126615Z Azure Region: centralus
+check	Set up job	2026-09-14T02:30:25.1127225Z ##[endgroup]
+check	Set up job	2026-09-14T02:30:25.1128684Z ##[group]VM Image
+check	Set up job	2026-09-14T02:30:25.1129269Z - OS: Linux (x64)
+check	Set up job	2026-09-14T02:30:25.1129918Z - Source: Docker
+check	Set up job	2026-09-14T02:30:25.1130485Z - Name: ubuntu:24.04
+check	Set up job	2026-09-14T02:30:25.1131064Z - Version: 20260728.2.1
+check	Set up job	2026-09-14T02:30:25.1131662Z ##[endgroup]
+check	Set up job	2026-09-14T02:30:25.1132830Z ##[group]GITHUB_TOKEN Permissions
+check	Set up job	2026-09-14T02:30:25.1135484Z Contents: read
+check	Set up job	2026-09-14T02:30:25.1136103Z Metadata: read
+check	Set up job	2026-09-14T02:30:25.1136655Z Packages: read
+check	Set up job	2026-09-14T02:30:25.1137250Z ##[endgroup]
+check	Set up job	2026-09-14T02:30:25.1139819Z Secret source: Actions
+check	Set up job	2026-09-14T02:30:25.1140746Z Cache mode: write
+check	Set up job	2026-09-14T02:30:25.1141497Z Prepare workflow directory
+check	Set up job	2026-09-14T02:30:25.2050080Z Prepare all required actions
+check	Set up job	2026-09-14T02:30:25.2304863Z Complete job name: check
+check	Look for dockerd and try starting it	﻿2026-09-14T02:30:25.3839469Z ##[group]Run which dockerd || echo "NO_DOCKERD_BINARY"
+check	Look for dockerd and try starting it	2026-09-14T02:30:25.3840459Z ^[[36;1mwhich dockerd || echo "NO_DOCKERD_BINARY"^[[0m
+check	Look for dockerd and try starting it	2026-09-14T02:30:25.3841349Z ^[[36;1msudo dockerd --version 2>&1 || echo "DOCKERD_VERSION_FAILED"^[[0m
+check	Look for dockerd and try starting it	2026-09-14T02:30:25.3842274Z ^[[36;1msudo dockerd > /tmp/dockerd.log 2>&1 &^[[0m
+check	Look for dockerd and try starting it	2026-09-14T02:30:25.3842967Z ^[[36;1msleep 3^[[0m
+check	Look for dockerd and try starting it	2026-09-14T02:30:25.3843732Z ^[[36;1mdocker version || echo "STILL_NO_DAEMON_AFTER_MANUAL_START"^[[0m
+check	Look for dockerd and try starting it	2026-09-14T02:30:25.3855119Z ^[[36;1mcat /tmp/dockerd.log 2>/dev/null | tail -20^[[0m
+check	Look for dockerd and try starting it	2026-09-14T02:30:25.4378064Z shell: /usr/bin/bash -e {0}
+check	Look for dockerd and try starting it	2026-09-14T02:30:25.4379789Z ##[endgroup]
+check	Look for dockerd and try starting it	2026-09-14T02:30:26.1229968Z NO_DOCKERD_BINARY
+check	Look for dockerd and try starting it	2026-09-14T02:30:26.1231877Z sudo: dockerd: command not found
+check	Look for dockerd and try starting it	2026-09-14T02:30:26.1232598Z DOCKERD_VERSION_FAILED
+check	Look for dockerd and try starting it	2026-09-14T02:30:31.2509154Z Client: Docker Engine - Community
+check	Look for dockerd and try starting it	2026-09-14T02:30:31.2513315Z  Version:           29.6.2
+check	Look for dockerd and try starting it	2026-09-14T02:30:31.2516950Z  API version:       1.55
+check	Look for dockerd and try starting it	2026-09-14T02:30:31.2519913Z  Go version:        go1.26.5
+check	Look for dockerd and try starting it	2026-09-14T02:30:31.2523619Z  Git commit:        dfc4efb
+check	Look for dockerd and try starting it	2026-09-14T02:30:31.2527507Z  Built:             Thu Jul 16 16:12:18 2026
+check	Look for dockerd and try starting it	2026-09-14T02:30:31.2530811Z  OS/Arch:           linux/amd64
+check	Look for dockerd and try starting it	2026-09-14T02:30:31.2550550Z  Context:           default
+check	Look for dockerd and try starting it	2026-09-14T02:30:31.2570654Z failed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory
+check	Look for dockerd and try starting it	2026-09-14T02:30:31.2674188Z STILL_NO_DAEMON_AFTER_MANUAL_START
+check	Look for dockerd and try starting it	2026-09-14T02:30:31.2753042Z sudo: dockerd: command not found
+check	Complete job	﻿2026-09-14T02:30:31.3336040Z Cleaning up orphan processes

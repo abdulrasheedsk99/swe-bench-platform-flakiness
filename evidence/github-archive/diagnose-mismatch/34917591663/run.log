@@ -1,0 +1,702 @@
+diagnose	Set up job	﻿2026-09-15T01:31:21.1841705Z Current runner version: '2.337.0'
+diagnose	Set up job	2026-09-15T01:31:21.1869609Z ##[group]Runner Image Provisioner
+diagnose	Set up job	2026-09-15T01:31:21.1870685Z Hosted Compute Agent
+diagnose	Set up job	2026-09-15T01:31:21.1871301Z Version: 20260828.587
+diagnose	Set up job	2026-09-15T01:31:21.1872006Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+diagnose	Set up job	2026-09-15T01:31:21.1872817Z Build Date: 2026-08-28T16:44:25Z
+diagnose	Set up job	2026-09-15T01:31:21.1873524Z Worker ID: {296c142f-28cd-4390-82ac-9cc005f57364}
+diagnose	Set up job	2026-09-15T01:31:21.1874326Z Azure Region: northcentralus
+diagnose	Set up job	2026-09-15T01:31:21.1875008Z ##[endgroup]
+diagnose	Set up job	2026-09-15T01:31:21.1876599Z ##[group]Operating System
+diagnose	Set up job	2026-09-15T01:31:21.1877386Z Ubuntu
+diagnose	Set up job	2026-09-15T01:31:21.1877939Z 24.04.5
+diagnose	Set up job	2026-09-15T01:31:21.1878575Z LTS
+diagnose	Set up job	2026-09-15T01:31:21.1879128Z ##[endgroup]
+diagnose	Set up job	2026-09-15T01:31:21.1879686Z ##[group]Runner Image
+diagnose	Set up job	2026-09-15T01:31:21.1880404Z Image: ubuntu-24.04
+diagnose	Set up job	2026-09-15T01:31:21.1880998Z Version: 20260907.300.1
+diagnose	Set up job	2026-09-15T01:31:21.1882135Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260907.300/images/ubuntu/Ubuntu2404-Readme.md
+diagnose	Set up job	2026-09-15T01:31:21.1883889Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260907.300
+diagnose	Set up job	2026-09-15T01:31:21.1885021Z ##[endgroup]
+diagnose	Set up job	2026-09-15T01:31:21.1886380Z ##[group]GITHUB_TOKEN Permissions
+diagnose	Set up job	2026-09-15T01:31:21.1888638Z Contents: read
+diagnose	Set up job	2026-09-15T01:31:21.1889278Z Metadata: read
+diagnose	Set up job	2026-09-15T01:31:21.1889961Z Packages: read
+diagnose	Set up job	2026-09-15T01:31:21.1890565Z ##[endgroup]
+diagnose	Set up job	2026-09-15T01:31:21.1892692Z Secret source: Actions
+diagnose	Set up job	2026-09-15T01:31:21.1893768Z Cache mode: write
+diagnose	Set up job	2026-09-15T01:31:21.1894857Z Prepare workflow directory
+diagnose	Set up job	2026-09-15T01:31:21.2243601Z Prepare all required actions
+diagnose	Set up job	2026-09-15T01:31:21.2291889Z Getting action download info
+diagnose	Set up job	2026-09-15T01:31:21.4711181Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+diagnose	Set up job	2026-09-15T01:31:21.5577525Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+diagnose	Set up job	2026-09-15T01:31:21.6387939Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+diagnose	Set up job	2026-09-15T01:31:21.8618649Z Complete job name: diagnose
+diagnose	Run actions/checkout@v4	﻿2026-09-15T01:31:21.9417856Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:21.9427086Z ##[group]Run actions/checkout@v4
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:21.9428177Z with:
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:21.9428783Z   repository: abdulrasheedsk99/swe-bench-platform-flakiness
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:21.9433062Z   token: ***
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:21.9433524Z   ssh-strict: true
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:21.9433984Z   ssh-user: git
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:21.9434443Z   persist-credentials: true
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:21.9434946Z   clean: true
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:21.9435399Z   sparse-checkout-cone-mode: true
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:21.9435930Z   fetch-depth: 1
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:21.9436568Z   fetch-tags: false
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:21.9437056Z   show-progress: true
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:21.9437508Z   lfs: false
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:21.9437935Z   submodules: false
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:21.9438434Z   set-safe-directory: true
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:21.9438954Z   allow-unsafe-pr-checkout: false
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:21.9439773Z ##[endgroup]
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0475666Z Syncing repository: abdulrasheedsk99/swe-bench-platform-flakiness
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0478392Z ##[group]Getting Git version info
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0479419Z Working directory is '/home/runner/work/swe-bench-platform-flakiness/swe-bench-platform-flakiness'
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0480983Z [command]/usr/bin/git version
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0508290Z git version 2.55.0
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0540812Z ##[endgroup]
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0551856Z Temporarily overriding HOME='/home/runner/work/_temp/9df9b8bb-a0c9-45e5-8bac-0af58f594bc7' before making global git config changes
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0554155Z Adding repository directory to the temporary git global config as a safe directory
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0558758Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/swe-bench-platform-flakiness/swe-bench-platform-flakiness
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0613156Z Deleting the contents of '/home/runner/work/swe-bench-platform-flakiness/swe-bench-platform-flakiness'
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0619963Z ##[group]Initializing the repository
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0625034Z [command]/usr/bin/git init /home/runner/work/swe-bench-platform-flakiness/swe-bench-platform-flakiness
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0707207Z hint: Using 'master' as the name for the initial branch. This default branch name
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0709280Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0710920Z hint: to use in all of your new repositories, which will suppress this warning,
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0712629Z hint: call:
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0713194Z hint:
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0713888Z hint: 	git config --global init.defaultBranch <name>
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0715000Z hint:
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0715748Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0717720Z hint: 'development'. The just-created branch can be renamed via this command:
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0718841Z hint:
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0719269Z hint: 	git branch -m <name>
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0719760Z hint:
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0720392Z hint: Disable this message with "git config set advice.defaultBranchName false"
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0722017Z Initialized empty Git repository in /home/runner/work/swe-bench-platform-flakiness/swe-bench-platform-flakiness/.git/
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0724670Z [command]/usr/bin/git remote add origin https://github.com/abdulrasheedsk99/swe-bench-platform-flakiness
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0770310Z ##[endgroup]
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0771153Z ##[group]Disabling automatic garbage collection
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0775806Z [command]/usr/bin/git config --local gc.auto 0
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0813114Z ##[endgroup]
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0814141Z ##[group]Setting up auth
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0821670Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.0862849Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.1232078Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.1271594Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.1553174Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.1598220Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.1846125Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.1889397Z ##[endgroup]
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.1890642Z ##[group]Fetching the repository
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.1900730Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +361adc4d5fbe359fa918ead740d2f8030d861824:refs/remotes/origin/main
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.6553574Z From https://github.com/abdulrasheedsk99/swe-bench-platform-flakiness
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.6555729Z  * [new ref]         361adc4d5fbe359fa918ead740d2f8030d861824 -> origin/main
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.6558159Z ##[endgroup]
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.6559013Z ##[group]Determining the checkout info
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.6559998Z ##[endgroup]
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.6560583Z [command]/usr/bin/git sparse-checkout disable
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.6588547Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.6628061Z ##[group]Checking out the ref
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.6633135Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.6883581Z Switched to a new branch 'main'
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.6887060Z branch 'main' set up to track 'origin/main'.
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.6895903Z ##[endgroup]
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.6942809Z [command]/usr/bin/git log -1 --format=%H
+diagnose	Run actions/checkout@v4	2026-09-15T01:31:22.6973350Z 361adc4d5fbe359fa918ead740d2f8030d861824
+diagnose	Run actions/setup-python@v5	﻿2026-09-15T01:31:22.7345265Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+diagnose	Run actions/setup-python@v5	2026-09-15T01:31:22.7351577Z ##[group]Run actions/setup-python@v5
+diagnose	Run actions/setup-python@v5	2026-09-15T01:31:22.7352726Z with:
+diagnose	Run actions/setup-python@v5	2026-09-15T01:31:22.7353581Z   python-version: 3.11
+diagnose	Run actions/setup-python@v5	2026-09-15T01:31:22.7354580Z   check-latest: false
+diagnose	Run actions/setup-python@v5	2026-09-15T01:31:22.7364521Z   token: ***
+diagnose	Run actions/setup-python@v5	2026-09-15T01:31:22.7365457Z   update-environment: true
+diagnose	Run actions/setup-python@v5	2026-09-15T01:31:22.7366708Z   allow-prereleases: false
+diagnose	Run actions/setup-python@v5	2026-09-15T01:31:22.7367751Z   freethreaded: false
+diagnose	Run actions/setup-python@v5	2026-09-15T01:31:22.7368704Z ##[endgroup]
+diagnose	Run actions/setup-python@v5	2026-09-15T01:31:22.8812766Z ##[group]Installed versions
+diagnose	Run actions/setup-python@v5	2026-09-15T01:31:22.8927449Z (node:2256) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+diagnose	Run actions/setup-python@v5	2026-09-15T01:31:22.8930326Z (Use `node --trace-deprecation ...` to show where the warning was created)
+diagnose	Run actions/setup-python@v5	2026-09-15T01:31:22.8932080Z Successfully set up CPython (3.11.16)
+diagnose	Run actions/setup-python@v5	2026-09-15T01:31:22.8933772Z ##[endgroup]
+diagnose	Install swebench	﻿2026-09-15T01:31:22.9154454Z ##[group]Run pip install swebench==4.1.0
+diagnose	Install swebench	2026-09-15T01:31:22.9156591Z ^[[36;1mpip install swebench==4.1.0^[[0m
+diagnose	Install swebench	2026-09-15T01:31:22.9219295Z shell: /usr/bin/bash -e {0}
+diagnose	Install swebench	2026-09-15T01:31:22.9220298Z env:
+diagnose	Install swebench	2026-09-15T01:31:22.9221287Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.16/x64
+diagnose	Install swebench	2026-09-15T01:31:22.9222995Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib/pkgconfig
+diagnose	Install swebench	2026-09-15T01:31:22.9224903Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+diagnose	Install swebench	2026-09-15T01:31:22.9227021Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+diagnose	Install swebench	2026-09-15T01:31:22.9228928Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+diagnose	Install swebench	2026-09-15T01:31:22.9231296Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib
+diagnose	Install swebench	2026-09-15T01:31:22.9233143Z ##[endgroup]
+diagnose	Install swebench	2026-09-15T01:31:23.6554510Z Collecting swebench==4.1.0
+diagnose	Install swebench	2026-09-15T01:31:23.7074672Z   Downloading swebench-4.1.0-py3-none-any.whl.metadata (15 kB)
+diagnose	Install swebench	2026-09-15T01:31:23.7288245Z Collecting beautifulsoup4 (from swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:23.7333080Z   Downloading beautifulsoup4-4.15.0-py3-none-any.whl.metadata (3.8 kB)
+diagnose	Install swebench	2026-09-15T01:31:23.7778736Z Collecting chardet (from swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:23.7824541Z   Downloading chardet-7.6.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (9.6 kB)
+diagnose	Install swebench	2026-09-15T01:31:23.8033940Z Collecting datasets (from swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:23.8134582Z   Downloading datasets-5.0.1-py3-none-any.whl.metadata (23 kB)
+diagnose	Install swebench	2026-09-15T01:31:23.8453851Z Collecting docker (from swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:23.8493790Z   Downloading docker-7.2.0-py3-none-any.whl.metadata (3.8 kB)
+diagnose	Install swebench	2026-09-15T01:31:23.8649849Z Collecting ghapi (from swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:23.8690538Z   Downloading ghapi-2.1.3-py3-none-any.whl.metadata (17 kB)
+diagnose	Install swebench	2026-09-15T01:31:23.8893856Z Collecting GitPython (from swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:23.8933787Z   Downloading gitpython-3.1.62-py3-none-any.whl.metadata (13 kB)
+diagnose	Install swebench	2026-09-15T01:31:24.0879614Z Collecting modal (from swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:24.0922486Z   Downloading modal-1.5.5-py3-none-any.whl.metadata (2.5 kB)
+diagnose	Install swebench	2026-09-15T01:31:24.1206440Z Collecting pre-commit (from swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:24.1247479Z   Downloading pre_commit-4.6.2-py2.py3-none-any.whl.metadata (1.2 kB)
+diagnose	Install swebench	2026-09-15T01:31:24.1387812Z Collecting python-dotenv (from swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:24.1424540Z   Downloading python_dotenv-1.2.3-py3-none-any.whl.metadata (29 kB)
+diagnose	Install swebench	2026-09-15T01:31:24.1642737Z Collecting requests (from swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:24.1682506Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+diagnose	Install swebench	2026-09-15T01:31:24.1985930Z Collecting rich (from swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:24.2026809Z   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+diagnose	Install swebench	2026-09-15T01:31:24.2176809Z Collecting tenacity (from swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:24.2215180Z   Downloading tenacity-9.1.4-py3-none-any.whl.metadata (1.2 kB)
+diagnose	Install swebench	2026-09-15T01:31:24.2474718Z Collecting tqdm (from swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:24.2520708Z   Downloading tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+diagnose	Install swebench	2026-09-15T01:31:24.2679669Z Collecting unidiff (from swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:24.2717994Z   Downloading unidiff-1.0.0-py3-none-any.whl.metadata (7.8 kB)
+diagnose	Install swebench	2026-09-15T01:31:24.2885964Z Collecting soupsieve>=1.6.1 (from beautifulsoup4->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:24.2923474Z   Downloading soupsieve-2.9.2-py3-none-any.whl.metadata (4.6 kB)
+diagnose	Install swebench	2026-09-15T01:31:24.3072134Z Collecting typing-extensions>=4.0.0 (from beautifulsoup4->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:24.3109865Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+diagnose	Install swebench	2026-09-15T01:31:24.3312379Z Collecting filelock (from datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:24.3385170Z   Downloading filelock-3.32.6-py3-none-any.whl.metadata (2.0 kB)
+diagnose	Install swebench	2026-09-15T01:31:24.5310604Z Collecting numpy>=1.17 (from datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:24.5351764Z   Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+diagnose	Install swebench	2026-09-15T01:31:24.6051101Z Collecting pyarrow>=21.0.0 (from datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:24.6092052Z   Downloading pyarrow-25.0.1-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+diagnose	Install swebench	2026-09-15T01:31:24.6208557Z Collecting dill<0.4.2,>=0.3.0 (from datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:24.6245170Z   Downloading dill-0.4.1-py3-none-any.whl.metadata (10 kB)
+diagnose	Install swebench	2026-09-15T01:31:24.7185089Z Collecting pandas (from datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:24.7232391Z   Downloading pandas-3.0.5-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+diagnose	Install swebench	2026-09-15T01:31:24.7615785Z Collecting httpx<1.0.0 (from datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:24.7657825Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+diagnose	Install swebench	2026-09-15T01:31:24.9084032Z Collecting xxhash (from datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:24.9126951Z   Downloading xxhash-4.0.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (17 kB)
+diagnose	Install swebench	2026-09-15T01:31:24.9325321Z Collecting multiprocess<0.70.20 (from datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:24.9374695Z   Downloading multiprocess-0.70.19-py311-none-any.whl.metadata (7.5 kB)
+diagnose	Install swebench	2026-09-15T01:31:24.9551636Z Collecting fsspec<=2026.6.0,>=2023.1.0 (from fsspec[http]<=2026.6.0,>=2023.1.0->datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:24.9590994Z   Downloading fsspec-2026.6.0-py3-none-any.whl.metadata (10 kB)
+diagnose	Install swebench	2026-09-15T01:31:25.0095142Z Collecting huggingface-hub<2.0,>=0.25.0 (from datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:25.0135315Z   Downloading huggingface_hub-1.31.0-py3-none-any.whl.metadata (16 kB)
+diagnose	Install swebench	2026-09-15T01:31:25.0380503Z Collecting packaging (from datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:25.0426890Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+diagnose	Install swebench	2026-09-15T01:31:25.0730791Z Collecting pyyaml>=5.1 (from datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:25.0772166Z   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+diagnose	Install swebench	2026-09-15T01:31:25.5342826Z Collecting aiohttp!=4.0.0a0,!=4.0.0a1 (from fsspec[http]<=2026.6.0,>=2023.1.0->datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:25.5386039Z   Downloading aiohttp-3.14.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+diagnose	Install swebench	2026-09-15T01:31:25.5566833Z Collecting anyio (from httpx<1.0.0->datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:25.5615627Z   Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+diagnose	Install swebench	2026-09-15T01:31:25.5789931Z Collecting certifi (from httpx<1.0.0->datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:25.5835197Z   Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+diagnose	Install swebench	2026-09-15T01:31:25.5976182Z Collecting httpcore==1.* (from httpx<1.0.0->datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:25.6023345Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+diagnose	Install swebench	2026-09-15T01:31:25.6169344Z Collecting idna (from httpx<1.0.0->datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:25.6212149Z   Downloading idna-3.19-py3-none-any.whl.metadata (9.2 kB)
+diagnose	Install swebench	2026-09-15T01:31:25.6325328Z Collecting h11>=0.16 (from httpcore==1.*->httpx<1.0.0->datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:25.6364051Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+diagnose	Install swebench	2026-09-15T01:31:25.6514002Z Collecting click<9.0.0,>=8.4.2 (from huggingface-hub<2.0,>=0.25.0->datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:25.6550964Z   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+diagnose	Install swebench	2026-09-15T01:31:25.6911086Z Collecting hf-xet<2.0.0,>=1.5.2 (from huggingface-hub<2.0,>=0.25.0->datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:25.6953321Z   Downloading hf_xet-1.6.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+diagnose	Install swebench	2026-09-15T01:31:25.7195398Z Collecting aiohappyeyeballs>=2.5.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.6.0,>=2023.1.0->datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:25.7234177Z   Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl.metadata (5.9 kB)
+diagnose	Install swebench	2026-09-15T01:31:25.7331581Z Collecting aiosignal>=1.4.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.6.0,>=2023.1.0->datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:25.7372633Z   Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+diagnose	Install swebench	2026-09-15T01:31:25.7518206Z Collecting attrs>=17.3.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.6.0,>=2023.1.0->datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:25.7562502Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+diagnose	Install swebench	2026-09-15T01:31:25.8113600Z Collecting frozenlist>=1.1.1 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.6.0,>=2023.1.0->datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:25.8215548Z   Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+diagnose	Install swebench	2026-09-15T01:31:26.0553058Z Collecting multidict<7.0,>=4.5 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.6.0,>=2023.1.0->datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:26.0594967Z   Downloading multidict-6.8.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+diagnose	Install swebench	2026-09-15T01:31:26.1093007Z Collecting propcache>=0.2.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.6.0,>=2023.1.0->datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:26.1135622Z   Downloading propcache-0.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (16 kB)
+diagnose	Install swebench	2026-09-15T01:31:26.3797845Z Collecting yarl<2.0,>=1.17.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.6.0,>=2023.1.0->datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:26.3820787Z   Downloading yarl-1.24.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (103 kB)
+diagnose	Install swebench	2026-09-15T01:31:26.5048358Z Collecting charset_normalizer<4,>=2 (from requests->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:26.5094212Z   Downloading charset_normalizer-3.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (45 kB)
+diagnose	Install swebench	2026-09-15T01:31:26.5322058Z Collecting urllib3<3,>=1.26 (from requests->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:26.5363747Z   Downloading urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+diagnose	Install swebench	2026-09-15T01:31:26.5794547Z Collecting fastcore>=2.2.7 (from ghapi->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:26.5854393Z   Downloading fastcore-2.2.27-py3-none-any.whl.metadata (9.5 kB)
+diagnose	Install swebench	2026-09-15T01:31:26.5974913Z Collecting fastspec>=0.2.1 (from ghapi->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:26.6049198Z   Downloading fastspec-0.2.4-py3-none-any.whl.metadata (14 kB)
+diagnose	Install swebench	2026-09-15T01:31:26.6147940Z Collecting fasttransport>=0.0.2 (from ghapi->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:26.6198618Z   Downloading fasttransport-0.0.4-py3-none-any.whl.metadata (4.2 kB)
+diagnose	Install swebench	2026-09-15T01:31:26.6371475Z Collecting httpx2>=2.9.1 (from fasttransport>=0.0.2->ghapi->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:26.6416924Z   Downloading httpx2-2.13.0-py3-none-any.whl.metadata (10 kB)
+diagnose	Install swebench	2026-09-15T01:31:26.6563569Z Collecting httpcore2==2.13.0 (from httpx2>=2.9.1->fasttransport>=0.0.2->ghapi->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:26.6607660Z   Downloading httpcore2-2.13.0-py3-none-any.whl.metadata (26 kB)
+diagnose	Install swebench	2026-09-15T01:31:26.6749549Z Collecting truststore>=0.10 (from httpx2>=2.9.1->fasttransport>=0.0.2->ghapi->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:26.6789279Z   Downloading truststore-0.10.4-py3-none-any.whl.metadata (4.4 kB)
+diagnose	Install swebench	2026-09-15T01:31:26.6945361Z Collecting gitdb<5,>=4.0.1 (from GitPython->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:26.6985581Z   Downloading gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+diagnose	Install swebench	2026-09-15T01:31:26.7103300Z Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->GitPython->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:26.7144603Z   Downloading smmap-5.0.3-py3-none-any.whl.metadata (4.6 kB)
+diagnose	Install swebench	2026-09-15T01:31:26.7712774Z Collecting cbor2 (from modal->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:26.7756650Z   Downloading cbor2-6.1.4-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+diagnose	Install swebench	2026-09-15T01:31:26.7904036Z Collecting grpclib<0.4.10,>=0.4.7 (from modal->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:26.7949075Z   Downloading grpclib-0.4.9-py3-none-any.whl.metadata (6.1 kB)
+diagnose	Install swebench	2026-09-15T01:31:26.9856870Z Collecting protobuf!=4.24.0,<7.0,>=3.19 (from modal->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:26.9903038Z   Downloading protobuf-6.33.6-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)
+diagnose	Install swebench	2026-09-15T01:31:27.0086811Z Collecting synchronicity~=0.12.5 (from modal->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:27.0129489Z   Downloading synchronicity-0.12.5-py3-none-any.whl.metadata (14 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.0243206Z Collecting toml (from modal->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:27.0284463Z   Downloading toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.0412248Z Collecting types-certifi (from modal->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:27.0455055Z   Downloading types_certifi-2021.10.8.3-py3-none-any.whl.metadata (1.4 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.0605130Z Collecting types-toml (from modal->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:27.0643111Z   Downloading types_toml-0.10.8.20260518-py3-none-any.whl.metadata (1.7 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.1308431Z Collecting watchfiles (from modal->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:27.1353034Z   Downloading watchfiles-1.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.1504857Z Collecting h2<5,>=3.1.0 (from grpclib<0.4.10,>=0.4.7->modal->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:27.1544069Z   Downloading h2-4.4.1-py3-none-any.whl.metadata (3.8 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.1670394Z Collecting hyperframe<7,>=6.1 (from h2<5,>=3.1.0->grpclib<0.4.10,>=0.4.7->modal->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:27.1708435Z   Downloading hyperframe-6.1.0-py3-none-any.whl.metadata (4.3 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.1818021Z Collecting hpack<5,>=4.2 (from h2<5,>=3.1.0->grpclib<0.4.10,>=0.4.7->modal->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:27.1869192Z   Downloading hpack-4.2.0-py3-none-any.whl.metadata (3.3 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.2031016Z Collecting markdown-it-py>=2.2.0 (from rich->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:27.2077833Z   Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.2255252Z Collecting pygments<3.0.0,>=2.13.0 (from rich->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:27.2292789Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.2398521Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:27.2450995Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.2606425Z Collecting python-dateutil>=2.8.2 (from pandas->datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:27.2642956Z   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.2768753Z Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->datasets->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:27.2806687Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.2930199Z Collecting cfgv>=2.0.0 (from pre-commit->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:27.2967717Z   Downloading cfgv-3.5.0-py2.py3-none-any.whl.metadata (8.9 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.3247852Z Collecting identify>=1.0.0 (from pre-commit->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:27.3290052Z   Downloading identify-2.6.19-py2.py3-none-any.whl.metadata (4.4 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.3412573Z Collecting nodeenv>=0.11.1 (from pre-commit->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:27.3452634Z   Downloading nodeenv-1.10.0-py2.py3-none-any.whl.metadata (24 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.3781220Z Collecting virtualenv>=20.10.0 (from pre-commit->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:27.3824375Z   Downloading virtualenv-21.7.9-py3-none-any.whl.metadata (3.5 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.3974894Z Collecting distlib<1,>=0.3.7 (from virtualenv>=20.10.0->pre-commit->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:27.4012315Z   Downloading distlib-0.4.3-py2.py3-none-any.whl.metadata (5.3 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.4186605Z Collecting platformdirs<5,>=3.9.1 (from virtualenv>=20.10.0->pre-commit->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:27.4229681Z   Downloading platformdirs-4.11.8-py3-none-any.whl.metadata (5.5 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.4331187Z Collecting python-discovery>=1.6 (from virtualenv>=20.10.0->pre-commit->swebench==4.1.0)
+diagnose	Install swebench	2026-09-15T01:31:27.4369399Z   Downloading python_discovery-1.6.0-py3-none-any.whl.metadata (5.1 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.4537407Z Downloading swebench-4.1.0-py3-none-any.whl (157 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.4618902Z Downloading beautifulsoup4-4.15.0-py3-none-any.whl (109 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.4675021Z Downloading soupsieve-2.9.2-py3-none-any.whl (37 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.4728674Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.4787380Z Downloading chardet-7.6.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.5 MB)
+diagnose	Install swebench	2026-09-15T01:31:27.4907917Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 134.8 MB/s  0:00:00
+diagnose	Install swebench	2026-09-15T01:31:27.4964069Z Downloading datasets-5.0.1-py3-none-any.whl (559 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.5011199Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 559.1/559.1 kB 127.7 MB/s  0:00:00
+diagnose	Install swebench	2026-09-15T01:31:27.5052535Z Downloading dill-0.4.1-py3-none-any.whl (120 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.5110648Z Downloading fsspec-2026.6.0-py3-none-any.whl (203 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.5177592Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.5252028Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.5317680Z Downloading huggingface_hub-1.31.0-py3-none-any.whl (798 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.5370041Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 798.3/798.3 kB 191.4 MB/s  0:00:00
+diagnose	Install swebench	2026-09-15T01:31:27.5409545Z Downloading click-8.5.0-py3-none-any.whl (125 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.5472311Z Downloading hf_xet-1.6.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.5 MB)
+diagnose	Install swebench	2026-09-15T01:31:27.5656667Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 281.5 MB/s  0:00:00
+diagnose	Install swebench	2026-09-15T01:31:27.5737464Z Downloading multiprocess-0.70.19-py311-none-any.whl (144 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.5800786Z Downloading aiohttp-3.14.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.8 MB)
+diagnose	Install swebench	2026-09-15T01:31:27.5891503Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 231.9 MB/s  0:00:00
+diagnose	Install swebench	2026-09-15T01:31:27.5931623Z Downloading multidict-6.8.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (272 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.5990910Z Downloading yarl-1.24.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (111 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.6053809Z Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.6105757Z Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.6159640Z Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.6214063Z Downloading filelock-3.32.6-py3-none-any.whl (100 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.6277878Z Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.6336215Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.6392515Z Downloading idna-3.19-py3-none-any.whl (68 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.6451410Z Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+diagnose	Install swebench	2026-09-15T01:31:27.7112880Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 262.4 MB/s  0:00:00
+diagnose	Install swebench	2026-09-15T01:31:27.7153981Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.7225972Z Downloading propcache-0.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (58 kB)
+diagnose	Install swebench	2026-09-15T01:31:27.7287386Z Downloading pyarrow-25.0.1-cp311-cp311-manylinux_2_28_x86_64.whl (50.1 MB)
+diagnose	Install swebench	2026-09-15T01:31:28.0266220Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 MB 169.6 MB/s  0:00:00
+diagnose	Install swebench	2026-09-15T01:31:28.0307264Z Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.0384184Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 99.2 MB/s  0:00:00
+diagnose	Install swebench	2026-09-15T01:31:28.0423268Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.0483982Z Downloading charset_normalizer-3.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (262 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.0547086Z Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.0604552Z Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.0663664Z Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.0720393Z Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.0784287Z Downloading docker-7.2.0-py3-none-any.whl (148 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.0845503Z Downloading ghapi-2.1.3-py3-none-any.whl (364 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.0925446Z Downloading fastcore-2.2.27-py3-none-any.whl (152 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.0985194Z Downloading fastspec-0.2.4-py3-none-any.whl (26 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.1043703Z Downloading fasttransport-0.0.4-py3-none-any.whl (13 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.1097430Z Downloading httpx2-2.13.0-py3-none-any.whl (95 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.1154387Z Downloading httpcore2-2.13.0-py3-none-any.whl (83 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.1208288Z Downloading truststore-0.10.4-py3-none-any.whl (18 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.1262452Z Downloading gitpython-3.1.62-py3-none-any.whl (222 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.1323959Z Downloading gitdb-4.0.12-py3-none-any.whl (62 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.1376127Z Downloading smmap-5.0.3-py3-none-any.whl (24 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.1433296Z Downloading modal-1.5.5-py3-none-any.whl (985 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.1523070Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 985.2/985.2 kB 108.6 MB/s  0:00:00
+diagnose	Install swebench	2026-09-15T01:31:28.1563282Z Downloading grpclib-0.4.9-py3-none-any.whl (77 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.1627228Z Downloading h2-4.4.1-py3-none-any.whl (62 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.1681433Z Downloading hpack-4.2.0-py3-none-any.whl (34 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.1734426Z Downloading hyperframe-6.1.0-py3-none-any.whl (13 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.1790060Z Downloading protobuf-6.33.6-cp39-abi3-manylinux2014_x86_64.whl (323 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.1852676Z Downloading synchronicity-0.12.5-py3-none-any.whl (41 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.1911240Z Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.1987693Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+diagnose	Install swebench	2026-09-15T01:31:28.2104901Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 110.1 MB/s  0:00:00
+diagnose	Install swebench	2026-09-15T01:31:28.2156790Z Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.2221799Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.2277920Z Downloading cbor2-6.1.4-cp311-cp311-manylinux_2_28_x86_64.whl (464 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.2356161Z Downloading pandas-3.0.5-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (11.3 MB)
+diagnose	Install swebench	2026-09-15T01:31:28.3142256Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.3/11.3 MB 145.0 MB/s  0:00:00
+diagnose	Install swebench	2026-09-15T01:31:28.3184158Z Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.3244809Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.3297938Z Downloading pre_commit-4.6.2-py2.py3-none-any.whl (226 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.3357048Z Downloading cfgv-3.5.0-py2.py3-none-any.whl (7.4 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.3407847Z Downloading identify-2.6.19-py2.py3-none-any.whl (99 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.3460885Z Downloading nodeenv-1.10.0-py2.py3-none-any.whl (23 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.3515142Z Downloading virtualenv-21.7.9-py3-none-any.whl (5.3 MB)
+diagnose	Install swebench	2026-09-15T01:31:28.3854623Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 163.6 MB/s  0:00:00
+diagnose	Install swebench	2026-09-15T01:31:28.3894448Z Downloading distlib-0.4.3-py2.py3-none-any.whl (470 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.3990702Z Downloading platformdirs-4.11.8-py3-none-any.whl (24 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.4042359Z Downloading python_discovery-1.6.0-py3-none-any.whl (38 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.4102375Z Downloading python_dotenv-1.2.3-py3-none-any.whl (22 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.4157843Z Downloading tenacity-9.1.4-py3-none-any.whl (28 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.4213180Z Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.4266722Z Downloading types_certifi-2021.10.8.3-py3-none-any.whl (2.1 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.4318472Z Downloading types_toml-0.10.8.20260518-py3-none-any.whl (9.7 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.4371812Z Downloading unidiff-1.0.0-py3-none-any.whl (18 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.4426445Z Downloading watchfiles-1.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (456 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.4508240Z Downloading xxhash-4.0.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (261 kB)
+diagnose	Install swebench	2026-09-15T01:31:28.8626030Z Installing collected packages: types-certifi, distlib, xxhash, urllib3, unidiff, typing-extensions, types-toml, truststore, tqdm, toml, tenacity, soupsieve, smmap, six, pyyaml, python-dotenv, pygments, pyarrow, protobuf, propcache, platformdirs, packaging, numpy, nodeenv, multidict, mdurl, idna, identify, hyperframe, hpack, hf-xet, h11, fsspec, frozenlist, filelock, fastcore, dill, click, charset_normalizer, chardet, cfgv, certifi, cbor2, attrs, aiohappyeyeballs, yarl, synchronicity, requests, python-discovery, python-dateutil, multiprocess, markdown-it-py, httpcore2, httpcore, h2, gitdb, beautifulsoup4, anyio, aiosignal, watchfiles, virtualenv, rich, pandas, httpx2, httpx, grpclib, GitPython, docker, aiohttp, pre-commit, modal, huggingface-hub, fasttransport, fastspec, datasets, ghapi, swebench
+diagnose	Install swebench	2026-09-15T01:31:41.5412591Z 
+diagnose	Install swebench	2026-09-15T01:31:41.5447861Z Successfully installed GitPython-3.1.62 aiohappyeyeballs-2.7.1 aiohttp-3.14.3 aiosignal-1.4.0 anyio-4.15.1 attrs-26.1.0 beautifulsoup4-4.15.0 cbor2-6.1.4 certifi-2026.7.22 cfgv-3.5.0 chardet-7.6.0 charset_normalizer-3.5.1 click-8.5.0 datasets-5.0.1 dill-0.4.1 distlib-0.4.3 docker-7.2.0 fastcore-2.2.27 fastspec-0.2.4 fasttransport-0.0.4 filelock-3.32.6 frozenlist-1.8.0 fsspec-2026.6.0 ghapi-2.1.3 gitdb-4.0.12 grpclib-0.4.9 h11-0.16.0 h2-4.4.1 hf-xet-1.6.0 hpack-4.2.0 httpcore-1.0.9 httpcore2-2.13.0 httpx-0.28.1 httpx2-2.13.0 huggingface-hub-1.31.0 hyperframe-6.1.0 identify-2.6.19 idna-3.19 markdown-it-py-4.2.0 mdurl-0.1.2 modal-1.5.5 multidict-6.8.0 multiprocess-0.70.19 nodeenv-1.10.0 numpy-2.4.6 packaging-26.3 pandas-3.0.5 platformdirs-4.11.8 pre-commit-4.6.2 propcache-0.5.2 protobuf-6.33.6 pyarrow-25.0.1 pygments-2.21.0 python-dateutil-2.9.0.post0 python-discovery-1.6.0 python-dotenv-1.2.3 pyyaml-6.0.3 requests-2.34.2 rich-15.0.0 six-1.17.0 smmap-5.0.3 soupsieve-2.9.2 swebench-4.1.0 synchronicity-0.12.5 tenacity-9.1.4 toml-0.10.2 tqdm-4.70.1 truststore-0.10.4 types-certifi-2021.10.8.3 types-toml-0.10.8.20260518 typing-extensions-4.16.0 unidiff-1.0.0 urllib3-2.7.0 virtualenv-21.7.9 watchfiles-1.2.0 xxhash-4.0.1 yarl-1.24.5
+diagnose	Print FAIL_TO_PASS tests for context	﻿2026-09-15T01:31:41.8769385Z ##[group]Run python3 -c "
+diagnose	Print FAIL_TO_PASS tests for context	2026-09-15T01:31:41.8769740Z ^[[36;1mpython3 -c "^[[0m
+diagnose	Print FAIL_TO_PASS tests for context	2026-09-15T01:31:41.8770206Z ^[[36;1mfrom datasets import load_dataset^[[0m
+diagnose	Print FAIL_TO_PASS tests for context	2026-09-15T01:31:41.8770615Z ^[[36;1mds = load_dataset('SWE-bench/SWE-bench_Lite', split='test')^[[0m
+diagnose	Print FAIL_TO_PASS tests for context	2026-09-15T01:31:41.8771102Z ^[[36;1mrow = [r for r in ds if r['instance_id'] == 'matplotlib__matplotlib-23913'][0]^[[0m
+diagnose	Print FAIL_TO_PASS tests for context	2026-09-15T01:31:41.8771559Z ^[[36;1mprint('FAIL_TO_PASS:', row['FAIL_TO_PASS'])^[[0m
+diagnose	Print FAIL_TO_PASS tests for context	2026-09-15T01:31:41.8771947Z ^[[36;1mprint('PASS_TO_PASS (first 5):', row['PASS_TO_PASS'][:5])^[[0m
+diagnose	Print FAIL_TO_PASS tests for context	2026-09-15T01:31:41.8772288Z ^[[36;1m"^[[0m
+diagnose	Print FAIL_TO_PASS tests for context	2026-09-15T01:31:41.8815831Z shell: /usr/bin/bash -e {0}
+diagnose	Print FAIL_TO_PASS tests for context	2026-09-15T01:31:41.8816226Z env:
+diagnose	Print FAIL_TO_PASS tests for context	2026-09-15T01:31:41.8816833Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.16/x64
+diagnose	Print FAIL_TO_PASS tests for context	2026-09-15T01:31:41.8817440Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib/pkgconfig
+diagnose	Print FAIL_TO_PASS tests for context	2026-09-15T01:31:41.8818048Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+diagnose	Print FAIL_TO_PASS tests for context	2026-09-15T01:31:41.8818568Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+diagnose	Print FAIL_TO_PASS tests for context	2026-09-15T01:31:41.8819171Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+diagnose	Print FAIL_TO_PASS tests for context	2026-09-15T01:31:41.8819695Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib
+diagnose	Print FAIL_TO_PASS tests for context	2026-09-15T01:31:41.8820154Z ##[endgroup]
+diagnose	Print FAIL_TO_PASS tests for context	2026-09-15T01:31:43.3661583Z Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+diagnose	Print FAIL_TO_PASS tests for context	2026-09-15T01:31:44.8608955Z 
+diagnose	Print FAIL_TO_PASS tests for context	2026-09-15T01:31:44.8710067Z Generating test split:   0%|          | 0/300 [00:00<?, ? examples/s]
+diagnose	Print FAIL_TO_PASS tests for context	2026-09-15T01:31:44.8711724Z Generating test split: 100%|██████████| 300/300 [00:00<00:00, 30213.25 examples/s]
+diagnose	Print FAIL_TO_PASS tests for context	2026-09-15T01:31:44.8712342Z 
+diagnose	Print FAIL_TO_PASS tests for context	2026-09-15T01:31:44.8751448Z Generating dev split:   0%|          | 0/23 [00:00<?, ? examples/s]
+diagnose	Print FAIL_TO_PASS tests for context	2026-09-15T01:31:44.8752485Z Generating dev split: 100%|██████████| 23/23 [00:00<00:00, 6119.58 examples/s]
+diagnose	Print FAIL_TO_PASS tests for context	2026-09-15T01:31:44.9030761Z FAIL_TO_PASS: ['lib/matplotlib/tests/test_legend.py::test_legend_draggable[True]', 'lib/matplotlib/tests/test_legend.py::test_legend_draggable[False]']
+diagnose	Print FAIL_TO_PASS tests for context	2026-09-15T01:31:44.9032451Z PASS_TO_PASS (first 5): ['lib/matplotlib/tests/test_legend.py::test_legend_ordereddict', 'lib/matplotlib/tests/test_legend.py::test_legend_auto1[png]', 'lib/matplotlib/tests/test_legend.py::test_legend_auto1[pdf]', 'lib/matplotlib/tests/test_legend.py::test_legend_auto2[png]', 'lib/matplotlib/tests/test_legend.py::test_legend_auto2[pdf]']
+diagnose	Run the same fixed patch 5 times	﻿2026-09-15T01:31:45.1285033Z ##[group]Run for i in 1 2 3 4 5; do
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:45.1285389Z ^[[36;1mfor i in 1 2 3 4 5; do^[[0m
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:45.1285646Z ^[[36;1m  echo "=== REP $i ==="^[[0m
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:45.1285980Z ^[[36;1m  python3 -m swebench.harness.run_evaluation \^[[0m
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:45.1286761Z ^[[36;1m    -p predictions.jsonl \^[[0m
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:45.1287066Z ^[[36;1m    -i matplotlib__matplotlib-23913 \^[[0m
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:45.1287377Z ^[[36;1m    -id mismatch_diag_$i \^[[0m
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:45.1287643Z ^[[36;1m    --max_workers 1 || true^[[0m
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:45.1287893Z ^[[36;1mdone^[[0m
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:45.1328813Z shell: /usr/bin/bash -e {0}
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:45.1329086Z env:
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:45.1329354Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.16/x64
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:45.1329790Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib/pkgconfig
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:45.1330205Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:45.1330581Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:45.1331005Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:45.1331380Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:45.1331702Z ##[endgroup]
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:45.1394487Z === REP 1 ===
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:46.4761632Z <frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:46.5464638Z 2026-09-15 01:31:46,546 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:46.5470105Z Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:46.5471950Z 2026-09-15 01:31:46,546 - huggingface_hub.utils._http - WARNING - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:46.5553136Z 2026-09-15 01:31:46,554 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/SWE-bench/SWE-bench_Lite/b0dde1093fe417d83b7184254edf8199c1f0dff5/README.md?%2Fdatasets%2FSWE-bench%2FSWE-bench_Lite%2Fresolve%2Fmain%2FREADME.md=&etag=%2258500986c6a0d5bb39ced1772445513a52605767%22 "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:46.5939233Z 2026-09-15 01:31:46,593 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:46.6929002Z 2026-09-15 01:31:46,692 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/SWE-bench/SWE-bench_Lite/SWE-bench/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:46.7428718Z 2026-09-15 01:31:46,742 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/SWE-bench/SWE-bench_Lite/revision/b0dde1093fe417d83b7184254edf8199c1f0dff5 "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:46.7847059Z 2026-09-15 01:31:46,784 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/.huggingface.yaml "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:46.8717487Z 2026-09-15 01:31:46,871 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=SWE-bench/SWE-bench_Lite "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:47.0133599Z 2026-09-15 01:31:47,012 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/SWE-bench/SWE-bench_Lite/tree/b0dde1093fe417d83b7184254edf8199c1f0dff5/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:47.0520935Z 2026-09-15 01:31:47,051 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/SWE-bench/SWE-bench_Lite/tree/b0dde1093fe417d83b7184254edf8199c1f0dff5?recursive=false&expand=false "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:47.0924022Z 2026-09-15 01:31:47,092 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/dataset_infos.json "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:47.1801690Z 2026-09-15 01:31:47,179 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:47.1874163Z 2026-09-15 01:31:47,187 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/SWE-bench/SWE-bench_Lite/b0dde1093fe417d83b7184254edf8199c1f0dff5/README.md?%2Fdatasets%2FSWE-bench%2FSWE-bench_Lite%2Fresolve%2Fmain%2FREADME.md=&etag=%2258500986c6a0d5bb39ced1772445513a52605767%22 "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:47.2231558Z 2026-09-15 01:31:47,222 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:47.2506909Z 2026-09-15 01:31:47,250 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/SWE-bench/SWE-bench_Lite/SWE-bench/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:47.2891936Z 2026-09-15 01:31:47,288 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/.huggingface.yaml "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:47.3356884Z 2026-09-15 01:31:47,335 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=SWE-bench/SWE-bench_Lite "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:47.3752593Z 2026-09-15 01:31:47,374 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/dataset_infos.json "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:47.6509764Z Running 1 instances...
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:31:47.6510161Z 
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:05.4451892Z Evaluation:   0%|          | 0/1 [00:00<?, ?it/s, error=0, ✓=0, ✖=0]
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:05.4452535Z Evaluation:   0%|          | 0/1 [02:17<?, ?it/s, ✓=1, ✖=0, error=0]
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:05.4456922Z Evaluation: 100%|██████████| 1/1 [02:17<00:00, 137.79s/it, ✓=1, ✖=0, error=0]
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:05.4457478Z Evaluation: 100%|██████████| 1/1 [02:17<00:00, 137.79s/it, ✓=1, ✖=0, error=0]
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:05.4729063Z All instances run.
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:05.4729508Z Cleaning cached images...
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:05.4729861Z Removed 0 images.
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:05.4730146Z Total instances: 1
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:05.4730443Z Instances submitted: 1
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:05.4730818Z Instances completed: 1
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:05.4731129Z Instances incomplete: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:05.4731450Z Instances resolved: 1
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:05.4731750Z Instances unresolved: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:05.4732076Z Instances with empty patches: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:05.4732436Z Instances with errors: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:05.4732771Z Unstopped containers: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:05.4733102Z Unremoved images: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:05.4733552Z Report written to gemma4-32k-mini-swe-agent.mismatch_diag_1.json
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:05.7381476Z === REP 2 ===
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:06.8845546Z <frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:06.9843497Z 2026-09-15 01:34:06,984 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:06.9847299Z Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:06.9849032Z 2026-09-15 01:34:06,984 - huggingface_hub.utils._http - WARNING - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:06.9926758Z 2026-09-15 01:34:06,992 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/SWE-bench/SWE-bench_Lite/b0dde1093fe417d83b7184254edf8199c1f0dff5/README.md?%2Fdatasets%2FSWE-bench%2FSWE-bench_Lite%2Fresolve%2Fmain%2FREADME.md=&etag=%2258500986c6a0d5bb39ced1772445513a52605767%22 "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:07.0352392Z 2026-09-15 01:34:07,034 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:07.1497644Z 2026-09-15 01:34:07,149 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/SWE-bench/SWE-bench_Lite/SWE-bench/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:07.2914758Z 2026-09-15 01:34:07,291 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/SWE-bench/SWE-bench_Lite/revision/b0dde1093fe417d83b7184254edf8199c1f0dff5 "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:07.3368017Z 2026-09-15 01:34:07,336 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/.huggingface.yaml "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:07.4083910Z 2026-09-15 01:34:07,408 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=SWE-bench/SWE-bench_Lite "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:07.4570477Z 2026-09-15 01:34:07,456 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/SWE-bench/SWE-bench_Lite/tree/b0dde1093fe417d83b7184254edf8199c1f0dff5/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:07.4969709Z 2026-09-15 01:34:07,496 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/SWE-bench/SWE-bench_Lite/tree/b0dde1093fe417d83b7184254edf8199c1f0dff5?recursive=false&expand=false "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:07.5379816Z 2026-09-15 01:34:07,537 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/dataset_infos.json "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:07.6263831Z 2026-09-15 01:34:07,626 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:07.6362987Z 2026-09-15 01:34:07,635 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/SWE-bench/SWE-bench_Lite/b0dde1093fe417d83b7184254edf8199c1f0dff5/README.md?%2Fdatasets%2FSWE-bench%2FSWE-bench_Lite%2Fresolve%2Fmain%2FREADME.md=&etag=%2258500986c6a0d5bb39ced1772445513a52605767%22 "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:07.6708087Z 2026-09-15 01:34:07,670 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:07.7032683Z 2026-09-15 01:34:07,702 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/SWE-bench/SWE-bench_Lite/SWE-bench/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:07.7462519Z 2026-09-15 01:34:07,745 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/.huggingface.yaml "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:07.7929166Z 2026-09-15 01:34:07,792 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=SWE-bench/SWE-bench_Lite "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:07.8323018Z 2026-09-15 01:34:07,832 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/dataset_infos.json "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:07.9531418Z Running 1 instances...
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:34:07.9531711Z 
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:22.9426236Z Evaluation:   0%|          | 0/1 [00:00<?, ?it/s, error=0, ✓=0, ✖=0]
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:22.9427353Z Evaluation:   0%|          | 0/1 [02:14<?, ?it/s, ✓=1, ✖=0, error=0]
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:22.9470598Z Evaluation: 100%|██████████| 1/1 [02:14<00:00, 134.99s/it, ✓=1, ✖=0, error=0]
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:22.9471405Z Evaluation: 100%|██████████| 1/1 [02:14<00:00, 134.99s/it, ✓=1, ✖=0, error=0]
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:22.9732158Z All instances run.
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:22.9732542Z Cleaning cached images...
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:22.9732904Z Removed 0 images.
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:22.9733176Z Total instances: 1
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:22.9733402Z Instances submitted: 1
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:22.9733636Z Instances completed: 1
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:22.9734149Z Instances incomplete: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:22.9734378Z Instances resolved: 1
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:22.9734601Z Instances unresolved: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:22.9734835Z Instances with empty patches: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:22.9735088Z Instances with errors: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:22.9735320Z Unstopped containers: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:22.9735537Z Unremoved images: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:22.9735848Z Report written to gemma4-32k-mini-swe-agent.mismatch_diag_2.json
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:23.2019669Z === REP 3 ===
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:24.3347251Z <frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:24.4066772Z 2026-09-15 01:36:24,406 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:24.4147678Z 2026-09-15 01:36:24,414 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/SWE-bench/SWE-bench_Lite/b0dde1093fe417d83b7184254edf8199c1f0dff5/README.md?%2Fdatasets%2FSWE-bench%2FSWE-bench_Lite%2Fresolve%2Fmain%2FREADME.md=&etag=%2258500986c6a0d5bb39ced1772445513a52605767%22 "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:24.4509031Z 2026-09-15 01:36:24,450 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:24.4513111Z Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:24.4514897Z 2026-09-15 01:36:24,450 - huggingface_hub.utils._http - WARNING - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:24.5580863Z 2026-09-15 01:36:24,557 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/SWE-bench/SWE-bench_Lite/SWE-bench/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:24.7919784Z 2026-09-15 01:36:24,791 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/SWE-bench/SWE-bench_Lite/revision/b0dde1093fe417d83b7184254edf8199c1f0dff5 "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:24.8309921Z 2026-09-15 01:36:24,830 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/.huggingface.yaml "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:24.9147694Z 2026-09-15 01:36:24,914 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=SWE-bench/SWE-bench_Lite "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:24.9607234Z 2026-09-15 01:36:24,960 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/SWE-bench/SWE-bench_Lite/tree/b0dde1093fe417d83b7184254edf8199c1f0dff5/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:24.9988509Z 2026-09-15 01:36:24,998 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/SWE-bench/SWE-bench_Lite/tree/b0dde1093fe417d83b7184254edf8199c1f0dff5?recursive=false&expand=false "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:25.0359129Z 2026-09-15 01:36:25,035 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/dataset_infos.json "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:25.1284672Z 2026-09-15 01:36:25,128 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:25.1384567Z 2026-09-15 01:36:25,138 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/SWE-bench/SWE-bench_Lite/b0dde1093fe417d83b7184254edf8199c1f0dff5/README.md?%2Fdatasets%2FSWE-bench%2FSWE-bench_Lite%2Fresolve%2Fmain%2FREADME.md=&etag=%2258500986c6a0d5bb39ced1772445513a52605767%22 "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:25.1722366Z 2026-09-15 01:36:25,172 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:25.2003603Z 2026-09-15 01:36:25,200 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/SWE-bench/SWE-bench_Lite/SWE-bench/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:25.2425771Z 2026-09-15 01:36:25,242 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/.huggingface.yaml "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:25.2883042Z 2026-09-15 01:36:25,288 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=SWE-bench/SWE-bench_Lite "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:25.3280725Z 2026-09-15 01:36:25,327 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/dataset_infos.json "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:25.4435349Z Running 1 instances...
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:36:25.4435917Z 
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:39.5219597Z Evaluation:   0%|          | 0/1 [00:00<?, ?it/s, error=0, ✓=0, ✖=0]
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:39.5220775Z Evaluation:   0%|          | 0/1 [02:14<?, ?it/s, ✓=1, ✖=0, error=0]
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:39.5221987Z Evaluation: 100%|██████████| 1/1 [02:14<00:00, 134.08s/it, ✓=1, ✖=0, error=0]
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:39.5222890Z Evaluation: 100%|██████████| 1/1 [02:14<00:00, 134.08s/it, ✓=1, ✖=0, error=0]
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:39.5490993Z All instances run.
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:39.5491369Z Cleaning cached images...
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:39.5491708Z Removed 0 images.
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:39.5492009Z Total instances: 1
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:39.5492300Z Instances submitted: 1
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:39.5492615Z Instances completed: 1
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:39.5492926Z Instances incomplete: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:39.5493237Z Instances resolved: 1
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:39.5493571Z Instances unresolved: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:39.5494556Z Instances with empty patches: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:39.5494919Z Instances with errors: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:39.5495239Z Unstopped containers: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:39.5495539Z Unremoved images: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:39.5495983Z Report written to gemma4-32k-mini-swe-agent.mismatch_diag_3.json
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:39.7822476Z === REP 4 ===
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:40.9471806Z <frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:41.0195324Z 2026-09-15 01:38:41,019 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:41.0273639Z 2026-09-15 01:38:41,027 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/SWE-bench/SWE-bench_Lite/b0dde1093fe417d83b7184254edf8199c1f0dff5/README.md?%2Fdatasets%2FSWE-bench%2FSWE-bench_Lite%2Fresolve%2Fmain%2FREADME.md=&etag=%2258500986c6a0d5bb39ced1772445513a52605767%22 "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:41.0627926Z 2026-09-15 01:38:41,062 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:41.0630274Z Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:41.0631943Z 2026-09-15 01:38:41,062 - huggingface_hub.utils._http - WARNING - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:41.1537010Z 2026-09-15 01:38:41,153 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/SWE-bench/SWE-bench_Lite/SWE-bench/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:41.3965257Z 2026-09-15 01:38:41,396 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/SWE-bench/SWE-bench_Lite/revision/b0dde1093fe417d83b7184254edf8199c1f0dff5 "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:41.4342423Z 2026-09-15 01:38:41,433 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/.huggingface.yaml "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:41.5090056Z 2026-09-15 01:38:41,508 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=SWE-bench/SWE-bench_Lite "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:41.5558874Z 2026-09-15 01:38:41,555 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/SWE-bench/SWE-bench_Lite/tree/b0dde1093fe417d83b7184254edf8199c1f0dff5/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:41.5901609Z 2026-09-15 01:38:41,589 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/SWE-bench/SWE-bench_Lite/tree/b0dde1093fe417d83b7184254edf8199c1f0dff5?recursive=false&expand=false "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:41.6278123Z 2026-09-15 01:38:41,627 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/dataset_infos.json "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:41.7198053Z 2026-09-15 01:38:41,719 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:41.7276884Z 2026-09-15 01:38:41,727 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/SWE-bench/SWE-bench_Lite/b0dde1093fe417d83b7184254edf8199c1f0dff5/README.md?%2Fdatasets%2FSWE-bench%2FSWE-bench_Lite%2Fresolve%2Fmain%2FREADME.md=&etag=%2258500986c6a0d5bb39ced1772445513a52605767%22 "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:41.7640609Z 2026-09-15 01:38:41,763 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:41.8030466Z 2026-09-15 01:38:41,802 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/SWE-bench/SWE-bench_Lite/SWE-bench/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:41.8444229Z 2026-09-15 01:38:41,844 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/.huggingface.yaml "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:41.8943291Z 2026-09-15 01:38:41,894 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=SWE-bench/SWE-bench_Lite "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:41.9394384Z 2026-09-15 01:38:41,939 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/dataset_infos.json "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:42.1187873Z Running 1 instances...
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:38:42.1188235Z 
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:56.9698323Z Evaluation:   0%|          | 0/1 [00:00<?, ?it/s, error=0, ✓=0, ✖=0]
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:56.9699188Z Evaluation:   0%|          | 0/1 [02:14<?, ?it/s, ✓=1, ✖=0, error=0]
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:56.9701821Z Evaluation: 100%|██████████| 1/1 [02:14<00:00, 134.85s/it, ✓=1, ✖=0, error=0]
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:56.9702866Z Evaluation: 100%|██████████| 1/1 [02:14<00:00, 134.85s/it, ✓=1, ✖=0, error=0]
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:56.9967499Z All instances run.
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:56.9967897Z Cleaning cached images...
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:56.9968233Z Removed 0 images.
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:56.9968510Z Total instances: 1
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:56.9968800Z Instances submitted: 1
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:56.9969111Z Instances completed: 1
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:56.9969407Z Instances incomplete: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:56.9969714Z Instances resolved: 1
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:56.9970016Z Instances unresolved: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:56.9970689Z Instances with empty patches: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:56.9971038Z Instances with errors: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:56.9971357Z Unstopped containers: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:56.9971665Z Unremoved images: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:56.9972106Z Report written to gemma4-32k-mini-swe-agent.mismatch_diag_4.json
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:57.2253451Z === REP 5 ===
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:58.3522355Z <frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:58.4310289Z 2026-09-15 01:40:58,430 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:58.4314115Z Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:58.4315956Z 2026-09-15 01:40:58,431 - huggingface_hub.utils._http - WARNING - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:58.4398417Z 2026-09-15 01:40:58,439 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/SWE-bench/SWE-bench_Lite/b0dde1093fe417d83b7184254edf8199c1f0dff5/README.md?%2Fdatasets%2FSWE-bench%2FSWE-bench_Lite%2Fresolve%2Fmain%2FREADME.md=&etag=%2258500986c6a0d5bb39ced1772445513a52605767%22 "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:58.4770676Z 2026-09-15 01:40:58,476 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:58.5607572Z 2026-09-15 01:40:58,560 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/SWE-bench/SWE-bench_Lite/SWE-bench/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:58.8067993Z 2026-09-15 01:40:58,806 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/SWE-bench/SWE-bench_Lite/revision/b0dde1093fe417d83b7184254edf8199c1f0dff5 "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:58.8409317Z 2026-09-15 01:40:58,840 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/.huggingface.yaml "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:59.1179336Z 2026-09-15 01:40:59,117 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=SWE-bench/SWE-bench_Lite "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:59.1616153Z 2026-09-15 01:40:59,161 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/SWE-bench/SWE-bench_Lite/tree/b0dde1093fe417d83b7184254edf8199c1f0dff5/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:59.2000619Z 2026-09-15 01:40:59,199 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/SWE-bench/SWE-bench_Lite/tree/b0dde1093fe417d83b7184254edf8199c1f0dff5?recursive=false&expand=false "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:59.2395813Z 2026-09-15 01:40:59,239 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/dataset_infos.json "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:59.3348513Z 2026-09-15 01:40:59,334 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:59.3431106Z 2026-09-15 01:40:59,342 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/SWE-bench/SWE-bench_Lite/b0dde1093fe417d83b7184254edf8199c1f0dff5/README.md?%2Fdatasets%2FSWE-bench%2FSWE-bench_Lite%2Fresolve%2Fmain%2FREADME.md=&etag=%2258500986c6a0d5bb39ced1772445513a52605767%22 "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:59.3810763Z 2026-09-15 01:40:59,380 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:59.4086165Z 2026-09-15 01:40:59,408 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/SWE-bench/SWE-bench_Lite/SWE-bench/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:59.4513418Z 2026-09-15 01:40:59,451 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/.huggingface.yaml "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:59.5016196Z 2026-09-15 01:40:59,501 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=SWE-bench/SWE-bench_Lite "HTTP/1.1 200 OK"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:59.5410786Z 2026-09-15 01:40:59,540 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/dataset_infos.json "HTTP/1.1 404 Not Found"
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:59.6529548Z Running 1 instances...
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:40:59.6529913Z 
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:43:13.7230212Z Evaluation:   0%|          | 0/1 [00:00<?, ?it/s, error=0, ✓=0, ✖=0]
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:43:13.7230991Z Evaluation:   0%|          | 0/1 [02:14<?, ?it/s, ✓=1, ✖=0, error=0]
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:43:13.7234155Z Evaluation: 100%|██████████| 1/1 [02:14<00:00, 134.07s/it, ✓=1, ✖=0, error=0]
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:43:13.7234989Z Evaluation: 100%|██████████| 1/1 [02:14<00:00, 134.07s/it, ✓=1, ✖=0, error=0]
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:43:13.7532994Z All instances run.
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:43:13.7533317Z Cleaning cached images...
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:43:13.7533581Z Removed 0 images.
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:43:13.7533794Z Total instances: 1
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:43:13.7534013Z Instances submitted: 1
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:43:13.7534239Z Instances completed: 1
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:43:13.7534458Z Instances incomplete: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:43:13.7534685Z Instances resolved: 1
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:43:13.7534908Z Instances unresolved: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:43:13.7535155Z Instances with empty patches: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:43:13.7535433Z Instances with errors: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:43:13.7535721Z Unstopped containers: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:43:13.7535946Z Unremoved images: 0
+diagnose	Run the same fixed patch 5 times	2026-09-15T01:43:13.7537023Z Report written to gemma4-32k-mini-swe-agent.mismatch_diag_5.json
+diagnose	Summarize all 5 verdicts	﻿2026-09-15T01:43:13.9936660Z ##[group]Run for i in 1 2 3 4 5; do
+diagnose	Summarize all 5 verdicts	2026-09-15T01:43:13.9937030Z ^[[36;1mfor i in 1 2 3 4 5; do^[[0m
+diagnose	Summarize all 5 verdicts	2026-09-15T01:43:13.9937286Z ^[[36;1m  python3 -c "^[[0m
+diagnose	Summarize all 5 verdicts	2026-09-15T01:43:13.9937521Z ^[[36;1m  import json^[[0m
+diagnose	Summarize all 5 verdicts	2026-09-15T01:43:13.9937736Z ^[[36;1m  try:^[[0m
+diagnose	Summarize all 5 verdicts	2026-09-15T01:43:13.9938041Z ^[[36;1m      r = json.load(open('gold-reference.mismatch_diag_$i.json'))^[[0m
+diagnose	Summarize all 5 verdicts	2026-09-15T01:43:13.9938611Z ^[[36;1m      v = 'RESOLVED' if 'matplotlib__matplotlib-23913' in r.get('resolved_ids', []) else 'UNRESOLVED'^[[0m
+diagnose	Summarize all 5 verdicts	2026-09-15T01:43:13.9939089Z ^[[36;1m  except FileNotFoundError:^[[0m
+diagnose	Summarize all 5 verdicts	2026-09-15T01:43:13.9939360Z ^[[36;1m      v = 'REPORT_MISSING'^[[0m
+diagnose	Summarize all 5 verdicts	2026-09-15T01:43:13.9939616Z ^[[36;1m  print(f'Rep $i: {v}')^[[0m
+diagnose	Summarize all 5 verdicts	2026-09-15T01:43:13.9939853Z ^[[36;1m  "^[[0m
+diagnose	Summarize all 5 verdicts	2026-09-15T01:43:13.9940043Z ^[[36;1mdone^[[0m
+diagnose	Summarize all 5 verdicts	2026-09-15T01:43:13.9981543Z shell: /usr/bin/bash -e {0}
+diagnose	Summarize all 5 verdicts	2026-09-15T01:43:13.9981810Z env:
+diagnose	Summarize all 5 verdicts	2026-09-15T01:43:13.9982085Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.16/x64
+diagnose	Summarize all 5 verdicts	2026-09-15T01:43:13.9982529Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib/pkgconfig
+diagnose	Summarize all 5 verdicts	2026-09-15T01:43:13.9982996Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+diagnose	Summarize all 5 verdicts	2026-09-15T01:43:13.9983379Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+diagnose	Summarize all 5 verdicts	2026-09-15T01:43:13.9983758Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+diagnose	Summarize all 5 verdicts	2026-09-15T01:43:13.9984142Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib
+diagnose	Summarize all 5 verdicts	2026-09-15T01:43:13.9984464Z ##[endgroup]
+diagnose	Summarize all 5 verdicts	2026-09-15T01:43:14.0145196Z   File "<string>", line 2
+diagnose	Summarize all 5 verdicts	2026-09-15T01:43:14.0145590Z     import json
+diagnose	Summarize all 5 verdicts	2026-09-15T01:43:14.0145949Z IndentationError: unexpected indent
+diagnose	Summarize all 5 verdicts	2026-09-15T01:43:14.0178713Z ##[error]Process completed with exit code 1.
+diagnose	Upload full logs	﻿2026-09-15T01:43:14.0254610Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+diagnose	Upload full logs	2026-09-15T01:43:14.0255982Z ##[group]Run actions/upload-artifact@v4
+diagnose	Upload full logs	2026-09-15T01:43:14.0256495Z with:
+diagnose	Upload full logs	2026-09-15T01:43:14.0256719Z   name: mismatch-diagnosis-logs
+diagnose	Upload full logs	2026-09-15T01:43:14.0256975Z   path: logs/
+diagnose	Upload full logs	2026-09-15T01:43:14.0257191Z   if-no-files-found: warn
+diagnose	Upload full logs	2026-09-15T01:43:14.0257437Z   compression-level: 6
+diagnose	Upload full logs	2026-09-15T01:43:14.0257657Z   overwrite: false
+diagnose	Upload full logs	2026-09-15T01:43:14.0257875Z   include-hidden-files: false
+diagnose	Upload full logs	2026-09-15T01:43:14.0258109Z env:
+diagnose	Upload full logs	2026-09-15T01:43:14.0258362Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.16/x64
+diagnose	Upload full logs	2026-09-15T01:43:14.0258786Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib/pkgconfig
+diagnose	Upload full logs	2026-09-15T01:43:14.0259202Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+diagnose	Upload full logs	2026-09-15T01:43:14.0259615Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+diagnose	Upload full logs	2026-09-15T01:43:14.0259995Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+diagnose	Upload full logs	2026-09-15T01:43:14.0260361Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib
+diagnose	Upload full logs	2026-09-15T01:43:14.0260679Z ##[endgroup]
+diagnose	Upload full logs	2026-09-15T01:43:14.1932964Z (node:7205) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+diagnose	Upload full logs	2026-09-15T01:43:14.1933684Z (Use `node --trace-deprecation ...` to show where the warning was created)
+diagnose	Upload full logs	2026-09-15T01:43:14.2187693Z With the provided path, there will be 25 files uploaded
+diagnose	Upload full logs	2026-09-15T01:43:14.2188484Z Artifact name is valid!
+diagnose	Upload full logs	2026-09-15T01:43:14.2188899Z Root directory input is valid!
+diagnose	Upload full logs	2026-09-15T01:43:14.4764981Z Beginning upload of artifact content to blob storage
+diagnose	Upload full logs	2026-09-15T01:43:14.6027529Z (node:7205) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+diagnose	Upload full logs	2026-09-15T01:43:14.8095934Z Uploaded bytes 477652
+diagnose	Upload full logs	2026-09-15T01:43:14.8433312Z Finished uploading artifact content to blob storage!
+diagnose	Upload full logs	2026-09-15T01:43:14.8434439Z SHA256 digest of uploaded artifact zip is caebf40cca7f771307abb13618315f74d8da3a5d64b96c230a9a1658849b7f6e
+diagnose	Upload full logs	2026-09-15T01:43:14.8436741Z Finalizing artifact upload
+diagnose	Upload full logs	2026-09-15T01:43:15.0507670Z Artifact mismatch-diagnosis-logs.zip successfully finalized. Artifact ID 10377226651
+diagnose	Upload full logs	2026-09-15T01:43:15.0508925Z Artifact mismatch-diagnosis-logs has been successfully uploaded! Final size is 477652 bytes. Artifact ID is 10377226651
+diagnose	Upload full logs	2026-09-15T01:43:15.0513961Z Artifact download URL: https://github.com/abdulrasheedsk99/swe-bench-platform-flakiness/actions/runs/34917591663/artifacts/10377226651
+diagnose	Post Run actions/checkout@v4	﻿2026-09-15T01:43:15.0722872Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+diagnose	Post Run actions/checkout@v4	2026-09-15T01:43:15.0724074Z Post job cleanup.
+diagnose	Post Run actions/checkout@v4	2026-09-15T01:43:15.1606910Z [command]/usr/bin/git version
+diagnose	Post Run actions/checkout@v4	2026-09-15T01:43:15.1657074Z git version 2.55.0
+diagnose	Post Run actions/checkout@v4	2026-09-15T01:43:15.1678282Z Temporarily overriding HOME='/home/runner/work/_temp/483be56f-cce9-42f0-9c33-66d47993f75f' before making global git config changes
+diagnose	Post Run actions/checkout@v4	2026-09-15T01:43:15.1679634Z Adding repository directory to the temporary git global config as a safe directory
+diagnose	Post Run actions/checkout@v4	2026-09-15T01:43:15.1683216Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/swe-bench-platform-flakiness/swe-bench-platform-flakiness
+diagnose	Post Run actions/checkout@v4	2026-09-15T01:43:15.1722598Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+diagnose	Post Run actions/checkout@v4	2026-09-15T01:43:15.1758783Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+diagnose	Post Run actions/checkout@v4	2026-09-15T01:43:15.2033923Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+diagnose	Post Run actions/checkout@v4	2026-09-15T01:43:15.2064946Z http.https://github.com/.extraheader
+diagnose	Post Run actions/checkout@v4	2026-09-15T01:43:15.2077220Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+diagnose	Post Run actions/checkout@v4	2026-09-15T01:43:15.2114876Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+diagnose	Post Run actions/checkout@v4	2026-09-15T01:43:15.2390862Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+diagnose	Post Run actions/checkout@v4	2026-09-15T01:43:15.2433285Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+diagnose	Complete job	﻿2026-09-15T01:43:15.2848516Z Cleaning up orphan processes
+diagnose	Complete job	2026-09-15T01:43:15.3211225Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

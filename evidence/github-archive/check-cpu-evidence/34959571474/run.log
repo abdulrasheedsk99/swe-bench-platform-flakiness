@@ -1,0 +1,89 @@
+check	Set up job	﻿2026-09-15T10:44:43.8748201Z Current runner version: '2.337.0'
+check	Set up job	2026-09-15T10:44:43.8776244Z ##[group]Runner Image Provisioner
+check	Set up job	2026-09-15T10:44:43.8777185Z Hosted Compute Agent
+check	Set up job	2026-09-15T10:44:43.8777804Z Version: 20260828.587
+check	Set up job	2026-09-15T10:44:43.8778784Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+check	Set up job	2026-09-15T10:44:43.8779575Z Build Date: 2026-08-28T16:44:25Z
+check	Set up job	2026-09-15T10:44:43.8780310Z Worker ID: {00147ced-f3e8-4d74-aea0-eccae95fc468}
+check	Set up job	2026-09-15T10:44:43.8781144Z Azure Region: northcentralus
+check	Set up job	2026-09-15T10:44:43.8781775Z ##[endgroup]
+check	Set up job	2026-09-15T10:44:43.8783461Z ##[group]Operating System
+check	Set up job	2026-09-15T10:44:43.8784193Z Ubuntu
+check	Set up job	2026-09-15T10:44:43.8784802Z 24.04.5
+check	Set up job	2026-09-15T10:44:43.8785401Z LTS
+check	Set up job	2026-09-15T10:44:43.8785947Z ##[endgroup]
+check	Set up job	2026-09-15T10:44:43.8786554Z ##[group]Runner Image
+check	Set up job	2026-09-15T10:44:43.8787192Z Image: ubuntu-24.04
+check	Set up job	2026-09-15T10:44:43.8787817Z Version: 20260907.300.1
+check	Set up job	2026-09-15T10:44:43.8789197Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260907.300/images/ubuntu/Ubuntu2404-Readme.md
+check	Set up job	2026-09-15T10:44:43.8791002Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260907.300
+check	Set up job	2026-09-15T10:44:43.8792021Z ##[endgroup]
+check	Set up job	2026-09-15T10:44:43.8793335Z ##[group]GITHUB_TOKEN Permissions
+check	Set up job	2026-09-15T10:44:43.8795580Z Contents: read
+check	Set up job	2026-09-15T10:44:43.8796229Z Metadata: read
+check	Set up job	2026-09-15T10:44:43.8796914Z Packages: read
+check	Set up job	2026-09-15T10:44:43.8797547Z ##[endgroup]
+check	Set up job	2026-09-15T10:44:43.8800051Z Secret source: Actions
+check	Set up job	2026-09-15T10:44:43.8801033Z Cache mode: write
+check	Set up job	2026-09-15T10:44:43.8802071Z Prepare workflow directory
+check	Set up job	2026-09-15T10:44:43.9240620Z Prepare all required actions
+check	Set up job	2026-09-15T10:44:43.9391495Z Complete job name: check
+check	CPU model and core count	﻿2026-09-15T10:44:44.0290226Z ##[group]Run echo "=== /proc/cpuinfo summary ==="
+check	CPU model and core count	2026-09-15T10:44:44.0291197Z ^[[36;1mecho "=== /proc/cpuinfo summary ==="^[[0m
+check	CPU model and core count	2026-09-15T10:44:44.0292244Z ^[[36;1mgrep "model name\|^processor" /proc/cpuinfo | sort | uniq -c^[[0m
+check	CPU model and core count	2026-09-15T10:44:44.0696756Z shell: /usr/bin/bash -e {0}
+check	CPU model and core count	2026-09-15T10:44:44.0697807Z ##[endgroup]
+check	CPU model and core count	2026-09-15T10:44:44.0911044Z === /proc/cpuinfo summary ===
+check	CPU model and core count	2026-09-15T10:44:44.0996489Z       4 model name	: AMD EPYC 9V74 80-Core Processor
+check	CPU model and core count	2026-09-15T10:44:44.0997716Z       1 processor	: 0
+check	CPU model and core count	2026-09-15T10:44:44.0998991Z       1 processor	: 1
+check	CPU model and core count	2026-09-15T10:44:44.0999909Z       1 processor	: 2
+check	CPU model and core count	2026-09-15T10:44:44.1000708Z       1 processor	: 3
+check	CPU steal time (hypervisor contention indicator)	﻿2026-09-15T10:44:44.1119661Z ##[group]Run echo "=== /proc/stat, two samples 2 seconds apart ==="
+check	CPU steal time (hypervisor contention indicator)	2026-09-15T10:44:44.1120774Z ^[[36;1mecho "=== /proc/stat, two samples 2 seconds apart ==="^[[0m
+check	CPU steal time (hypervisor contention indicator)	2026-09-15T10:44:44.1121622Z ^[[36;1mecho "--- sample 1 ---"^[[0m
+check	CPU steal time (hypervisor contention indicator)	2026-09-15T10:44:44.1122310Z ^[[36;1mcat /proc/stat | head -1^[[0m
+check	CPU steal time (hypervisor contention indicator)	2026-09-15T10:44:44.1123071Z ^[[36;1msleep 2^[[0m
+check	CPU steal time (hypervisor contention indicator)	2026-09-15T10:44:44.1123697Z ^[[36;1mecho "--- sample 2 (2s later) ---"^[[0m
+check	CPU steal time (hypervisor contention indicator)	2026-09-15T10:44:44.1200182Z ^[[36;1mcat /proc/stat | head -1^[[0m
+check	CPU steal time (hypervisor contention indicator)	2026-09-15T10:44:44.1201267Z ^[[36;1mecho ""^[[0m
+check	CPU steal time (hypervisor contention indicator)	2026-09-15T10:44:44.1202460Z ^[[36;1mecho "(8th field is 'steal' -- jiffies of CPU time stolen by the hypervisor for other tenants)"^[[0m
+check	CPU steal time (hypervisor contention indicator)	2026-09-15T10:44:44.1242623Z shell: /usr/bin/bash -e {0}
+check	CPU steal time (hypervisor contention indicator)	2026-09-15T10:44:44.1243168Z ##[endgroup]
+check	CPU steal time (hypervisor contention indicator)	2026-09-15T10:44:44.1309020Z === /proc/stat, two samples 2 seconds apart ===
+check	CPU steal time (hypervisor contention indicator)	2026-09-15T10:44:44.1310043Z --- sample 1 ---
+check	CPU steal time (hypervisor contention indicator)	2026-09-15T10:44:44.1321534Z cpu  2055 1 1262 6696 586 0 26 0 0 0
+check	CPU steal time (hypervisor contention indicator)	2026-09-15T10:44:46.1343183Z --- sample 2 (2s later) ---
+check	CPU steal time (hypervisor contention indicator)	2026-09-15T10:44:46.1357382Z cpu  2116 1 1267 7431 586 0 26 0 0 0
+check	CPU steal time (hypervisor contention indicator)	2026-09-15T10:44:46.1358908Z 
+check	CPU steal time (hypervisor contention indicator)	2026-09-15T10:44:46.1359524Z (8th field is 'steal' -- jiffies of CPU time stolen by the hypervisor for other tenants)
+check	Timing microbenchmark of a comparable CPU-bound loop	﻿2026-09-15T10:44:46.1401639Z ##[group]Run python3 -c "
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.1402059Z ^[[36;1mpython3 -c "^[[0m
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.1402356Z ^[[36;1mimport time^[[0m
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.1402651Z ^[[36;1mtimes = []^[[0m
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.1402960Z ^[[36;1mfor i in range(10):^[[0m
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.1403292Z ^[[36;1m    start = time.perf_counter()^[[0m
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.1403795Z ^[[36;1m    # comparable-scale nested loop to matplotlib's bbox-overlap check^[[0m
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.1404494Z ^[[36;1m    total = 0^[[0m
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.1404816Z ^[[36;1m    for x in range(2000):^[[0m
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.1405167Z ^[[36;1m        for y in range(50):^[[0m
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.1405504Z ^[[36;1m            total += x * y^[[0m
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.1405893Z ^[[36;1m    elapsed = time.perf_counter() - start^[[0m
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.1406286Z ^[[36;1m    times.append(elapsed)^[[0m
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.1406685Z ^[[36;1m    print(f'iteration {i}: {elapsed:.4f}s')^[[0m
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.1407245Z ^[[36;1mprint(f'min={min(times):.4f}s max={max(times):.4f}s spread={max(times)-min(times):.4f}s')^[[0m
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.1407794Z ^[[36;1m"^[[0m
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.1448672Z shell: /usr/bin/bash -e {0}
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.1449027Z ##[endgroup]
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.2569853Z iteration 0: 0.0092s
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.2570434Z iteration 1: 0.0091s
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.2570721Z iteration 2: 0.0092s
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.2570999Z iteration 3: 0.0092s
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.2571267Z iteration 4: 0.0091s
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.2572019Z iteration 5: 0.0092s
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.2572282Z iteration 6: 0.0091s
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.2572577Z iteration 7: 0.0091s
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.2572853Z iteration 8: 0.0091s
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.2573143Z iteration 9: 0.0092s
+check	Timing microbenchmark of a comparable CPU-bound loop	2026-09-15T10:44:46.2573459Z min=0.0091s max=0.0092s spread=0.0001s
+check	Complete job	﻿2026-09-15T10:44:46.2686925Z Cleaning up orphan processes

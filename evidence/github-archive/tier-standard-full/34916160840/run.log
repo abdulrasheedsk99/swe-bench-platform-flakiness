@@ -1,0 +1,626 @@
+grade	Set up job	﻿2026-09-15T01:09:57.2135855Z Current runner version: '2.337.0'
+grade	Set up job	2026-09-15T01:09:57.2154863Z ##[group]Runner Image Provisioner
+grade	Set up job	2026-09-15T01:09:57.2155427Z Hosted Compute Agent
+grade	Set up job	2026-09-15T01:09:57.2155826Z Version: 20260828.587
+grade	Set up job	2026-09-15T01:09:57.2156214Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+grade	Set up job	2026-09-15T01:09:57.2156646Z Build Date: 2026-08-28T16:44:25Z
+grade	Set up job	2026-09-15T01:09:57.2157116Z Worker ID: {1955c147-3af4-4ef2-88ec-b4e577d6c0d6}
+grade	Set up job	2026-09-15T01:09:57.2157534Z Azure Region: westus3
+grade	Set up job	2026-09-15T01:09:57.2157866Z ##[endgroup]
+grade	Set up job	2026-09-15T01:09:57.2158635Z ##[group]Operating System
+grade	Set up job	2026-09-15T01:09:57.2159103Z Ubuntu
+grade	Set up job	2026-09-15T01:09:57.2159542Z 24.04.5
+grade	Set up job	2026-09-15T01:09:57.2159869Z LTS
+grade	Set up job	2026-09-15T01:09:57.2160179Z ##[endgroup]
+grade	Set up job	2026-09-15T01:09:57.2160565Z ##[group]Runner Image
+grade	Set up job	2026-09-15T01:09:57.2160925Z Image: ubuntu-24.04
+grade	Set up job	2026-09-15T01:09:57.2161322Z Version: 20260907.300.1
+grade	Set up job	2026-09-15T01:09:57.2161941Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260907.300/images/ubuntu/Ubuntu2404-Readme.md
+grade	Set up job	2026-09-15T01:09:57.2163210Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260907.300
+grade	Set up job	2026-09-15T01:09:57.2163810Z ##[endgroup]
+grade	Set up job	2026-09-15T01:09:57.2164583Z ##[group]GITHUB_TOKEN Permissions
+grade	Set up job	2026-09-15T01:09:57.2165770Z Contents: read
+grade	Set up job	2026-09-15T01:09:57.2166167Z Metadata: read
+grade	Set up job	2026-09-15T01:09:57.2166542Z Packages: read
+grade	Set up job	2026-09-15T01:09:57.2166923Z ##[endgroup]
+grade	Set up job	2026-09-15T01:09:57.2168210Z Secret source: Actions
+grade	Set up job	2026-09-15T01:09:57.2168738Z Cache mode: write
+grade	Set up job	2026-09-15T01:09:57.2169540Z Prepare workflow directory
+grade	Set up job	2026-09-15T01:09:57.2373889Z Prepare all required actions
+grade	Set up job	2026-09-15T01:09:57.2405730Z Getting action download info
+grade	Set up job	2026-09-15T01:09:57.5366838Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+grade	Set up job	2026-09-15T01:09:57.9588344Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+grade	Set up job	2026-09-15T01:09:58.0533011Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+grade	Set up job	2026-09-15T01:09:58.2975424Z Complete job name: grade
+grade	Run actions/checkout@v4	﻿2026-09-15T01:09:58.3562724Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.3569391Z ##[group]Run actions/checkout@v4
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.3570060Z with:
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.3570658Z   repository: abdulrasheedsk99/swe-bench-platform-flakiness
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.3575823Z   token: ***
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.3576295Z   ssh-strict: true
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.3576774Z   ssh-user: git
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.3577262Z   persist-credentials: true
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.3577808Z   clean: true
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.3578333Z   sparse-checkout-cone-mode: true
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.3578924Z   fetch-depth: 1
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.3579397Z   fetch-tags: false
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.3579946Z   show-progress: true
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.3580445Z   lfs: false
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.3580896Z   submodules: false
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.3581447Z   set-safe-directory: true
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.3582081Z   allow-unsafe-pr-checkout: false
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.3582742Z ##[endgroup]
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.4279527Z Syncing repository: abdulrasheedsk99/swe-bench-platform-flakiness
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.4282776Z ##[group]Getting Git version info
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.4284490Z Working directory is '/home/runner/work/swe-bench-platform-flakiness/swe-bench-platform-flakiness'
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.4286801Z [command]/usr/bin/git version
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.6212790Z git version 2.55.0
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.6233989Z ##[endgroup]
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.6240051Z Temporarily overriding HOME='/home/runner/work/_temp/b622cdca-ed6a-44e5-a6ea-1e4615b94a38' before making global git config changes
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.6242525Z Adding repository directory to the temporary git global config as a safe directory
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.6244890Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/swe-bench-platform-flakiness/swe-bench-platform-flakiness
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.7316990Z Deleting the contents of '/home/runner/work/swe-bench-platform-flakiness/swe-bench-platform-flakiness'
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.7320325Z ##[group]Initializing the repository
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.7324815Z [command]/usr/bin/git init /home/runner/work/swe-bench-platform-flakiness/swe-bench-platform-flakiness
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.9223971Z hint: Using 'master' as the name for the initial branch. This default branch name
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.9226728Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.9229059Z hint: to use in all of your new repositories, which will suppress this warning,
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.9230926Z hint: call:
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.9232489Z hint:
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.9233721Z hint: 	git config --global init.defaultBranch <name>
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.9235267Z hint:
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.9236452Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.9238305Z hint: 'development'. The just-created branch can be renamed via this command:
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.9239618Z hint:
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.9240292Z hint: 	git branch -m <name>
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.9241093Z hint:
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.9242453Z hint: Disable this message with "git config set advice.defaultBranchName false"
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.9245287Z Initialized empty Git repository in /home/runner/work/swe-bench-platform-flakiness/swe-bench-platform-flakiness/.git/
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.9249759Z [command]/usr/bin/git remote add origin https://github.com/abdulrasheedsk99/swe-bench-platform-flakiness
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.9295446Z ##[endgroup]
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.9296904Z ##[group]Disabling automatic garbage collection
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.9298438Z [command]/usr/bin/git config --local gc.auto 0
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.9328840Z ##[endgroup]
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.9330251Z ##[group]Setting up auth
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.9333842Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+grade	Run actions/checkout@v4	2026-09-15T01:09:58.9366777Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+grade	Run actions/checkout@v4	2026-09-15T01:09:59.0017860Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+grade	Run actions/checkout@v4	2026-09-15T01:09:59.0049505Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+grade	Run actions/checkout@v4	2026-09-15T01:09:59.0237820Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+grade	Run actions/checkout@v4	2026-09-15T01:09:59.0270193Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+grade	Run actions/checkout@v4	2026-09-15T01:09:59.0454969Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+grade	Run actions/checkout@v4	2026-09-15T01:09:59.1008132Z ##[endgroup]
+grade	Run actions/checkout@v4	2026-09-15T01:09:59.1009248Z ##[group]Fetching the repository
+grade	Run actions/checkout@v4	2026-09-15T01:09:59.1016268Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +fe5f7f8e910b36df5e6c98c32feb0c51d572d1a1:refs/remotes/origin/main
+grade	Run actions/checkout@v4	2026-09-15T01:10:00.0896193Z From https://github.com/abdulrasheedsk99/swe-bench-platform-flakiness
+grade	Run actions/checkout@v4	2026-09-15T01:10:00.0898677Z  * [new ref]         fe5f7f8e910b36df5e6c98c32feb0c51d572d1a1 -> origin/main
+grade	Run actions/checkout@v4	2026-09-15T01:10:00.0903712Z ##[endgroup]
+grade	Run actions/checkout@v4	2026-09-15T01:10:00.0904734Z ##[group]Determining the checkout info
+grade	Run actions/checkout@v4	2026-09-15T01:10:00.0905814Z ##[endgroup]
+grade	Run actions/checkout@v4	2026-09-15T01:10:00.0908708Z [command]/usr/bin/git sparse-checkout disable
+grade	Run actions/checkout@v4	2026-09-15T01:10:00.1057782Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+grade	Run actions/checkout@v4	2026-09-15T01:10:00.1178015Z ##[group]Checking out the ref
+grade	Run actions/checkout@v4	2026-09-15T01:10:00.1191229Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+grade	Run actions/checkout@v4	2026-09-15T01:10:00.1557962Z Switched to a new branch 'main'
+grade	Run actions/checkout@v4	2026-09-15T01:10:00.1561059Z branch 'main' set up to track 'origin/main'.
+grade	Run actions/checkout@v4	2026-09-15T01:10:00.1568495Z ##[endgroup]
+grade	Run actions/checkout@v4	2026-09-15T01:10:00.1613765Z [command]/usr/bin/git log -1 --format=%H
+grade	Run actions/checkout@v4	2026-09-15T01:10:00.1639457Z fe5f7f8e910b36df5e6c98c32feb0c51d572d1a1
+grade	Free disk space	﻿2026-09-15T01:10:00.1830423Z ##[group]Run sudo rm -rf /usr/share/dotnet /opt/ghc "$AGENT_TOOLSDIRECTORY" /usr/local/lib/android || true
+grade	Free disk space	2026-09-15T01:10:00.1831166Z ^[[36;1msudo rm -rf /usr/share/dotnet /opt/ghc "$AGENT_TOOLSDIRECTORY" /usr/local/lib/android || true^[[0m
+grade	Free disk space	2026-09-15T01:10:00.1831623Z ^[[36;1mecho "--- disk before ---"^[[0m
+grade	Free disk space	2026-09-15T01:10:00.1831925Z ^[[36;1mdf -h^[[0m
+grade	Free disk space	2026-09-15T01:10:00.1870318Z shell: /usr/bin/bash -e {0}
+grade	Free disk space	2026-09-15T01:10:00.1870638Z ##[endgroup]
+grade	Free disk space	2026-09-15T01:11:55.4644735Z --- disk before ---
+grade	Free disk space	2026-09-15T01:11:55.5985015Z Filesystem       Size  Used Avail Use% Mounted on
+grade	Free disk space	2026-09-15T01:11:55.5985339Z /dev/root        145G   37G  108G  26% /
+grade	Free disk space	2026-09-15T01:11:55.5985614Z tmpfs            7.9G   84K  7.9G   1% /dev/shm
+grade	Free disk space	2026-09-15T01:11:55.6037820Z tmpfs            3.2G 1012K  3.2G   1% /run
+grade	Free disk space	2026-09-15T01:11:55.6038103Z tmpfs            5.0M     0  5.0M   0% /run/lock
+grade	Free disk space	2026-09-15T01:11:55.6038367Z /dev/nvme0n1p16  881M   64M  756M   8% /boot
+grade	Free disk space	2026-09-15T01:11:55.6038714Z /dev/nvme0n1p15  105M  6.2M   99M   6% /boot/efi
+grade	Free disk space	2026-09-15T01:11:55.6039078Z tmpfs            1.6G   12K  1.6G   1% /run/user/1001
+grade	Run actions/setup-python@v5	﻿2026-09-15T01:11:55.6103319Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+grade	Run actions/setup-python@v5	2026-09-15T01:11:55.6104404Z ##[group]Run actions/setup-python@v5
+grade	Run actions/setup-python@v5	2026-09-15T01:11:55.6104559Z with:
+grade	Run actions/setup-python@v5	2026-09-15T01:11:55.6104676Z   python-version: 3.11
+grade	Run actions/setup-python@v5	2026-09-15T01:11:55.6104806Z   check-latest: false
+grade	Run actions/setup-python@v5	2026-09-15T01:11:55.6106071Z   token: ***
+grade	Run actions/setup-python@v5	2026-09-15T01:11:55.6106204Z   update-environment: true
+grade	Run actions/setup-python@v5	2026-09-15T01:11:55.6106344Z   allow-prereleases: false
+grade	Run actions/setup-python@v5	2026-09-15T01:11:55.6106480Z   freethreaded: false
+grade	Run actions/setup-python@v5	2026-09-15T01:11:55.6106607Z ##[endgroup]
+grade	Run actions/setup-python@v5	2026-09-15T01:11:55.6971009Z ##[group]Installed versions
+grade	Run actions/setup-python@v5	2026-09-15T01:11:55.6977322Z Version 3.11 was not found in the local cache
+grade	Run actions/setup-python@v5	2026-09-15T01:11:55.7048635Z (node:2167) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+grade	Run actions/setup-python@v5	2026-09-15T01:11:55.7049266Z (Use `node --trace-deprecation ...` to show where the warning was created)
+grade	Run actions/setup-python@v5	2026-09-15T01:11:56.7520865Z Version 3.11 is available for downloading
+grade	Run actions/setup-python@v5	2026-09-15T01:11:56.7522258Z Download from "https://github.com/actions/python-versions/releases/download/3.11.16-31661435402/python-3.11.16-linux-24.04-x64.tar.gz"
+grade	Run actions/setup-python@v5	2026-09-15T01:11:57.3214975Z Extract downloaded archive
+grade	Run actions/setup-python@v5	2026-09-15T01:11:57.3298352Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/b4edc5f0-bb62-42b7-8379-501966a065fb -f /home/runner/work/_temp/09f05cb1-6a91-4a6a-a91f-7d0ae75f6a40
+grade	Run actions/setup-python@v5	2026-09-15T01:11:58.8308326Z Execute installation script
+grade	Run actions/setup-python@v5	2026-09-15T01:11:58.8387457Z Check if Python hostedtoolcache folder exist...
+grade	Run actions/setup-python@v5	2026-09-15T01:11:58.8388024Z Creating Python hostedtoolcache folder...
+grade	Run actions/setup-python@v5	2026-09-15T01:11:58.8402169Z Create Python 3.11.16 folder
+grade	Run actions/setup-python@v5	2026-09-15T01:11:58.8414198Z Copy Python binaries to hostedtoolcache folder
+grade	Run actions/setup-python@v5	2026-09-15T01:11:59.2332747Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+grade	Run actions/setup-python@v5	2026-09-15T01:11:59.2368602Z Upgrading pip...
+grade	Run actions/setup-python@v5	2026-09-15T01:12:01.0734303Z Collecting pip
+grade	Run actions/setup-python@v5	2026-09-15T01:12:01.1360467Z Downloading pip-26.2.1-py3-none-any.whl.metadata (4.6 kB)
+grade	Run actions/setup-python@v5	2026-09-15T01:12:01.1512695Z Downloading pip-26.2.1-py3-none-any.whl (1.8 MB)
+grade	Run actions/setup-python@v5	2026-09-15T01:12:01.2259554Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 25.1 MB/s eta 0:00:00
+grade	Run actions/setup-python@v5	2026-09-15T01:12:01.2260132Z 
+grade	Run actions/setup-python@v5	2026-09-15T01:12:01.2551001Z Installing collected packages: pip
+grade	Run actions/setup-python@v5	2026-09-15T01:12:01.2551732Z Attempting uninstall: pip
+grade	Run actions/setup-python@v5	2026-09-15T01:12:01.2564033Z Found existing installation: pip 24.0
+grade	Run actions/setup-python@v5	2026-09-15T01:12:01.2795317Z Uninstalling pip-24.0:
+grade	Run actions/setup-python@v5	2026-09-15T01:12:01.2836104Z Successfully uninstalled pip-24.0
+grade	Run actions/setup-python@v5	2026-09-15T01:12:01.7539926Z Successfully installed pip-26.2.1
+grade	Run actions/setup-python@v5	2026-09-15T01:12:01.8060931Z Create complete file
+grade	Run actions/setup-python@v5	2026-09-15T01:12:01.8092938Z Successfully set up CPython (3.11.16)
+grade	Run actions/setup-python@v5	2026-09-15T01:12:01.8093754Z ##[endgroup]
+grade	Install swebench	﻿2026-09-15T01:12:01.8218765Z ##[group]Run pip install swebench==4.1.0
+grade	Install swebench	2026-09-15T01:12:01.8218961Z ^[[36;1mpip install swebench==4.1.0^[[0m
+grade	Install swebench	2026-09-15T01:12:01.8249614Z shell: /usr/bin/bash -e {0}
+grade	Install swebench	2026-09-15T01:12:01.8249760Z env:
+grade	Install swebench	2026-09-15T01:12:01.8249904Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.16/x64
+grade	Install swebench	2026-09-15T01:12:01.8250137Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib/pkgconfig
+grade	Install swebench	2026-09-15T01:12:01.8250361Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+grade	Install swebench	2026-09-15T01:12:01.8250557Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+grade	Install swebench	2026-09-15T01:12:01.8250770Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+grade	Install swebench	2026-09-15T01:12:01.8250967Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib
+grade	Install swebench	2026-09-15T01:12:01.8251135Z ##[endgroup]
+grade	Install swebench	2026-09-15T01:12:02.1633939Z Collecting swebench==4.1.0
+grade	Install swebench	2026-09-15T01:12:02.2334536Z   Downloading swebench-4.1.0-py3-none-any.whl.metadata (15 kB)
+grade	Install swebench	2026-09-15T01:12:02.3196018Z Collecting beautifulsoup4 (from swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:02.3228026Z   Downloading beautifulsoup4-4.15.0-py3-none-any.whl.metadata (3.8 kB)
+grade	Install swebench	2026-09-15T01:12:02.3616572Z Collecting chardet (from swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:02.3649555Z   Downloading chardet-7.6.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (9.6 kB)
+grade	Install swebench	2026-09-15T01:12:02.5575528Z Collecting datasets (from swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:02.5606632Z   Downloading datasets-5.0.1-py3-none-any.whl.metadata (23 kB)
+grade	Install swebench	2026-09-15T01:12:02.5887694Z Collecting docker (from swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:02.5915581Z   Downloading docker-7.2.0-py3-none-any.whl.metadata (3.8 kB)
+grade	Install swebench	2026-09-15T01:12:02.6106835Z Collecting ghapi (from swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:02.6135200Z   Downloading ghapi-2.1.3-py3-none-any.whl.metadata (17 kB)
+grade	Install swebench	2026-09-15T01:12:02.8315653Z Collecting GitPython (from swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:02.8347375Z   Downloading gitpython-3.1.62-py3-none-any.whl.metadata (13 kB)
+grade	Install swebench	2026-09-15T01:12:03.3428659Z Collecting modal (from swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:03.3472978Z   Downloading modal-1.5.5-py3-none-any.whl.metadata (2.5 kB)
+grade	Install swebench	2026-09-15T01:12:03.4034792Z Collecting pre-commit (from swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:03.4065780Z   Downloading pre_commit-4.6.2-py2.py3-none-any.whl.metadata (1.2 kB)
+grade	Install swebench	2026-09-15T01:12:03.5638434Z Collecting python-dotenv (from swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:03.5669240Z   Downloading python_dotenv-1.2.3-py3-none-any.whl.metadata (29 kB)
+grade	Install swebench	2026-09-15T01:12:03.5883339Z Collecting requests (from swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:03.5914530Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+grade	Install swebench	2026-09-15T01:12:03.6163211Z Collecting rich (from swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:03.6192478Z   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+grade	Install swebench	2026-09-15T01:12:03.8869100Z Collecting tenacity (from swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:03.8903107Z   Downloading tenacity-9.1.4-py3-none-any.whl.metadata (1.2 kB)
+grade	Install swebench	2026-09-15T01:12:03.9670534Z Collecting tqdm (from swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:03.9700443Z   Downloading tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+grade	Install swebench	2026-09-15T01:12:04.0107111Z Collecting unidiff (from swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:04.0139506Z   Downloading unidiff-1.0.0-py3-none-any.whl.metadata (7.8 kB)
+grade	Install swebench	2026-09-15T01:12:04.0311707Z Collecting soupsieve>=1.6.1 (from beautifulsoup4->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:04.0339377Z   Downloading soupsieve-2.9.2-py3-none-any.whl.metadata (4.6 kB)
+grade	Install swebench	2026-09-15T01:12:04.0504410Z Collecting typing-extensions>=4.0.0 (from beautifulsoup4->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:04.0532827Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+grade	Install swebench	2026-09-15T01:12:04.0725916Z Collecting filelock (from datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:04.0754283Z   Downloading filelock-3.32.6-py3-none-any.whl.metadata (2.0 kB)
+grade	Install swebench	2026-09-15T01:12:04.3598669Z Collecting numpy>=1.17 (from datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:04.3631775Z   Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+grade	Install swebench	2026-09-15T01:12:04.4479145Z Collecting pyarrow>=21.0.0 (from datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:04.4513652Z   Downloading pyarrow-25.0.1-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+grade	Install swebench	2026-09-15T01:12:04.6148699Z Collecting dill<0.4.2,>=0.3.0 (from datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:04.6178587Z   Downloading dill-0.4.1-py3-none-any.whl.metadata (10 kB)
+grade	Install swebench	2026-09-15T01:12:04.6815185Z Collecting pandas (from datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:04.6850043Z   Downloading pandas-3.0.5-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+grade	Install swebench	2026-09-15T01:12:04.7160323Z Collecting httpx<1.0.0 (from datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:04.7193713Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+grade	Install swebench	2026-09-15T01:12:04.8194970Z Collecting xxhash (from datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:04.8227250Z   Downloading xxhash-4.0.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (17 kB)
+grade	Install swebench	2026-09-15T01:12:04.8419331Z Collecting multiprocess<0.70.20 (from datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:04.8458518Z   Downloading multiprocess-0.70.19-py311-none-any.whl.metadata (7.5 kB)
+grade	Install swebench	2026-09-15T01:12:04.8639648Z Collecting fsspec<=2026.6.0,>=2023.1.0 (from fsspec[http]<=2026.6.0,>=2023.1.0->datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:04.8667731Z   Downloading fsspec-2026.6.0-py3-none-any.whl.metadata (10 kB)
+grade	Install swebench	2026-09-15T01:12:04.9022786Z Collecting huggingface-hub<2.0,>=0.25.0 (from datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:04.9051534Z   Downloading huggingface_hub-1.31.0-py3-none-any.whl.metadata (16 kB)
+grade	Install swebench	2026-09-15T01:12:04.9410663Z Collecting packaging (from datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:04.9439321Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+grade	Install swebench	2026-09-15T01:12:04.9709045Z Collecting pyyaml>=5.1 (from datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:04.9738214Z   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+grade	Install swebench	2026-09-15T01:12:05.2893792Z Collecting aiohttp!=4.0.0a0,!=4.0.0a1 (from fsspec[http]<=2026.6.0,>=2023.1.0->datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:05.2929364Z   Downloading aiohttp-3.14.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+grade	Install swebench	2026-09-15T01:12:05.3168259Z Collecting anyio (from httpx<1.0.0->datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:05.3198072Z   Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+grade	Install swebench	2026-09-15T01:12:05.7031625Z Collecting certifi (from httpx<1.0.0->datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:05.7060214Z   Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+grade	Install swebench	2026-09-15T01:12:05.7223422Z Collecting httpcore==1.* (from httpx<1.0.0->datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:05.7251496Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+grade	Install swebench	2026-09-15T01:12:05.7451347Z Collecting idna (from httpx<1.0.0->datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:05.7480801Z   Downloading idna-3.19-py3-none-any.whl.metadata (9.2 kB)
+grade	Install swebench	2026-09-15T01:12:05.7639694Z Collecting h11>=0.16 (from httpcore==1.*->httpx<1.0.0->datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:05.7672606Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+grade	Install swebench	2026-09-15T01:12:06.7953189Z Collecting click<9.0.0,>=8.4.2 (from huggingface-hub<2.0,>=0.25.0->datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:06.7981990Z   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+grade	Install swebench	2026-09-15T01:12:06.8267068Z Collecting hf-xet<2.0.0,>=1.5.2 (from huggingface-hub<2.0,>=0.25.0->datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:06.8295203Z   Downloading hf_xet-1.6.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+grade	Install swebench	2026-09-15T01:12:06.8496025Z Collecting aiohappyeyeballs>=2.5.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.6.0,>=2023.1.0->datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:06.8525517Z   Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl.metadata (5.9 kB)
+grade	Install swebench	2026-09-15T01:12:06.8663460Z Collecting aiosignal>=1.4.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.6.0,>=2023.1.0->datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:06.8690873Z   Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+grade	Install swebench	2026-09-15T01:12:06.8847665Z Collecting attrs>=17.3.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.6.0,>=2023.1.0->datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:06.8876007Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+grade	Install swebench	2026-09-15T01:12:06.9349858Z Collecting frozenlist>=1.1.1 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.6.0,>=2023.1.0->datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:06.9381317Z   Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+grade	Install swebench	2026-09-15T01:12:07.1402633Z Collecting multidict<7.0,>=4.5 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.6.0,>=2023.1.0->datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:07.1436280Z   Downloading multidict-6.8.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+grade	Install swebench	2026-09-15T01:12:07.1903773Z Collecting propcache>=0.2.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.6.0,>=2023.1.0->datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:07.1939203Z   Downloading propcache-0.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (16 kB)
+grade	Install swebench	2026-09-15T01:12:07.3756040Z Collecting yarl<2.0,>=1.17.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.6.0,>=2023.1.0->datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:07.3791490Z   Downloading yarl-1.24.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (103 kB)
+grade	Install swebench	2026-09-15T01:12:07.4656549Z Collecting charset_normalizer<4,>=2 (from requests->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:07.4692909Z   Downloading charset_normalizer-3.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (45 kB)
+grade	Install swebench	2026-09-15T01:12:07.4908258Z Collecting urllib3<3,>=1.26 (from requests->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:07.4935896Z   Downloading urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+grade	Install swebench	2026-09-15T01:12:07.5273593Z Collecting fastcore>=2.2.7 (from ghapi->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:07.5303621Z   Downloading fastcore-2.2.27-py3-none-any.whl.metadata (9.5 kB)
+grade	Install swebench	2026-09-15T01:12:07.5463464Z Collecting fastspec>=0.2.1 (from ghapi->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:07.5490465Z   Downloading fastspec-0.2.4-py3-none-any.whl.metadata (14 kB)
+grade	Install swebench	2026-09-15T01:12:07.5637521Z Collecting fasttransport>=0.0.2 (from ghapi->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:07.5666384Z   Downloading fasttransport-0.0.4-py3-none-any.whl.metadata (4.2 kB)
+grade	Install swebench	2026-09-15T01:12:07.5941732Z Collecting httpx2>=2.9.1 (from fasttransport>=0.0.2->ghapi->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:07.5973872Z   Downloading httpx2-2.13.0-py3-none-any.whl.metadata (10 kB)
+grade	Install swebench	2026-09-15T01:12:07.6193246Z Collecting httpcore2==2.13.0 (from httpx2>=2.9.1->fasttransport>=0.0.2->ghapi->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:07.6222654Z   Downloading httpcore2-2.13.0-py3-none-any.whl.metadata (26 kB)
+grade	Install swebench	2026-09-15T01:12:07.6383732Z Collecting truststore>=0.10 (from httpx2>=2.9.1->fasttransport>=0.0.2->ghapi->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:07.6413522Z   Downloading truststore-0.10.4-py3-none-any.whl.metadata (4.4 kB)
+grade	Install swebench	2026-09-15T01:12:07.6817499Z Collecting gitdb<5,>=4.0.1 (from GitPython->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:07.6847464Z   Downloading gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+grade	Install swebench	2026-09-15T01:12:07.6997647Z Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->GitPython->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:07.7025623Z   Downloading smmap-5.0.3-py3-none-any.whl.metadata (4.6 kB)
+grade	Install swebench	2026-09-15T01:12:07.7422507Z Collecting cbor2 (from modal->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:07.7460087Z   Downloading cbor2-6.1.4-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+grade	Install swebench	2026-09-15T01:12:07.9979515Z Collecting grpclib<0.4.10,>=0.4.7 (from modal->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:08.0018742Z   Downloading grpclib-0.4.9-py3-none-any.whl.metadata (6.1 kB)
+grade	Install swebench	2026-09-15T01:12:08.4816831Z Collecting protobuf!=4.24.0,<7.0,>=3.19 (from modal->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:08.4853808Z   Downloading protobuf-6.33.6-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)
+grade	Install swebench	2026-09-15T01:12:08.6206514Z Collecting synchronicity~=0.12.5 (from modal->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:08.6246573Z   Downloading synchronicity-0.12.5-py3-none-any.whl.metadata (14 kB)
+grade	Install swebench	2026-09-15T01:12:08.6398324Z Collecting toml (from modal->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:08.6427619Z   Downloading toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+grade	Install swebench	2026-09-15T01:12:08.8554054Z Collecting types-certifi (from modal->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:08.8592171Z   Downloading types_certifi-2021.10.8.3-py3-none-any.whl.metadata (1.4 kB)
+grade	Install swebench	2026-09-15T01:12:08.8744016Z Collecting types-toml (from modal->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:08.8772614Z   Downloading types_toml-0.10.8.20260518-py3-none-any.whl.metadata (1.7 kB)
+grade	Install swebench	2026-09-15T01:12:08.9243816Z Collecting watchfiles (from modal->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:08.9278300Z   Downloading watchfiles-1.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+grade	Install swebench	2026-09-15T01:12:09.0975673Z Collecting h2<5,>=3.1.0 (from grpclib<0.4.10,>=0.4.7->modal->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:09.1003563Z   Downloading h2-4.4.1-py3-none-any.whl.metadata (3.8 kB)
+grade	Install swebench	2026-09-15T01:12:09.1154944Z Collecting hyperframe<7,>=6.1 (from h2<5,>=3.1.0->grpclib<0.4.10,>=0.4.7->modal->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:09.1183187Z   Downloading hyperframe-6.1.0-py3-none-any.whl.metadata (4.3 kB)
+grade	Install swebench	2026-09-15T01:12:09.1324016Z Collecting hpack<5,>=4.2 (from h2<5,>=3.1.0->grpclib<0.4.10,>=0.4.7->modal->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:09.1349881Z   Downloading hpack-4.2.0-py3-none-any.whl.metadata (3.3 kB)
+grade	Install swebench	2026-09-15T01:12:09.1525772Z Collecting markdown-it-py>=2.2.0 (from rich->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:09.1553171Z   Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+grade	Install swebench	2026-09-15T01:12:09.3592430Z Collecting pygments<3.0.0,>=2.13.0 (from rich->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:09.3621357Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+grade	Install swebench	2026-09-15T01:12:09.3764681Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:09.3794271Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+grade	Install swebench	2026-09-15T01:12:09.3963885Z Collecting python-dateutil>=2.8.2 (from pandas->datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:09.3996048Z   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+grade	Install swebench	2026-09-15T01:12:09.4150557Z Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->datasets->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:09.4177655Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+grade	Install swebench	2026-09-15T01:12:09.4322237Z Collecting cfgv>=2.0.0 (from pre-commit->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:09.4350840Z   Downloading cfgv-3.5.0-py2.py3-none-any.whl.metadata (8.9 kB)
+grade	Install swebench	2026-09-15T01:12:09.4585060Z Collecting identify>=1.0.0 (from pre-commit->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:09.4612302Z   Downloading identify-2.6.19-py2.py3-none-any.whl.metadata (4.4 kB)
+grade	Install swebench	2026-09-15T01:12:09.4760455Z Collecting nodeenv>=0.11.1 (from pre-commit->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:09.4789003Z   Downloading nodeenv-1.10.0-py2.py3-none-any.whl.metadata (24 kB)
+grade	Install swebench	2026-09-15T01:12:09.5063259Z Collecting virtualenv>=20.10.0 (from pre-commit->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:09.5095538Z   Downloading virtualenv-21.7.9-py3-none-any.whl.metadata (3.5 kB)
+grade	Install swebench	2026-09-15T01:12:09.5260684Z Collecting distlib<1,>=0.3.7 (from virtualenv>=20.10.0->pre-commit->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:09.5291509Z   Downloading distlib-0.4.3-py2.py3-none-any.whl.metadata (5.3 kB)
+grade	Install swebench	2026-09-15T01:12:09.5479174Z Collecting platformdirs<5,>=3.9.1 (from virtualenv>=20.10.0->pre-commit->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:09.5508087Z   Downloading platformdirs-4.11.8-py3-none-any.whl.metadata (5.5 kB)
+grade	Install swebench	2026-09-15T01:12:09.5653721Z Collecting python-discovery>=1.6 (from virtualenv>=20.10.0->pre-commit->swebench==4.1.0)
+grade	Install swebench	2026-09-15T01:12:09.5682406Z   Downloading python_discovery-1.6.0-py3-none-any.whl.metadata (5.1 kB)
+grade	Install swebench	2026-09-15T01:12:09.5789869Z Downloading swebench-4.1.0-py3-none-any.whl (157 kB)
+grade	Install swebench	2026-09-15T01:12:09.5844466Z Downloading beautifulsoup4-4.15.0-py3-none-any.whl (109 kB)
+grade	Install swebench	2026-09-15T01:12:09.5887062Z Downloading soupsieve-2.9.2-py3-none-any.whl (37 kB)
+grade	Install swebench	2026-09-15T01:12:09.6045345Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+grade	Install swebench	2026-09-15T01:12:09.6092987Z Downloading chardet-7.6.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.5 MB)
+grade	Install swebench	2026-09-15T01:12:09.6251486Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 165.5 MB/s  0:00:00
+grade	Install swebench	2026-09-15T01:12:09.6283017Z Downloading datasets-5.0.1-py3-none-any.whl (559 kB)
+grade	Install swebench	2026-09-15T01:12:09.6316317Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 559.1/559.1 kB 155.0 MB/s  0:00:00
+grade	Install swebench	2026-09-15T01:12:09.6345593Z Downloading dill-0.4.1-py3-none-any.whl (120 kB)
+grade	Install swebench	2026-09-15T01:12:09.6390272Z Downloading fsspec-2026.6.0-py3-none-any.whl (203 kB)
+grade	Install swebench	2026-09-15T01:12:09.6434859Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+grade	Install swebench	2026-09-15T01:12:09.6476358Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+grade	Install swebench	2026-09-15T01:12:09.6522353Z Downloading huggingface_hub-1.31.0-py3-none-any.whl (798 kB)
+grade	Install swebench	2026-09-15T01:12:09.6563405Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 798.3/798.3 kB 189.0 MB/s  0:00:00
+grade	Install swebench	2026-09-15T01:12:09.6590750Z Downloading click-8.5.0-py3-none-any.whl (125 kB)
+grade	Install swebench	2026-09-15T01:12:09.6633182Z Downloading hf_xet-1.6.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.5 MB)
+grade	Install swebench	2026-09-15T01:12:09.6921624Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 155.8 MB/s  0:00:00
+grade	Install swebench	2026-09-15T01:12:09.6952671Z Downloading multiprocess-0.70.19-py311-none-any.whl (144 kB)
+grade	Install swebench	2026-09-15T01:12:09.7001243Z Downloading aiohttp-3.14.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.8 MB)
+grade	Install swebench	2026-09-15T01:12:09.7072483Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 263.1 MB/s  0:00:00
+grade	Install swebench	2026-09-15T01:12:09.7102591Z Downloading multidict-6.8.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (272 kB)
+grade	Install swebench	2026-09-15T01:12:09.7151264Z Downloading yarl-1.24.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (111 kB)
+grade	Install swebench	2026-09-15T01:12:09.7195400Z Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+grade	Install swebench	2026-09-15T01:12:09.7237286Z Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+grade	Install swebench	2026-09-15T01:12:09.7282200Z Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+grade	Install swebench	2026-09-15T01:12:09.7324413Z Downloading filelock-3.32.6-py3-none-any.whl (100 kB)
+grade	Install swebench	2026-09-15T01:12:09.7367805Z Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+grade	Install swebench	2026-09-15T01:12:09.7415511Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+grade	Install swebench	2026-09-15T01:12:09.7458783Z Downloading idna-3.19-py3-none-any.whl (68 kB)
+grade	Install swebench	2026-09-15T01:12:09.7504601Z Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+grade	Install swebench	2026-09-15T01:12:09.8855829Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 124.9 MB/s  0:00:00
+grade	Install swebench	2026-09-15T01:12:09.8890154Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+grade	Install swebench	2026-09-15T01:12:09.8942656Z Downloading propcache-0.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (58 kB)
+grade	Install swebench	2026-09-15T01:12:09.8986845Z Downloading pyarrow-25.0.1-cp311-cp311-manylinux_2_28_x86_64.whl (50.1 MB)
+grade	Install swebench	2026-09-15T01:12:10.2541829Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 MB 141.4 MB/s  0:00:00
+grade	Install swebench	2026-09-15T01:12:10.2581147Z Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+grade	Install swebench	2026-09-15T01:12:10.2618265Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 219.5 MB/s  0:00:00
+grade	Install swebench	2026-09-15T01:12:10.2648569Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+grade	Install swebench	2026-09-15T01:12:10.2694192Z Downloading charset_normalizer-3.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (262 kB)
+grade	Install swebench	2026-09-15T01:12:10.2739642Z Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+grade	Install swebench	2026-09-15T01:12:10.2784918Z Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+grade	Install swebench	2026-09-15T01:12:10.2828005Z Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+grade	Install swebench	2026-09-15T01:12:10.2877567Z Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+grade	Install swebench	2026-09-15T01:12:10.2949758Z Downloading docker-7.2.0-py3-none-any.whl (148 kB)
+grade	Install swebench	2026-09-15T01:12:10.3027149Z Downloading ghapi-2.1.3-py3-none-any.whl (364 kB)
+grade	Install swebench	2026-09-15T01:12:10.3098926Z Downloading fastcore-2.2.27-py3-none-any.whl (152 kB)
+grade	Install swebench	2026-09-15T01:12:10.3228524Z Downloading fastspec-0.2.4-py3-none-any.whl (26 kB)
+grade	Install swebench	2026-09-15T01:12:10.3329986Z Downloading fasttransport-0.0.4-py3-none-any.whl (13 kB)
+grade	Install swebench	2026-09-15T01:12:10.3393163Z Downloading httpx2-2.13.0-py3-none-any.whl (95 kB)
+grade	Install swebench	2026-09-15T01:12:10.3594963Z Downloading httpcore2-2.13.0-py3-none-any.whl (83 kB)
+grade	Install swebench	2026-09-15T01:12:10.3683741Z Downloading truststore-0.10.4-py3-none-any.whl (18 kB)
+grade	Install swebench	2026-09-15T01:12:10.3773725Z Downloading gitpython-3.1.62-py3-none-any.whl (222 kB)
+grade	Install swebench	2026-09-15T01:12:10.3884181Z Downloading gitdb-4.0.12-py3-none-any.whl (62 kB)
+grade	Install swebench	2026-09-15T01:12:10.4428255Z Downloading smmap-5.0.3-py3-none-any.whl (24 kB)
+grade	Install swebench	2026-09-15T01:12:10.4475551Z Downloading modal-1.5.5-py3-none-any.whl (985 kB)
+grade	Install swebench	2026-09-15T01:12:10.4522625Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 985.2/985.2 kB 229.4 MB/s  0:00:00
+grade	Install swebench	2026-09-15T01:12:10.4549852Z Downloading grpclib-0.4.9-py3-none-any.whl (77 kB)
+grade	Install swebench	2026-09-15T01:12:10.4594782Z Downloading h2-4.4.1-py3-none-any.whl (62 kB)
+grade	Install swebench	2026-09-15T01:12:10.4643290Z Downloading hpack-4.2.0-py3-none-any.whl (34 kB)
+grade	Install swebench	2026-09-15T01:12:10.4685958Z Downloading hyperframe-6.1.0-py3-none-any.whl (13 kB)
+grade	Install swebench	2026-09-15T01:12:10.4727576Z Downloading protobuf-6.33.6-cp39-abi3-manylinux2014_x86_64.whl (323 kB)
+grade	Install swebench	2026-09-15T01:12:10.4775386Z Downloading synchronicity-0.12.5-py3-none-any.whl (41 kB)
+grade	Install swebench	2026-09-15T01:12:10.4815633Z Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+grade	Install swebench	2026-09-15T01:12:10.4864464Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+grade	Install swebench	2026-09-15T01:12:10.4918801Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 245.2 MB/s  0:00:00
+grade	Install swebench	2026-09-15T01:12:10.4949740Z Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+grade	Install swebench	2026-09-15T01:12:10.5730059Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+grade	Install swebench	2026-09-15T01:12:10.6026955Z Downloading cbor2-6.1.4-cp311-cp311-manylinux_2_28_x86_64.whl (464 kB)
+grade	Install swebench	2026-09-15T01:12:10.6099339Z Downloading pandas-3.0.5-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (11.3 MB)
+grade	Install swebench	2026-09-15T01:12:10.6840578Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.3/11.3 MB 152.6 MB/s  0:00:00
+grade	Install swebench	2026-09-15T01:12:10.6873515Z Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+grade	Install swebench	2026-09-15T01:12:10.6919864Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+grade	Install swebench	2026-09-15T01:12:10.6963014Z Downloading pre_commit-4.6.2-py2.py3-none-any.whl (226 kB)
+grade	Install swebench	2026-09-15T01:12:10.7007894Z Downloading cfgv-3.5.0-py2.py3-none-any.whl (7.4 kB)
+grade	Install swebench	2026-09-15T01:12:10.7052739Z Downloading identify-2.6.19-py2.py3-none-any.whl (99 kB)
+grade	Install swebench	2026-09-15T01:12:10.7095033Z Downloading nodeenv-1.10.0-py2.py3-none-any.whl (23 kB)
+grade	Install swebench	2026-09-15T01:12:10.7138849Z Downloading virtualenv-21.7.9-py3-none-any.whl (5.3 MB)
+grade	Install swebench	2026-09-15T01:12:10.7470591Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 162.5 MB/s  0:00:00
+grade	Install swebench	2026-09-15T01:12:10.7506067Z Downloading distlib-0.4.3-py2.py3-none-any.whl (470 kB)
+grade	Install swebench	2026-09-15T01:12:10.7556940Z Downloading platformdirs-4.11.8-py3-none-any.whl (24 kB)
+grade	Install swebench	2026-09-15T01:12:10.7601764Z Downloading python_discovery-1.6.0-py3-none-any.whl (38 kB)
+grade	Install swebench	2026-09-15T01:12:10.7648339Z Downloading python_dotenv-1.2.3-py3-none-any.whl (22 kB)
+grade	Install swebench	2026-09-15T01:12:10.7693183Z Downloading tenacity-9.1.4-py3-none-any.whl (28 kB)
+grade	Install swebench	2026-09-15T01:12:10.7742459Z Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+grade	Install swebench	2026-09-15T01:12:10.7785261Z Downloading types_certifi-2021.10.8.3-py3-none-any.whl (2.1 kB)
+grade	Install swebench	2026-09-15T01:12:10.7825611Z Downloading types_toml-0.10.8.20260518-py3-none-any.whl (9.7 kB)
+grade	Install swebench	2026-09-15T01:12:10.7866981Z Downloading unidiff-1.0.0-py3-none-any.whl (18 kB)
+grade	Install swebench	2026-09-15T01:12:10.8015316Z Downloading watchfiles-1.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (456 kB)
+grade	Install swebench	2026-09-15T01:12:10.8068835Z Downloading xxhash-4.0.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (261 kB)
+grade	Install swebench	2026-09-15T01:12:11.0468491Z Installing collected packages: types-certifi, distlib, xxhash, urllib3, unidiff, typing-extensions, types-toml, truststore, tqdm, toml, tenacity, soupsieve, smmap, six, pyyaml, python-dotenv, pygments, pyarrow, protobuf, propcache, platformdirs, packaging, numpy, nodeenv, multidict, mdurl, idna, identify, hyperframe, hpack, hf-xet, h11, fsspec, frozenlist, filelock, fastcore, dill, click, charset_normalizer, chardet, cfgv, certifi, cbor2, attrs, aiohappyeyeballs, yarl, synchronicity, requests, python-discovery, python-dateutil, multiprocess, markdown-it-py, httpcore2, httpcore, h2, gitdb, beautifulsoup4, anyio, aiosignal, watchfiles, virtualenv, rich, pandas, httpx2, httpx, grpclib, GitPython, docker, aiohttp, pre-commit, modal, huggingface-hub, fasttransport, fastspec, datasets, ghapi, swebench
+grade	Install swebench	2026-09-15T01:12:19.8118028Z 
+grade	Install swebench	2026-09-15T01:12:19.8137778Z Successfully installed GitPython-3.1.62 aiohappyeyeballs-2.7.1 aiohttp-3.14.3 aiosignal-1.4.0 anyio-4.15.1 attrs-26.1.0 beautifulsoup4-4.15.0 cbor2-6.1.4 certifi-2026.7.22 cfgv-3.5.0 chardet-7.6.0 charset_normalizer-3.5.1 click-8.5.0 datasets-5.0.1 dill-0.4.1 distlib-0.4.3 docker-7.2.0 fastcore-2.2.27 fastspec-0.2.4 fasttransport-0.0.4 filelock-3.32.6 frozenlist-1.8.0 fsspec-2026.6.0 ghapi-2.1.3 gitdb-4.0.12 grpclib-0.4.9 h11-0.16.0 h2-4.4.1 hf-xet-1.6.0 hpack-4.2.0 httpcore-1.0.9 httpcore2-2.13.0 httpx-0.28.1 httpx2-2.13.0 huggingface-hub-1.31.0 hyperframe-6.1.0 identify-2.6.19 idna-3.19 markdown-it-py-4.2.0 mdurl-0.1.2 modal-1.5.5 multidict-6.8.0 multiprocess-0.70.19 nodeenv-1.10.0 numpy-2.4.6 packaging-26.3 pandas-3.0.5 platformdirs-4.11.8 pre-commit-4.6.2 propcache-0.5.2 protobuf-6.33.6 pyarrow-25.0.1 pygments-2.21.0 python-dateutil-2.9.0.post0 python-discovery-1.6.0 python-dotenv-1.2.3 pyyaml-6.0.3 requests-2.34.2 rich-15.0.0 six-1.17.0 smmap-5.0.3 soupsieve-2.9.2 swebench-4.1.0 synchronicity-0.12.5 tenacity-9.1.4 toml-0.10.2 tqdm-4.70.1 truststore-0.10.4 types-certifi-2021.10.8.3 types-toml-0.10.8.20260518 typing-extensions-4.16.0 unidiff-1.0.0 urllib3-2.7.0 virtualenv-21.7.9 watchfiles-1.2.0 xxhash-4.0.1 yarl-1.24.5
+grade	Run grading harness on all 18 instances	﻿2026-09-15T01:12:20.1249663Z ##[group]Run python -m swebench.harness.run_evaluation \
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:20.1249916Z ^[[36;1mpython -m swebench.harness.run_evaluation \^[[0m
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:20.1250484Z ^[[36;1m  -p predictions.jsonl \^[[0m
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:20.1264953Z ^[[36;1m  -id "standard_full_${REP_ID}" \^[[0m
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:20.1265123Z ^[[36;1m  --max_workers 2^[[0m
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:20.1265259Z ^[[36;1mecho "--- disk after ---"^[[0m
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:20.1265393Z ^[[36;1mdf -h^[[0m
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:20.1294798Z shell: /usr/bin/bash -e {0}
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:20.1294929Z env:
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:20.1295070Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.16/x64
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:20.1295302Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib/pkgconfig
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:20.1295525Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:20.1295736Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:20.1295952Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:20.1296220Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:20.1296390Z   REP_ID: rep1_v2
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:20.1296503Z ##[endgroup]
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:20.9975095Z <frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:21.1177694Z 2026-09-15 01:12:21,117 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:21.1926274Z 2026-09-15 01:12:21,192 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:21.1928581Z Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:21.1929444Z 2026-09-15 01:12:21,192 - huggingface_hub.utils._http - WARNING - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:21.1982222Z 2026-09-15 01:12:21,198 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/SWE-bench/SWE-bench_Lite/b0dde1093fe417d83b7184254edf8199c1f0dff5/README.md?%2Fdatasets%2FSWE-bench%2FSWE-bench_Lite%2Fresolve%2Fmain%2FREADME.md=&etag=%2258500986c6a0d5bb39ced1772445513a52605767%22 "HTTP/1.1 200 OK"
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:21.2044947Z 2026-09-15 01:12:21,204 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/resolve-cache/datasets/SWE-bench/SWE-bench_Lite/b0dde1093fe417d83b7184254edf8199c1f0dff5/README.md?%2Fdatasets%2FSWE-bench%2FSWE-bench_Lite%2Fresolve%2Fmain%2FREADME.md=&etag=%2258500986c6a0d5bb39ced1772445513a52605767%22 "HTTP/1.1 200 OK"
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:21.2710900Z 2026-09-15 01:12:21,270 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:21.4859064Z 2026-09-15 01:12:21,485 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/SWE-bench/SWE-bench_Lite/SWE-bench/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:21.5562461Z 2026-09-15 01:12:21,555 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/SWE-bench/SWE-bench_Lite/revision/b0dde1093fe417d83b7184254edf8199c1f0dff5 "HTTP/1.1 200 OK"
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:21.6230559Z 2026-09-15 01:12:21,622 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/.huggingface.yaml "HTTP/1.1 404 Not Found"
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:21.7620914Z 2026-09-15 01:12:21,761 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=SWE-bench/SWE-bench_Lite "HTTP/1.1 200 OK"
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:21.8458151Z 2026-09-15 01:12:21,845 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/SWE-bench/SWE-bench_Lite/tree/b0dde1093fe417d83b7184254edf8199c1f0dff5/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:21.9135723Z 2026-09-15 01:12:21,913 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/SWE-bench/SWE-bench_Lite/tree/b0dde1093fe417d83b7184254edf8199c1f0dff5?recursive=false&expand=false "HTTP/1.1 200 OK"
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:21.9884624Z 2026-09-15 01:12:21,988 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/dataset_infos.json "HTTP/1.1 404 Not Found"
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:22.0745106Z 2026-09-15 01:12:22,074 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/data/test-00000-of-00001.parquet "HTTP/1.1 302 Found"
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:22.1476399Z 2026-09-15 01:12:22,147 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/SWE-bench/SWE-bench_Lite/xet-read-token/b0dde1093fe417d83b7184254edf8199c1f0dff5 "HTTP/1.1 200 OK"
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:23.0634199Z 2026-09-15 01:12:23,063 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/data/dev-00000-of-00001.parquet "HTTP/1.1 302 Found"
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:23.7320301Z 
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:23.7398553Z Generating test split:   0%|          | 0/300 [00:00<?, ? examples/s]
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:23.7399225Z Generating test split: 100%|██████████| 300/300 [00:00<00:00, 39214.98 examples/s]
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:23.7399654Z 
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:23.7426333Z Generating dev split:   0%|          | 0/23 [00:00<?, ? examples/s]
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:23.7426980Z Generating dev split: 100%|██████████| 23/23 [00:00<00:00, 9087.99 examples/s]
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:23.8381204Z 2026-09-15 01:12:23,837 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:23.8434597Z 2026-09-15 01:12:23,843 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/SWE-bench/SWE-bench_Lite/b0dde1093fe417d83b7184254edf8199c1f0dff5/README.md?%2Fdatasets%2FSWE-bench%2FSWE-bench_Lite%2Fresolve%2Fmain%2FREADME.md=&etag=%2258500986c6a0d5bb39ced1772445513a52605767%22 "HTTP/1.1 200 OK"
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:23.9165694Z 2026-09-15 01:12:23,916 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:23.9808606Z 2026-09-15 01:12:23,980 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/SWE-bench/SWE-bench_Lite/SWE-bench/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:24.0514993Z 2026-09-15 01:12:24,051 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/.huggingface.yaml "HTTP/1.1 404 Not Found"
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:24.1325236Z 2026-09-15 01:12:24,132 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=SWE-bench/SWE-bench_Lite "HTTP/1.1 200 OK"
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:24.2056790Z 2026-09-15 01:12:24,205 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/SWE-bench/SWE-bench_Lite/resolve/b0dde1093fe417d83b7184254edf8199c1f0dff5/dataset_infos.json "HTTP/1.1 404 Not Found"
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:25.5402322Z Running 24 instances...
+grade	Run grading harness on all 18 instances	2026-09-15T01:12:25.5402579Z 
+grade	Run grading harness on all 18 instances	2026-09-15T01:14:46.5228830Z Evaluation:   0%|          | 0/24 [00:00<?, ?it/s, error=0, ✓=0, ✖=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:14:46.5229416Z Evaluation:   0%|          | 0/24 [02:20<?, ?it/s, ✓=0, ✖=1, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:16:02.2981901Z Evaluation:   4%|▍         | 1/24 [02:20<54:02, 140.98s/it, ✓=0, ✖=1, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:16:02.2983016Z Evaluation:   4%|▍         | 1/24 [03:36<54:02, 140.98s/it, ✓=0, ✖=2, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:16:31.5800391Z Evaluation:   8%|▊         | 2/24 [03:36<37:37, 102.63s/it, ✓=0, ✖=2, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:16:31.5826256Z Evaluation:   8%|▊         | 2/24 [04:06<37:37, 102.63s/it, ✓=0, ✖=3, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:16:57.3818149Z Evaluation:  12%|█▎        | 3/24 [04:06<24:11, 69.14s/it, ✓=0, ✖=3, error=0] 
+grade	Run grading harness on all 18 instances	2026-09-15T01:16:57.3818637Z Evaluation:  12%|█▎        | 3/24 [04:31<24:11, 69.14s/it, ✓=0, ✖=4, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:17:17.0670619Z Evaluation:  17%|█▋        | 4/24 [04:31<17:20, 52.03s/it, ✓=0, ✖=4, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:17:17.0672699Z Evaluation:  17%|█▋        | 4/24 [04:51<17:20, 52.03s/it, ✓=0, ✖=5, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:17:48.0373436Z Evaluation:  21%|██        | 5/24 [04:51<12:46, 40.36s/it, ✓=0, ✖=5, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:17:48.0374101Z Evaluation:  21%|██        | 5/24 [05:22<12:46, 40.36s/it, ✓=0, ✖=6, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:17:55.2968837Z Evaluation:  25%|██▌       | 6/24 [05:22<11:09, 37.17s/it, ✓=0, ✖=6, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:17:55.2969380Z Evaluation:  25%|██▌       | 6/24 [05:29<11:09, 37.17s/it, ✓=0, ✖=7, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:18:38.5828369Z Evaluation:  29%|██▉       | 7/24 [05:29<07:45, 27.39s/it, ✓=0, ✖=7, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:18:38.5837643Z Evaluation:  29%|██▉       | 7/24 [06:13<07:45, 27.39s/it, ✓=0, ✖=8, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:18:41.1262667Z Evaluation:  33%|███▎      | 8/24 [06:13<08:39, 32.45s/it, ✓=0, ✖=8, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:18:41.1264147Z Evaluation:  33%|███▎      | 8/24 [06:15<08:39, 32.45s/it, ✓=0, ✖=9, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:19:36.2781983Z Evaluation:  38%|███▊      | 9/24 [06:15<05:46, 23.10s/it, ✓=0, ✖=9, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:19:36.2782713Z Evaluation:  38%|███▊      | 9/24 [07:10<05:46, 23.10s/it, ✓=0, ✖=10, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:19:39.1299751Z Evaluation:  42%|████▏     | 10/24 [07:10<07:41, 33.00s/it, ✓=0, ✖=10, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:19:39.1300306Z Evaluation:  42%|████▏     | 10/24 [07:13<07:41, 33.00s/it, ✓=1, ✖=10, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:20:48.8798048Z Evaluation:  46%|████▌     | 11/24 [07:13<05:09, 23.77s/it, ✓=1, ✖=10, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:20:48.8798628Z Evaluation:  46%|████▌     | 11/24 [08:23<05:09, 23.77s/it, ✓=1, ✖=11, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:20:50.8045006Z Evaluation:  50%|█████     | 12/24 [08:23<07:33, 37.76s/it, ✓=1, ✖=11, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:20:50.8045560Z Evaluation:  50%|█████     | 12/24 [08:25<07:33, 37.76s/it, ✓=2, ✖=11, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:21:53.3555089Z Evaluation:  54%|█████▍    | 13/24 [08:25<04:55, 26.90s/it, ✓=2, ✖=11, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:21:53.3555479Z Evaluation:  54%|█████▍    | 13/24 [09:27<04:55, 26.90s/it, ✓=2, ✖=12, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:21:55.7212445Z Evaluation:  58%|█████▊    | 14/24 [09:27<06:16, 37.67s/it, ✓=2, ✖=12, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:21:55.7213003Z Evaluation:  58%|█████▊    | 14/24 [09:30<06:16, 37.67s/it, ✓=2, ✖=13, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:22:59.1801932Z Evaluation:  62%|██████▎   | 15/24 [09:30<04:03, 27.03s/it, ✓=2, ✖=13, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:22:59.1802714Z Evaluation:  62%|██████▎   | 15/24 [10:33<04:03, 27.03s/it, ✓=2, ✖=14, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:23:01.3977293Z Evaluation:  67%|██████▋   | 16/24 [10:33<05:03, 37.99s/it, ✓=2, ✖=14, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:23:01.3978127Z Evaluation:  67%|██████▋   | 16/24 [10:35<05:03, 37.99s/it, ✓=2, ✖=15, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:24:05.2648945Z Evaluation:  71%|███████   | 17/24 [10:35<03:10, 27.24s/it, ✓=2, ✖=15, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:24:05.2649610Z Evaluation:  71%|███████   | 17/24 [11:39<03:10, 27.24s/it, ✓=2, ✖=16, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:24:07.6544239Z Evaluation:  75%|███████▌  | 18/24 [11:39<03:49, 38.24s/it, ✓=2, ✖=16, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:24:07.6544818Z Evaluation:  75%|███████▌  | 18/24 [11:42<03:49, 38.24s/it, ✓=2, ✖=17, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:25:26.0439621Z Evaluation:  79%|███████▉  | 19/24 [11:42<02:17, 27.47s/it, ✓=2, ✖=17, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:25:26.0440214Z Evaluation:  79%|███████▉  | 19/24 [13:00<02:17, 27.47s/it, ✓=3, ✖=17, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:25:28.3016810Z Evaluation:  83%|████████▎ | 20/24 [13:00<02:51, 42.76s/it, ✓=3, ✖=17, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:25:28.3017368Z Evaluation:  83%|████████▎ | 20/24 [13:02<02:51, 42.76s/it, ✓=4, ✖=17, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:26:23.4288855Z Evaluation:  88%|████████▊ | 21/24 [13:02<01:31, 30.60s/it, ✓=4, ✖=17, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:26:23.4289797Z Evaluation:  88%|████████▊ | 21/24 [13:57<01:31, 30.60s/it, ✓=4, ✖=18, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:26:26.1837958Z Evaluation:  92%|█████████▏| 22/24 [13:57<01:15, 37.96s/it, ✓=4, ✖=18, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:26:26.1838368Z Evaluation:  92%|█████████▏| 22/24 [14:00<01:15, 37.96s/it, ✓=4, ✖=19, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:21.0959668Z Evaluation:  96%|█████████▌| 23/24 [14:00<00:27, 27.40s/it, ✓=4, ✖=19, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:21.0960192Z Evaluation:  96%|█████████▌| 23/24 [14:55<00:27, 27.40s/it, ✓=5, ✖=19, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:21.0969538Z Evaluation: 100%|██████████| 24/24 [14:55<00:00, 35.65s/it, ✓=5, ✖=19, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:21.0970033Z Evaluation: 100%|██████████| 24/24 [14:55<00:00, 37.31s/it, ✓=5, ✖=19, error=0]
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:24.5018658Z All instances run.
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:24.5019005Z Cleaning cached images...
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:24.5019216Z Removed 0 images.
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:24.5019385Z Total instances: 300
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:24.5019633Z Instances submitted: 24
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:24.5019816Z Instances completed: 24
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:24.5020016Z Instances incomplete: 276
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:24.5020201Z Instances resolved: 5
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:24.5020382Z Instances unresolved: 19
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:24.5020573Z Instances with empty patches: 0
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:24.5020772Z Instances with errors: 0
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:24.5020953Z Unstopped containers: 0
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:24.5021134Z Unremoved images: 0
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:24.5021396Z Report written to gemma4-32k-mini-swe-agent.standard_full_rep1_v2.json
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:24.7557088Z --- disk after ---
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:24.7573400Z Filesystem       Size  Used Avail Use% Mounted on
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:24.7573714Z /dev/root        145G   38G  107G  27% /
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:24.7573957Z tmpfs            7.9G   84K  7.9G   1% /dev/shm
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:24.7574195Z tmpfs            3.2G 1012K  3.2G   1% /run
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:24.7574369Z tmpfs            5.0M     0  5.0M   0% /run/lock
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:24.7574652Z /dev/nvme0n1p16  881M   64M  756M   8% /boot
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:24.7574914Z /dev/nvme0n1p15  105M  6.2M   99M   6% /boot/efi
+grade	Run grading harness on all 18 instances	2026-09-15T01:27:24.7575230Z tmpfs            1.6G   12K  1.6G   1% /run/user/1001
+grade	Compare against local ground truth	﻿2026-09-15T01:27:24.8769175Z ##[group]Run python3 -c "
+grade	Compare against local ground truth	2026-09-15T01:27:24.8769365Z ^[[36;1mpython3 -c "^[[0m
+grade	Compare against local ground truth	2026-09-15T01:27:24.8769484Z ^[[36;1mimport json, os^[[0m
+grade	Compare against local ground truth	2026-09-15T01:27:24.8769679Z ^[[36;1mrep = os.environ['REP_ID']^[[0m
+grade	Compare against local ground truth	2026-09-15T01:27:24.8769925Z ^[[36;1mreport = json.load(open(f'gemma4-32k-mini-swe-agent.standard_full_{rep}.json'))^[[0m
+grade	Compare against local ground truth	2026-09-15T01:27:24.8770194Z ^[[36;1mground_truth = json.load(open('ground_truth_local.json'))^[[0m
+grade	Compare against local ground truth	2026-09-15T01:27:24.8770436Z ^[[36;1mresolved = set(report['resolved_ids'])^[[0m
+grade	Compare against local ground truth	2026-09-15T01:27:24.8770628Z ^[[36;1mmismatches = []^[[0m
+grade	Compare against local ground truth	2026-09-15T01:27:24.8770769Z ^[[36;1mfor iid, expected in ground_truth.items():^[[0m
+grade	Compare against local ground truth	2026-09-15T01:27:24.8770976Z ^[[36;1m    tier_verdict = 'RESOLVED' if iid in resolved else 'UNRESOLVED'^[[0m
+grade	Compare against local ground truth	2026-09-15T01:27:24.8771203Z ^[[36;1m    if tier_verdict != expected:^[[0m
+grade	Compare against local ground truth	2026-09-15T01:27:24.8771454Z ^[[36;1m        mismatches.append((iid, expected, tier_verdict))^[[0m
+grade	Compare against local ground truth	2026-09-15T01:27:24.8771671Z ^[[36;1mprint(f'Total instances: {len(ground_truth)}')^[[0m
+grade	Compare against local ground truth	2026-09-15T01:27:24.8771906Z ^[[36;1mprint(f'Matches: {len(ground_truth) - len(mismatches)}')^[[0m
+grade	Compare against local ground truth	2026-09-15T01:27:24.8772350Z ^[[36;1mprint(f'Mismatches: {len(mismatches)}')^[[0m
+grade	Compare against local ground truth	2026-09-15T01:27:24.8772599Z ^[[36;1mfor iid, expected, actual in mismatches:^[[0m
+grade	Compare against local ground truth	2026-09-15T01:27:24.8772923Z ^[[36;1m    print(f'  MISMATCH: {iid} -- local={expected}, tier={actual}')^[[0m
+grade	Compare against local ground truth	2026-09-15T01:27:24.8773179Z ^[[36;1m"^[[0m
+grade	Compare against local ground truth	2026-09-15T01:27:24.9640785Z shell: /usr/bin/bash -e {0}
+grade	Compare against local ground truth	2026-09-15T01:27:24.9640986Z env:
+grade	Compare against local ground truth	2026-09-15T01:27:24.9641156Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.16/x64
+grade	Compare against local ground truth	2026-09-15T01:27:24.9641402Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib/pkgconfig
+grade	Compare against local ground truth	2026-09-15T01:27:24.9641632Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+grade	Compare against local ground truth	2026-09-15T01:27:24.9641836Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+grade	Compare against local ground truth	2026-09-15T01:27:24.9642122Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+grade	Compare against local ground truth	2026-09-15T01:27:24.9642529Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib
+grade	Compare against local ground truth	2026-09-15T01:27:24.9642709Z   REP_ID: rep1_v2
+grade	Compare against local ground truth	2026-09-15T01:27:24.9642827Z ##[endgroup]
+grade	Compare against local ground truth	2026-09-15T01:27:24.9822726Z Total instances: 24
+grade	Compare against local ground truth	2026-09-15T01:27:24.9822988Z Matches: 23
+grade	Compare against local ground truth	2026-09-15T01:27:24.9823136Z Mismatches: 1
+grade	Compare against local ground truth	2026-09-15T01:27:24.9823352Z   MISMATCH: matplotlib__matplotlib-23913 -- local=RESOLVED, tier=UNRESOLVED
+grade	Upload report	﻿2026-09-15T01:27:24.9902271Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+grade	Upload report	2026-09-15T01:27:24.9902977Z ##[group]Run actions/upload-artifact@v4
+grade	Upload report	2026-09-15T01:27:24.9903121Z with:
+grade	Upload report	2026-09-15T01:27:24.9903238Z   name: standard-full-report-rep1_v2
+grade	Upload report	2026-09-15T01:27:24.9903410Z   path: gemma4-32k-mini-swe-agent.standard_full_*.json
+grade	Upload report	2026-09-15T01:27:24.9903595Z   if-no-files-found: warn
+grade	Upload report	2026-09-15T01:27:24.9903719Z   compression-level: 6
+grade	Upload report	2026-09-15T01:27:24.9903831Z   overwrite: false
+grade	Upload report	2026-09-15T01:27:24.9903945Z   include-hidden-files: false
+grade	Upload report	2026-09-15T01:27:24.9904069Z env:
+grade	Upload report	2026-09-15T01:27:24.9904205Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.16/x64
+grade	Upload report	2026-09-15T01:27:24.9904425Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib/pkgconfig
+grade	Upload report	2026-09-15T01:27:24.9904672Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+grade	Upload report	2026-09-15T01:27:24.9904871Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+grade	Upload report	2026-09-15T01:27:24.9905067Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+grade	Upload report	2026-09-15T01:27:24.9905263Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib
+grade	Upload report	2026-09-15T01:27:24.9905431Z ##[endgroup]
+grade	Upload report	2026-09-15T01:27:25.9961130Z (node:10452) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+grade	Upload report	2026-09-15T01:27:25.9961676Z (Use `node --trace-deprecation ...` to show where the warning was created)
+grade	Upload report	2026-09-15T01:27:26.0019909Z With the provided path, there will be 1 file uploaded
+grade	Upload report	2026-09-15T01:27:26.0023767Z Artifact name is valid!
+grade	Upload report	2026-09-15T01:27:26.0024193Z Root directory input is valid!
+grade	Upload report	2026-09-15T01:27:26.9452419Z Beginning upload of artifact content to blob storage
+grade	Upload report	2026-09-15T01:27:27.0344770Z (node:10452) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+grade	Upload report	2026-09-15T01:27:27.2667352Z Uploaded bytes 1691
+grade	Upload report	2026-09-15T01:27:27.3443667Z Finished uploading artifact content to blob storage!
+grade	Upload report	2026-09-15T01:27:27.3444148Z SHA256 digest of uploaded artifact zip is 27b723823bc1f9ffd9c26a4bf42400d89348da4f4bce155310affe643c0da2f1
+grade	Upload report	2026-09-15T01:27:27.3445621Z Finalizing artifact upload
+grade	Upload report	2026-09-15T01:27:27.5708903Z Artifact standard-full-report-rep1_v2.zip successfully finalized. Artifact ID 10376473519
+grade	Upload report	2026-09-15T01:27:27.5709474Z Artifact standard-full-report-rep1_v2 has been successfully uploaded! Final size is 1691 bytes. Artifact ID is 10376473519
+grade	Upload report	2026-09-15T01:27:27.5714044Z Artifact download URL: https://github.com/abdulrasheedsk99/swe-bench-platform-flakiness/actions/runs/34916160840/artifacts/10376473519
+grade	Post Run actions/setup-python@v5	﻿2026-09-15T01:27:27.6315305Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+grade	Post Run actions/setup-python@v5	2026-09-15T01:27:27.6315948Z Post job cleanup.
+grade	Post Run actions/setup-python@v5	2026-09-15T01:27:27.8064458Z (node:10465) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+grade	Post Run actions/setup-python@v5	2026-09-15T01:27:27.8065160Z (Use `node --trace-deprecation ...` to show where the warning was created)
+grade	Post Run actions/checkout@v4	﻿2026-09-15T01:27:27.8230818Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+grade	Post Run actions/checkout@v4	2026-09-15T01:27:27.8231483Z Post job cleanup.
+grade	Post Run actions/checkout@v4	2026-09-15T01:27:27.8857007Z [command]/usr/bin/git version
+grade	Post Run actions/checkout@v4	2026-09-15T01:27:27.8896897Z git version 2.55.0
+grade	Post Run actions/checkout@v4	2026-09-15T01:27:27.8919690Z Temporarily overriding HOME='/home/runner/work/_temp/5531570b-f098-416a-8280-bb001eb8c64f' before making global git config changes
+grade	Post Run actions/checkout@v4	2026-09-15T01:27:27.8920521Z Adding repository directory to the temporary git global config as a safe directory
+grade	Post Run actions/checkout@v4	2026-09-15T01:27:27.8923622Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/swe-bench-platform-flakiness/swe-bench-platform-flakiness
+grade	Post Run actions/checkout@v4	2026-09-15T01:27:27.8957324Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+grade	Post Run actions/checkout@v4	2026-09-15T01:27:27.8987623Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+grade	Post Run actions/checkout@v4	2026-09-15T01:27:27.9640889Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+grade	Post Run actions/checkout@v4	2026-09-15T01:27:27.9666674Z http.https://github.com/.extraheader
+grade	Post Run actions/checkout@v4	2026-09-15T01:27:27.9673940Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+grade	Post Run actions/checkout@v4	2026-09-15T01:27:27.9703715Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+grade	Post Run actions/checkout@v4	2026-09-15T01:27:27.9920473Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+grade	Post Run actions/checkout@v4	2026-09-15T01:27:27.9970361Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+grade	Complete job	﻿2026-09-15T01:27:28.1724005Z Cleaning up orphan processes
+grade	Complete job	2026-09-15T01:27:28.6117976Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

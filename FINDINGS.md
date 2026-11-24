@@ -96,9 +96,27 @@ on either tier, and the GitHub-side mechanism (one borderline machine profile
 versus different hardware in the two windows) is undetermined; telling them apart
 would need trials interleaved across time windows.
 
+Timeline (UTC, 15 September 2026; times from `evidence/github-archive/run-index/`):
+
+| Window | Run | Started | Finished | matplotlib-23913 |
+|---|---|---|---|---|
+| First flip | `tier-standard-full` 34916160840 (24 instances, one repetition) | 01:09:53 | 01:27:32 | UNRESOLVED |
+| Batch 1 | `diagnose-mismatch` 34917591663 (5 repetitions) | 01:31:17 | 01:43:18 | 5 of 5 RESOLVED |
+| Batch 2 | `diagnose-mismatch` 34919380657 (15 repetitions) | 01:58:46 | 02:28:17 | 15 of 15 UNRESOLVED |
+
+Batch 2 started 15 minutes after batch 1 finished. The 24-instance run had one
+repetition only; the flip prompted the two targeted batches. In every UNRESOLVED
+repetition the only failing test is `test_warn_big_data_best_loc` (both
+FAIL_TO_PASS tests pass). The Actions run for batch 1 is marked "failure" because
+the workflow's final summary step hit a Python `IndentationError` after all five
+repetitions and the artifact upload had finished; the workflow was fixed in the
+next commit (79774ab). All three runs used runner image `ubuntu-24.04` version
+`20260907.300.1`.
+
 Files: `evidence/matplotlib-23913-investigation/` (the 15 local repetition
-reports) and the workflows `diagnose-mismatch.yml`, `check-cpu-evidence.yml` and
-`check-image-identity.yml`.
+reports), `evidence/github-archive/` (GitHub-side logs, reports and the run
+index; see the README) and the workflows `diagnose-mismatch.yml`,
+`check-cpu-evidence.yml` and `check-image-identity.yml`.
 
 Treatment in the paper: the instance is excluded from the clean 101-instance set
 and counted separately (upper limit 5.3% on the disagreement rate when it is

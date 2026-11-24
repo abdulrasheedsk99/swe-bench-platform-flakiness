@@ -130,6 +130,27 @@ elapsed time was not measured on either tier. The instance is excluded from the
 clean 101-instance set and counted separately (upper limit 5.3% when included).
 See `FINDINGS.md` for the evidence.
 
+## Archived GitHub Actions evidence
+
+GitHub deletes run logs and artifacts after 90 days, so `scripts/archive_github_runs.sh`
+saved them into `evidence/github-archive/` (archived 24 November 2026):
+
+- `run-index/<workflow>.tsv`: every run of every workflow (run id, created and
+  updated time in UTC, conclusion, commit, title). The dispatch times show how
+  closely the repetitions ran: in every three-repetition batch they were
+  dispatched within 13 minutes of one another, and within seconds for the
+  extension and model batches.
+- `<workflow>/<run id>/run.log`: the full log of each early and diagnostic run
+  (Docker daemon check, image identity, manifest check, CPU check, slim and ARM64
+  tests, the first 24-instance run, the matplotlib-23913 batches, the harness 5.0.2
+  probe).
+- `<workflow>/<run id>/artifacts/`: the reports and logs each run uploaded,
+  including the per-repetition reports for the matplotlib-23913 batches.
+
+Reports of the later batches (clean set, extensions, model patches, harness 5.0.2
+replay) are committed in the `github_reports_*` folders. Their runs are indexed
+here but their logs were not archived.
+
 ## Harness versions
 
 Ground truth and the main comparison use `swebench==4.1.0`. The ARM64 and

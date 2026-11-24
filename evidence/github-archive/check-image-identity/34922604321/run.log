@@ -1,0 +1,95 @@
+check	Set up job	﻿2026-09-15T02:48:55.1845187Z Current runner version: '2.337.0'
+check	Set up job	2026-09-15T02:48:55.1882013Z ##[group]Runner Image Provisioner
+check	Set up job	2026-09-15T02:48:55.1883560Z Hosted Compute Agent
+check	Set up job	2026-09-15T02:48:55.1884859Z Version: 20260828.587
+check	Set up job	2026-09-15T02:48:55.1886152Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+check	Set up job	2026-09-15T02:48:55.1887453Z Build Date: 2026-08-28T16:44:25Z
+check	Set up job	2026-09-15T02:48:55.1888757Z Worker ID: {715a8418-fcf1-408a-8b36-aabe3fbf4e33}
+check	Set up job	2026-09-15T02:48:55.1890105Z Azure Region: eastus
+check	Set up job	2026-09-15T02:48:55.1891148Z ##[endgroup]
+check	Set up job	2026-09-15T02:48:55.1894313Z ##[group]Operating System
+check	Set up job	2026-09-15T02:48:55.1895454Z Ubuntu
+check	Set up job	2026-09-15T02:48:55.1896606Z 24.04.5
+check	Set up job	2026-09-15T02:48:55.1897468Z LTS
+check	Set up job	2026-09-15T02:48:55.1898285Z ##[endgroup]
+check	Set up job	2026-09-15T02:48:55.1899374Z ##[group]Runner Image
+check	Set up job	2026-09-15T02:48:55.1900416Z Image: ubuntu-24.04
+check	Set up job	2026-09-15T02:48:55.1901517Z Version: 20260907.300.1
+check	Set up job	2026-09-15T02:48:55.1903420Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260907.300/images/ubuntu/Ubuntu2404-Readme.md
+check	Set up job	2026-09-15T02:48:55.1906938Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260907.300
+check	Set up job	2026-09-15T02:48:55.1909111Z ##[endgroup]
+check	Set up job	2026-09-15T02:48:55.1911405Z ##[group]GITHUB_TOKEN Permissions
+check	Set up job	2026-09-15T02:48:55.1914694Z Contents: read
+check	Set up job	2026-09-15T02:48:55.1915787Z Metadata: read
+check	Set up job	2026-09-15T02:48:55.1916829Z Packages: read
+check	Set up job	2026-09-15T02:48:55.1917761Z ##[endgroup]
+check	Set up job	2026-09-15T02:48:55.1920877Z Secret source: Actions
+check	Set up job	2026-09-15T02:48:55.1922580Z Cache mode: write
+check	Set up job	2026-09-15T02:48:55.1924538Z Prepare workflow directory
+check	Set up job	2026-09-15T02:48:55.2421653Z Prepare all required actions
+check	Set up job	2026-09-15T02:48:55.2578914Z Complete job name: check
+check	Pull and inspect the exact image	﻿2026-09-15T02:48:55.3508276Z ##[group]Run IMAGE="docker.io/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23913:latest"
+check	Pull and inspect the exact image	2026-09-15T02:48:55.3509824Z ^[[36;1mIMAGE="docker.io/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23913:latest"^[[0m
+check	Pull and inspect the exact image	2026-09-15T02:48:55.3510807Z ^[[36;1mdocker pull "$IMAGE"^[[0m
+check	Pull and inspect the exact image	2026-09-15T02:48:55.3511591Z ^[[36;1mecho "--- Image ID ---"^[[0m
+check	Pull and inspect the exact image	2026-09-15T02:48:55.3512373Z ^[[36;1mdocker inspect --format='{{.Id}}' "$IMAGE"^[[0m
+check	Pull and inspect the exact image	2026-09-15T02:48:55.3513093Z ^[[36;1mecho "--- Created ---"^[[0m
+check	Pull and inspect the exact image	2026-09-15T02:48:55.3513797Z ^[[36;1mdocker inspect --format='{{.Created}}' "$IMAGE"^[[0m
+check	Pull and inspect the exact image	2026-09-15T02:48:55.3515029Z ^[[36;1mecho "--- Registry digest ---"^[[0m
+check	Pull and inspect the exact image	2026-09-15T02:48:55.3515898Z ^[[36;1mdocker inspect --format='{{index .RepoDigests 0}}' "$IMAGE"^[[0m
+check	Pull and inspect the exact image	2026-09-15T02:48:55.3970417Z shell: /usr/bin/bash -e {0}
+check	Pull and inspect the exact image	2026-09-15T02:48:55.3971677Z ##[endgroup]
+check	Pull and inspect the exact image	2026-09-15T02:48:55.7352199Z latest: Pulling from swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23913
+check	Pull and inspect the exact image	2026-09-15T02:48:55.8049524Z 39a945af8df2: Pulling fs layer
+check	Pull and inspect the exact image	2026-09-15T02:48:55.8051744Z a4d326e88417: Pulling fs layer
+check	Pull and inspect the exact image	2026-09-15T02:48:55.8052847Z fd7a87c0b95b: Pulling fs layer
+check	Pull and inspect the exact image	2026-09-15T02:48:55.8053641Z d07e7f5cb3eb: Pulling fs layer
+check	Pull and inspect the exact image	2026-09-15T02:48:55.8055200Z 3d473160e8e5: Pulling fs layer
+check	Pull and inspect the exact image	2026-09-15T02:48:55.8056007Z 6a99d82d9a89: Pulling fs layer
+check	Pull and inspect the exact image	2026-09-15T02:48:55.8056836Z 61837affeedb: Pulling fs layer
+check	Pull and inspect the exact image	2026-09-15T02:48:55.8057561Z 0139ca1056eb: Pulling fs layer
+check	Pull and inspect the exact image	2026-09-15T02:48:55.8058292Z 0c0e7ed79c77: Pulling fs layer
+check	Pull and inspect the exact image	2026-09-15T02:48:55.8059043Z 4f4fb700ef54: Pulling fs layer
+check	Pull and inspect the exact image	2026-09-15T02:48:55.8059778Z d07e7f5cb3eb: Waiting
+check	Pull and inspect the exact image	2026-09-15T02:48:55.8060464Z 3d473160e8e5: Waiting
+check	Pull and inspect the exact image	2026-09-15T02:48:55.8061469Z 6a99d82d9a89: Waiting
+check	Pull and inspect the exact image	2026-09-15T02:48:55.8062513Z 61837affeedb: Waiting
+check	Pull and inspect the exact image	2026-09-15T02:48:55.8063388Z 0139ca1056eb: Waiting
+check	Pull and inspect the exact image	2026-09-15T02:48:55.8064336Z 4f4fb700ef54: Waiting
+check	Pull and inspect the exact image	2026-09-15T02:48:55.8065367Z 0c0e7ed79c77: Waiting
+check	Pull and inspect the exact image	2026-09-15T02:48:55.9425358Z 39a945af8df2: Verifying Checksum
+check	Pull and inspect the exact image	2026-09-15T02:48:55.9571657Z 39a945af8df2: Download complete
+check	Pull and inspect the exact image	2026-09-15T02:48:55.9739500Z d07e7f5cb3eb: Verifying Checksum
+check	Pull and inspect the exact image	2026-09-15T02:48:55.9742160Z d07e7f5cb3eb: Download complete
+check	Pull and inspect the exact image	2026-09-15T02:48:56.0039180Z 3d473160e8e5: Download complete
+check	Pull and inspect the exact image	2026-09-15T02:48:56.0388443Z 6a99d82d9a89: Download complete
+check	Pull and inspect the exact image	2026-09-15T02:48:56.8737649Z a4d326e88417: Verifying Checksum
+check	Pull and inspect the exact image	2026-09-15T02:48:56.8740684Z a4d326e88417: Download complete
+check	Pull and inspect the exact image	2026-09-15T02:48:56.9062045Z 0139ca1056eb: Download complete
+check	Pull and inspect the exact image	2026-09-15T02:48:58.0420112Z fd7a87c0b95b: Download complete
+check	Pull and inspect the exact image	2026-09-15T02:48:58.0827022Z 4f4fb700ef54: Verifying Checksum
+check	Pull and inspect the exact image	2026-09-15T02:48:58.0828900Z 4f4fb700ef54: Download complete
+check	Pull and inspect the exact image	2026-09-15T02:48:58.9517144Z 39a945af8df2: Pull complete
+check	Pull and inspect the exact image	2026-09-15T02:49:01.4608049Z 0c0e7ed79c77: Verifying Checksum
+check	Pull and inspect the exact image	2026-09-15T02:49:01.4608671Z 0c0e7ed79c77: Download complete
+check	Pull and inspect the exact image	2026-09-15T02:49:02.9807400Z 61837affeedb: Verifying Checksum
+check	Pull and inspect the exact image	2026-09-15T02:49:02.9809957Z 61837affeedb: Download complete
+check	Pull and inspect the exact image	2026-09-15T02:49:11.6971194Z a4d326e88417: Pull complete
+check	Pull and inspect the exact image	2026-09-15T02:49:20.9928238Z fd7a87c0b95b: Pull complete
+check	Pull and inspect the exact image	2026-09-15T02:49:21.0084471Z d07e7f5cb3eb: Pull complete
+check	Pull and inspect the exact image	2026-09-15T02:49:21.0190688Z 3d473160e8e5: Pull complete
+check	Pull and inspect the exact image	2026-09-15T02:49:21.0423482Z 6a99d82d9a89: Pull complete
+check	Pull and inspect the exact image	2026-09-15T02:50:05.3083642Z 61837affeedb: Pull complete
+check	Pull and inspect the exact image	2026-09-15T02:50:05.3186474Z 0139ca1056eb: Pull complete
+check	Pull and inspect the exact image	2026-09-15T02:50:29.5883183Z 0c0e7ed79c77: Pull complete
+check	Pull and inspect the exact image	2026-09-15T02:50:29.5997595Z 4f4fb700ef54: Pull complete
+check	Pull and inspect the exact image	2026-09-15T02:50:29.6045259Z Digest: sha256:120ede7d6c997ba6c5ed2f0dba1f2d541d429bf0c6541962b08da51d0d412665
+check	Pull and inspect the exact image	2026-09-15T02:50:29.6057846Z Status: Downloaded newer image for swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23913:latest
+check	Pull and inspect the exact image	2026-09-15T02:50:29.6066316Z docker.io/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23913:latest
+check	Pull and inspect the exact image	2026-09-15T02:50:29.6096610Z --- Image ID ---
+check	Pull and inspect the exact image	2026-09-15T02:50:29.6238443Z sha256:2c015624b0616e6c5f109729a0aa0b332f3e4331da715199783c9a90b71b2580
+check	Pull and inspect the exact image	2026-09-15T02:50:29.6250617Z --- Created ---
+check	Pull and inspect the exact image	2026-09-15T02:50:29.6381370Z 2026-08-15T06:51:04.440575912Z
+check	Pull and inspect the exact image	2026-09-15T02:50:29.6393005Z --- Registry digest ---
+check	Pull and inspect the exact image	2026-09-15T02:50:29.6511721Z swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23913@sha256:120ede7d6c997ba6c5ed2f0dba1f2d541d429bf0c6541962b08da51d0d412665
+check	Complete job	﻿2026-09-15T02:50:29.6686548Z Cleaning up orphan processes
