@@ -107,6 +107,9 @@ repeats every batch with `swebench==5.0.2` against the 4.1.0 ground truth.
 - Initial 24-instance arm: selected before these scripts existed; its record is
   `instances.txt`.
 
+`scripts/verified_overlap.py` lists which of the 101 clean instances also belong to SWE-bench
+Verified: 24 of them (`clean_in_verified.txt`). All 24 agreed across tiers, like the rest.
+
 ## Patch generation (optional)
 
 `scripts/gen_provider.sh`, `scripts/pilot_provider.sh` and the
