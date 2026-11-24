@@ -1,0 +1,7 @@
+# Grading environment used for the local tier (Python 3.14 venv on macOS).
+# The GitHub workflows use Python 3.11 and install swebench themselves.
+swebench==4.1.0      # ground truth and main comparison; the replay workflow uses 5.0.2
+datasets==5.2.0
+docker==7.2.0
+pandas==3.1.1
+# Patch generation (optional): mini-swe-agent 2.4.6, installed separately.
