@@ -1,0 +1,3 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+=== swebench/sweb.eval.x86_64.astropy_1776_astropy-12907:latest exit 0
+platforms: ['linux/amd64', 'unknown/unknown']

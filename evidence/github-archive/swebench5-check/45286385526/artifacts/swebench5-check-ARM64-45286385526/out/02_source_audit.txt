@@ -1,0 +1,15 @@
+make_image_spec signature: (instance: swebench.types.SWEbenchInstance, dockerfile: str, namespace: Optional[str] = None, tag: str = 'latest', context_dir: Optional[str] = None) -> swebench.image_builder.image_spec.ImageSpec
+ImageSpec fields: ['instance_id', 'dockerfile', 'namespace', 'tag', 'arch', 'context_dir']
+--- lines mentioning arch / arm64 / aarch64 / machine() (excluding parsers, inference, collect, modal)
+image_builder/image_spec.py:20: arch: str = "amd64"
+image_builder/image_spec.py:29: if self.arch not in ["amd64", "arm64"]:
+image_builder/image_spec.py:31: f"Invalid architecture: {self.arch}. Must be 'x86_64' or 'arm64'"
+image_builder/image_spec.py:39: arch = "x86_64" if self.arch == "amd64" else self.arch
+image_builder/image_spec.py:40: key = f"sweb.eval.{arch}.{self.instance_id}:{self.tag}"
+image_builder/image_spec.py:56: if self.arch == "amd64":
+image_builder/image_spec.py:58: elif self.arch == "x86_64":
+image_builder/image_spec.py:60: elif self.arch == "arm64":
+image_builder/image_spec.py:61: return "linux/arm64/v8"
+image_builder/image_spec.py:63: raise ValueError(f"Invalid architecture: {self.arch}")
+--- swebench eval --help -> help lines mentioning arch/platform: none
+--- swebench images --help -> help lines mentioning arch/platform: none

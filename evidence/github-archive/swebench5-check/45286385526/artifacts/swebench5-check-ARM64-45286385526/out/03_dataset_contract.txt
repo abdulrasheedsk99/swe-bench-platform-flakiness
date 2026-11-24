@@ -1,0 +1,12 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating test split:   0%|          | 0/300 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 300/300 [00:00<00:00, 39991.46 examples/s]
+Generating dev split:   0%|          | 0/23 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 23/23 [00:00<00:00, 7501.48 examples/s]
+SWE-bench/SWE-bench_Lite rows: 300
+  columns: ['base_commit', 'created_at', 'difficulty', 'environment_setup_commit', 'eval_type', 'image', 'instance_id', 'log_parser', 'repo', 'version', 'patch', 'test_patch', 'eval_script', 'problem_statement', 'hints_text', 'FAIL_TO_PASS', 'PASS_TO_PASS']
+  missing required columns: none
+  first image field: astropy__astropy-12907 swebench/sweb.eval.x86_64.astropy_1776_astropy-12907:latest
+Generating test split:   0%|          | 0/500 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 500/500 [00:00<00:00, 48416.30 examples/s]
+SWE-bench/SWE-bench_Verified rows: 500
+  columns: ['base_commit', 'created_at', 'difficulty', 'environment_setup_commit', 'eval_type', 'image', 'instance_id', 'log_parser', 'repo', 'version', 'patch', 'test_patch', 'eval_script', 'problem_statement', 'hints_text', 'FAIL_TO_PASS', 'PASS_TO_PASS']
+  missing required columns: none
+  first image field: astropy__astropy-12907 swebench/sweb.eval.x86_64.astropy_1776_astropy-12907:latest
