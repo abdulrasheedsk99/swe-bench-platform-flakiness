@@ -92,20 +92,20 @@ workflow grades all four providers' predictions in one run.
 The full batch-to-workflow map is in the table above. `tier-standard-v5.yml`
 repeats every batch with `swebench==5.0.2` against the 4.1.0 ground truth.
 
-## Selection scripts
+## Instance selection
 
-- `scripts/select_gold_ext2.py` -- the second extension's seeded draw (seed 2027,
-  fixed per-repository allocation, stable pool minus the 34 instances in
-  `scripts/flaky34.txt`, 500-test cap).
-- `scripts/select_gold_ext.py` -- re-implementation of the first extension's draw
-  (seed 2026). The original draw was run interactively and its script was not
-  saved. Run it to check that it reproduces `new_gold_candidates.txt`; it prints
-  MATCH or DIFFERENT and never overwrites the committed list.
-- The initial 24-instance arm was selected before these scripts existed; its
-  record is `instances.txt`.
-
-Both scripts need the SWE-bench Lite dataset from Hugging Face
-(`princeton-nlp/SWE-bench_Lite`).
+- Second extension (seed 2027): `scripts/select_gold_ext2.py` is the exact script
+  that produced `new_gold_candidates2.txt` (fixed per-repository allocation, stable
+  pool minus the 34 instances in `scripts/flaky34.txt`, 500-test cap). It needs the
+  SWE-bench Lite dataset from Hugging Face (`princeton-nlp/SWE-bench_Lite`).
+- First extension (seed 2026): the draw was run interactively and its script was not
+  saved. The result is recorded in `new_gold_candidates.txt`, and the seed, the
+  per-repository allocation, the pool definition and the 500-test cap are described
+  in the paper. We tried to reconstruct the script by varying the pool, ordering and
+  sampler details; no variant reproduced the committed list exactly, so none is
+  included. The list itself, not a re-run of the draw, is the record.
+- Initial 24-instance arm: selected before these scripts existed; its record is
+  `instances.txt`.
 
 ## Patch generation (optional)
 
